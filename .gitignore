@@ -1,8 +1,2 @@
-# SASS Temp
+_site
 .sass-cache
-
-# OSX
-*.DS_Store
-
-# Jekyll Compiled
-_deploy

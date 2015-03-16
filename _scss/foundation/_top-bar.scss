@@ -1,0 +1,999 @@
+//
+// Top Bar Variables
+//
+$include-html-top-bar-classes: $include-html-classes !default;
+
+// Background color for the top bar
+$topbar-bg-color: #111 !default;
+$topbar-bg: $topbar-bg-color !default;
+
+// Height and margin
+$topbar-height: 45px !default;
+$topbar-margin-bottom: 0 !default;
+
+// Control Input height for top bar
+$topbar-input-height: 2.45em !default;
+
+// Controlling the styles for the title in the top bar
+$topbar-title-weight: bold !default;
+$topbar-title-font-size: em-calc(17) !default;
+
+// Style the top bar dropdown elements
+$topbar-dropdown-bg: #222 !default;
+$topbar-dropdown-link-color: #fff !default;
+$topbar-dropdown-link-bg: lighten($topbar-bg-color, 5%) !default;
+$topbar-dropdown-toggle-size: 5px !default;
+$topbar-dropdown-toggle-color: #fff !default;
+$topbar-dropdown-toggle-alpha: 0.5 !default;
+
+// Set the link colors and styles for top-level nav
+$topbar-link-color: #fff !default;
+$topbar-link-color-hover: #fff !default;
+$topbar-link-color-active: #fff !default;
+$topbar-link-weight: bold !default;
+$topbar-link-font-size: em-calc(13) !default;
+$topbar-link-hover-lightness: -30% !default; // Darken by 30%
+$topbar-link-bg-hover: adjust-color($topbar-dropdown-bg, $lightness: $topbar-link-hover-lightness) !default;
+$topbar-link-bg-active: darken($topbar-bg-color, 3%) !default;
+
+
+$topbar-dropdown-label-color: #555 !default;
+$topbar-dropdown-label-text-transform: uppercase !default;
+$topbar-dropdown-label-font-weight: bold !default;
+$topbar-dropdown-label-font-size: em-calc(10) !default;
+$topbar-dropdown-label-bg: lighten($topbar-bg-color, 5%) !default;
+
+// Top menu icon styles
+$topbar-menu-link-transform: uppercase !default;
+$topbar-menu-link-font-size: em-calc(13) !default;
+$topbar-menu-link-weight: bold !default;
+$topbar-menu-link-color: #fff !default;
+$topbar-menu-icon-color: #fff !default;
+$topbar-menu-link-color-toggled: #888 !default;
+$topbar-menu-icon-color-toggled: #888 !default;
+
+// Transitions and breakpoint styles
+$topbar-transition-speed: 300ms !default;
+// Using em-calc for the below breakpoint causes issues with top bar
+$topbar-breakpoint: 940px !default; // Change to 9999px for always mobile layout
+$topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})" !default;
+
+// Divider Styles
+$topbar-divider-border-bottom: solid 1px lighten($topbar-bg-color, 10%) !default;
+$topbar-divider-border-top: solid 1px darken($topbar-bg-color, 10%) !default;
+
+// Sticky Class
+$topbar-sticky-class: ".sticky" !default;
+$topbar-arrows: true !default; //Set false to remove the triangle icon from the menu item
+
+@if $include-html-top-bar-classes != false {
+
+  /* Wrapped around .top-bar to contain to grid width */
+  .contain-to-grid {
+    width: 100%;
+    background: $topbar-bg;
+    border-bottom: 1px solid $brand-gray;
+
+    .top-bar { margin-bottom: $topbar-margin-bottom; }
+  }
+
+  // Wrapped around .top-bar to make it stick to the top
+  .fixed {
+    width: 100%;
+    #{$default-float}: 0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+
+    &.expanded:not(.top-bar) {
+      overflow-y: auto;
+      height: auto;
+      width: 100%;
+      max-height: 100%;
+
+      .title-area {
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+      }
+      // Ensure you can scroll the menu on small screens
+      .top-bar-section {
+        z-index: 98;
+        margin-top: $topbar-height-mobile;
+      }
+    }
+  }
+
+  .top-bar {
+    height: $topbar-height-mobile;
+    line-height: $topbar-height-mobile;
+    position: relative;
+    background: $topbar-bg;
+    margin-bottom: $topbar-margin-bottom;
+
+    // Topbar Global list Styles
+    ul {
+      margin-bottom: 0;
+      list-style: none;
+    }
+
+    .row { max-width: none; }
+
+    form,
+    input { margin-bottom: 0; }
+
+    input { height: $topbar-input-height; }
+
+    .button { padding-top: .5em; padding-bottom: .5em; margin-bottom: 0; }
+
+    // Title Area
+    .title-area {
+      position: relative;
+      margin: 0;
+    }
+
+    .name {
+      margin: 0;
+      font-size: $em-base;
+      text-align: center;
+
+      h1 {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        line-height: $topbar-title-height-mobile;
+        font-size: $topbar-title-font-size;
+      }
+      a {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        font-weight: $topbar-title-weight;
+        color: $topbar-link-color;
+        padding: $topbar-title-padding-mobile;
+      }
+      img {
+        max-height: $topbar-title-height-mobile;
+      }
+    }
+
+    // Menu toggle button on small devices
+    .toggle-topbar {
+      position: absolute;
+      #{$default-float}: 0;
+      top: 0;
+
+      > a {
+        display: block;
+        height: $topbar-height-mobile;
+        width: $topbar-height-mobile;
+
+        &:focus {
+          outline: 0;
+        }
+
+        > .ion-navicon-round {
+          display: block;
+          color: $brand-darkgray;
+          font-size: 30px;
+          line-height: $topbar-height-mobile;
+          text-align: center;
+        }
+      }
+    }
+    // Mobile Search
+    .global-search {
+      position: absolute;
+      #{$opposite-direction}: 0;
+      top: 0;
+      width: $topbar-height-mobile;
+      z-index: 2;
+      @include single-transition(width,$topbar-transition-speed);
+
+      > form {
+        margin: 0;
+        padding: 0;
+      }
+      .ion-search {
+        position: relative;
+        display: block;
+        width: $topbar-height-mobile;
+        font-size: 30px;
+        line-height: $topbar-height-mobile;
+        color: $brand-darkgray;
+        background-color: #fff;
+        z-index: 0;
+        cursor: pointer;
+
+        &:before {
+          margin-left: 20px;
+        }
+      }
+      .global-nav-reset {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        width: $topbar-height-mobile;
+        font-size: 30px;
+        line-height: $topbar-height-mobile;
+        color: $brand-darkgray;
+        background-color: transparent;
+        border: 0;
+        letter-spacing: normal;
+        margin: 0;
+        padding: 0;
+      }
+      #global-search-nav-input {
+        position: absolute;
+        top: 0;
+        #{$opposite-direction}: 0;
+        display: block;
+        height: $topbar-height-mobile;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        background-color: transparent;
+        font-family: $body-font-family;
+        border: 0;
+        color: $brand-gray;
+        font-size: 15px;
+        line-height: 1.1;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        cursor: pointer;
+
+        // @include single-transition(width,$topbar-transition-speed);
+
+        &:focus {
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+      }
+
+      // Search expanded
+      &.expanded {
+        width: 100%;
+
+        .ion-search {
+          z-index: 3;
+        }
+        .global-nav-reset {
+          display: block;
+          z-index: 3;
+        }
+        #global-search-nav-input {
+          width: 100%;
+          padding-left: $topbar-height-mobile;
+          padding-right: $topbar-height-mobile;
+          background-color: #fff;
+          cursor: auto;
+        }
+      }
+    }
+
+    #mobile-offcanvas {
+      position: absolute;
+      left: -100%;
+      width: 100%;
+      z-index: 100;
+      background-color: $brand-gray;
+
+      @include single-transition(all, $topbar-transition-speed);
+    }
+
+    // Change things up when the top-bar is expanded
+    &.expanded {
+      height: auto;
+      background: transparent;
+
+      .title-area {
+        background: $topbar-bg;
+      }
+      .toggle-topbar > a {
+        color: $topbar-menu-link-color-toggled;
+
+        > .ion-navicon-round:before { content: "\f129"; }
+      }
+      #mobile-offcanvas { left: 0; }
+    }
+
+  }
+
+  // Right and Left Navigation that stacked by default
+  .top-bar-section {
+    #{$default-float}: 0;
+    position: relative;
+    width: auto;
+    @include single-transition($default-float, $topbar-transition-speed);
+
+    ul {
+      width: 100%;
+      height: auto;
+      display: block;
+      font-size: $em-base;
+      margin: 0;
+    }
+
+    .divider,
+    [role="separator"] {
+      border-bottom: $topbar-divider-border-bottom;
+      border-top: $topbar-divider-border-top;
+      clear: both;
+      height: 1px;
+      width: 100%;
+    }
+
+    ul li {
+      & > a {
+        display: block;
+        width: 100%;
+        color: $topbar-link-color;
+        padding: 25px 0;
+        font-size: $topbar-link-font-size;
+        font-weight: $topbar-link-weight;
+        // background: $topbar-dropdown-bg;
+
+        &.button {
+          background: $primary-color;
+          font-size: $topbar-link-font-size;
+          padding-right: $topbar-height / 3;
+          padding-left: $topbar-height / 3;
+          &:hover { background: darken($primary-color, 10%); }
+        }
+        &.button.secondary {
+          background: $secondary-color;
+          &:hover { background: darken($secondary-color, 10%); }
+        }
+        &.button.success {
+          background: $success-color;
+          &:hover { background: darken($success-color, 10%); }
+        }
+        &.button.alert {
+          background: $alert-color;
+          &:hover { background: darken($alert-color, 10%); }
+        }
+
+      }
+
+      // Apply the hover link color when it has that class
+      &:hover > a { color: $topbar-link-color-hover; }
+
+      // Apply the active link color when it has that class
+      &.active > a {
+        background: $topbar-link-bg-active;
+        color: $topbar-link-color-active;
+      }
+    }
+
+    // Add some extra padding for list items contains buttons
+    .has-form { padding: $topbar-height / 3; }
+
+    // Styling for list items that have a dropdown within them.
+    .has-dropdown {
+      position: relative;
+
+      & > a {
+        &:after {
+          @if ($topbar-arrows){
+            @include css-triangle($topbar-dropdown-toggle-size, rgba($topbar-dropdown-toggle-color, $topbar-dropdown-toggle-alpha), $default-float);
+          }
+          margin-#{$opposite-direction}: $topbar-height / 3;
+          margin-top: -($topbar-dropdown-toggle-size / 2) - 2;
+          position: absolute;
+          top: 50%;
+          #{$opposite-direction}: 0;
+        }
+      }
+
+      &.moved { position: static;
+        & > .dropdown {
+          display: block;
+        }
+      }
+    }
+
+    // Dropdown link style
+    .dropdown-link {
+
+      .caret {
+        @include single-transition;
+        @include css-triangle(4px, $brand-darkgray, top);
+      }
+      // Link with open dropdown
+      &.expanded {
+        color: #fff !important;
+        background: $topbar-dropdown-link-bg;
+
+        .caret {
+          border-top-color: #fff;
+          transform: scaleY(-1);
+        }
+      }
+    }
+    // Styling elements inside of dropdowns
+    .dropdown {
+      position: static;
+      #{$default-float}: 100%;
+      top: 0;
+      height: 0;
+      width: auto;
+      overflow: hidden;
+      z-index: 99;
+
+      li {
+        width: 100%;
+        height: auto;
+
+        a {
+          color: $topbar-dropdown-link-color;
+          font-size: 13px;
+          padding: 8px $topbar-height / 3;
+          background: $topbar-dropdown-link-bg;
+
+          &.parent-link { font-weight: $topbar-link-weight; }
+        }
+
+        &.title h5 { margin-bottom: 0;
+          a {
+            color: $topbar-link-color;
+            line-height: $topbar-height / 2;
+            display: block;
+          }
+        }
+      }
+
+      label {
+        padding: 8px $topbar-height / 3 2px;
+        margin-bottom: 0;
+        text-transform: $topbar-dropdown-label-text-transform;
+        color: $topbar-dropdown-label-color;
+        font-weight: $topbar-dropdown-label-font-weight;
+        font-size: $topbar-dropdown-label-font-size;
+      }
+    }
+
+    &#primary-nav {
+
+      ul li {
+        display: block;
+        width: 50%;
+        float: left;
+        background: $brand-darkgray;
+        border-bottom: 1px solid #fff;
+        @include single-transition;
+
+        > a { padding: 30px 0 30px 15px; }
+        &:nth-child(2n) { border-left: 1px solid #fff; }
+        &:hover { background: #ed1944; }
+      }
+      .nav-title {
+        display: block;
+        font-family: $header-font-family;
+        font-size: 26px;
+        line-height: 26px;
+      }
+      .nav-subtitle {
+        display: block;
+        font-family: $body-font-family;
+        font-size: 12px;
+        line-height: 13px;
+      }
+      .nav-mobile-tel {
+        width: 100%;
+
+        > a {
+          padding-left: 0;
+          padding-top: 25px;
+          text-align: center;
+        }
+        span {
+          display: inline-block;
+          line-height: 1;
+        }
+        .ion-ios-telephone {
+          font-size: 50px;
+        }
+        .tel-number {
+          text-align: left;
+
+          small { font-size: 11px; }
+          strong {
+            font-size: 28px;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+
+    &#tool-bar {
+
+      > ul:first-child { padding-top: 20px; }
+      > ul:last-child { padding-bottom: 20px; }
+      > ul > li {
+        text-align: center;
+
+        > a {
+          color: #584a45;
+          &:hover { color: darken(#584a45, $anchor-function-factor); }
+        }
+      }
+      .nav-tel,
+      .nav-cart,
+      .nav-chat { display: none; }
+    }
+  }
+
+  // Element that controls breakpoint, no need to change this ever
+  .top-bar-js-breakpoint {
+    width: $topbar-breakpoint !important;
+    visibility: hidden;
+  }
+  .js-generated { display: block; }
+
+  .mega-dropdown {
+    display: none;
+  }
+
+  // Top Bar styles intended for screen sizes above the breakpoint.
+  @media #{$topbar-media-query} {
+
+    .contain-to-grid {
+      border: 0;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: $topbar-height-toolbar;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #c2bab2;
+        z-index: 10;
+      }
+    }
+
+    .contain-to-grid .top-bar {
+      max-width: $row-width;
+      margin: 0 auto;
+      margin-bottom: $topbar-margin-bottom;
+    }
+
+    .top-bar {
+      background: $topbar-bg;
+      @include clearfix;
+      overflow: visible;
+      height: $topbar-height-desktop;
+
+      .toggle-topbar { display: none; }
+
+      .title-area {
+        position: absolute;
+        top: $topbar-height-toolbar;
+        left: 0;
+        width: 100%;
+      }
+      .name {
+        text-align: left;
+
+        h1 { line-height: $topbar-title-height-desktop; }
+        a { padding: $topbar-title-padding-desktop; }
+        img { max-height: $topbar-title-height-desktop; }
+      }
+      .global-search {
+        position: absolute;
+        #{$opposite-direction}: 0;
+        top: 0;
+        width: $topbar-height-primary;
+
+        .ion-search {
+          width: $topbar-height-primary;
+          font-size: 30px;
+          line-height: $topbar-height-primary;
+
+          &:before {
+            margin-left: 35px;
+          }
+        }
+        .global-nav-reset {
+          width: $topbar-height-primary;
+          font-size: 30px;
+          line-height: $topbar-height-primary;
+        }
+        #global-search-nav-input {
+          height: $topbar-height-primary;
+        }
+
+        // Search expanded
+        &.expanded {
+          width: 81%;
+
+          #global-search-nav-input {
+            padding-left: $topbar-height-primary;
+            padding-right: $topbar-height-primary;
+          }
+        }
+
+      }
+
+      input,
+      .button {
+        line-height: 2em;
+        font-size: em-calc(14);
+        height: 2em;
+        padding: 0 10px;
+        position: relative;
+        top: 8px;
+      }
+
+      &.expanded { background: $topbar-bg; }
+
+      #mobile-offcanvas {
+        position: static;
+        left: auto;
+        width: auto;
+        background-color: transparent;
+        z-index: 1;
+      }
+    }
+
+    .top-bar-section {
+      @include single-transition(none,0,0);
+      // #{$default-float}: 0 !important;
+
+      > ul {
+        width: auto;
+        height: auto !important;
+        display: inline;
+
+        > li {
+          float: $default-float;
+          .js-generated { display: none; }
+        }
+
+        > li {
+          &.hover {
+            > a:not(.button) {
+              background: $topbar-link-bg-hover;
+              color: $topbar-link-color-hover;
+            }
+          }
+          > a:not(.button) {
+            padding: 0 $topbar-height / 3;
+            line-height: $topbar-height-toolbar;
+            background: $topbar-bg;
+            &:hover {  }
+          }
+        }
+      }
+
+      .has-dropdown {
+
+        @if($topbar-arrows){
+
+          & > a {
+            padding-#{$opposite-direction}: $topbar-height / 3 + 20 !important;
+            &:after {
+              @include css-triangle($topbar-dropdown-toggle-size, rgba($topbar-dropdown-toggle-color, $topbar-dropdown-toggle-alpha), top);
+              margin-top: -($topbar-dropdown-toggle-size / 2);
+              top: $topbar-height / 2;
+            }
+          }
+
+        }
+
+        &.moved { position: relative;
+          & > .dropdown { display: none; }
+        }
+
+        &.hover, &.not-click:hover {
+          & > .dropdown {
+            display: block;
+          }
+        }
+
+        .dropdown li.has-dropdown {
+          & > a {
+            &:after {
+              border: none;
+              content: "\00bb";
+              top: 1em;
+              margin-top: -7px;
+              #{$opposite-direction}: 5px;
+            }
+          }
+        }
+      }
+      .dropdown {
+        position: absolute;
+        #{$default-float}: 0;
+        top: auto;
+        background: $brand-darkgray;
+
+        li {
+          text-align: left;
+          color: #fff;
+
+          a {
+            line-height: 1;
+            text-align: left;
+            white-space: nowrap;
+            padding: 7px 15px;
+          }
+          &:hover a {
+            background: $brand-darkgray;
+          }
+          label {
+            white-space: nowrap;
+            background: $topbar-dropdown-label-bg;
+          }
+
+          // Second Level Dropdowns
+          .dropdown {
+            #{$default-float}: 100%;
+            top: 0;
+          }
+        }
+      }
+
+      & > ul > .divider,
+      & > ul > [role="separator"] {
+        border-bottom: none;
+        border-top: none;
+        border-#{$opposite-direction}: $topbar-divider-border-bottom;
+        border-#{$default-float}: $topbar-divider-border-top;
+        clear: none;
+        height: $topbar-height;
+        width: 0;
+      }
+
+      .has-form {
+        background: $topbar-bg;
+        padding: 0 $topbar-height / 3;
+        height: $topbar-height;
+      }
+
+      // Position overrides for ul.right
+      ul.right {
+        li .dropdown {
+          left: auto;
+          right: 0;
+
+          li .dropdown { right: 100%; }
+        }
+      }
+
+      &#primary-nav {
+        top: $topbar-height-toolbar;
+        left: auto;
+        height: $topbar-height-primary;
+        float: right;
+        margin-right: $topbar-height-primary;
+
+        ul li {
+          display: inline-block;
+          width: auto;
+          margin-left: 60px;
+          border: 0;
+
+          &:first-child { margin-left: 0; }
+          &:nth-child(2n) { border-left: 0; }
+          > a {
+            padding: 30px 0 20px 0;
+            border-bottom: 6px solid transparent;
+            @include single-transition;
+          }
+          &:hover {
+            background: transparent;
+
+            > a { border-bottom-color: $brand-crimson; }
+            .nav-title,
+            .nav-subtitle { color: $brand-crimson; }
+          }
+        }
+        .nav-title { color: #000; }
+        .nav-subtitle { color: $brand-mediumgray; }
+        .nav-mobile-tel { display: none; }
+      }
+
+      &#tool-bar {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: $topbar-height-toolbar;
+
+        > ul:first-child,
+        > ul:last-child {
+          padding: 0;
+        }
+        > ul > li {
+
+          > a {
+            width: auto;
+            font-size: 13px;
+          }
+          + li:before {
+            content: "";
+            position: relative;
+            top: 18px;
+            display: inline-block;
+            height: 11px;
+            float: left;
+            border-left: 1px solid $brand-darkgray;
+          }
+        }
+
+        .nav-cart,
+        .nav-tel,
+        .nav-chat { display: block; }
+      }
+      .nav-cart {
+
+        .cart-total {
+          color: $brand-lightgray;
+          line-height: 1;
+        }
+        &.cart-full {
+
+          .cart-total {
+            color: $brand-crimson;
+            font-weight: 400;
+          }
+          .expanded .cart-total { color: #fff; }
+        }
+        .dropdown {
+          max-width: 400px;
+          min-width: 0;
+
+          > li {
+            padding: 15px 10px 0 10px;
+
+            &:last-child {
+              padding-bottom: 15px;
+            }
+            &:hover a {
+              background-color: transparent;
+            }
+            a {
+              background-color: transparent;
+            }
+          }
+          .cart-item-title {
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 18px;
+            color: #fff;
+          }
+          .cart-item-description {
+            margin-bottom: 0;
+            font-size: 12px;
+            line-height: 16px;
+            color: $brand-lightgray;
+          }
+          .cart-item-price {
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 18px;
+            color: #fff;
+          }
+          .cart-item-quantity {
+            margin-bottom: 0;
+            font-size: 12px;
+            line-height: 16px;
+            color: $brand-lightgray;
+            text-transform: uppercase;
+          }
+          .cart-truncate {
+            margin: 30px 0 15px 0;
+            font-size: 14px;
+            text-align: center;
+
+            a {
+              padding: 0;
+              font-size: inherit;
+            }
+          }
+          .button {
+            display: block;
+            top: auto;
+            height: auto;
+            width: auto;
+            margin: 0 10px;
+            padding: 20px;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: center;
+            background: $primary-color;
+            border-color: transparent;
+
+            &:hover {
+              background: darken($primary-color, 10%);
+            }
+          }
+        }
+      }
+    }
+
+    // Degrade gracefully when Javascript is disabled. Displays dropdown and changes
+    // background & text color on hover.
+    .no-js .top-bar-section {
+  	  ul li {
+        // Apply the hover link color when it has that class
+        &:hover > a {
+          background: $topbar-link-bg-hover;
+          color: $topbar-link-color-hover;
+        }
+
+        // Apply the active link color when it has that class
+        &:active > a {
+          background: $topbar-link-bg-active;
+          color: $topbar-link-color-active;
+        }
+      }
+  	  .has-dropdown {
+        &:hover {
+          & > .dropdown { display: block; }
+        }
+  	  }
+	  }
+
+    .mega-dropdown {
+      position: absolute;
+      top: $topbar-height-desktop;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      z-index: 20;
+
+      .full-width {
+        padding-top: 40px;
+        padding-bottom: 10px;
+        border-top: 1px solid #d1cdc9;
+        background: #fff;
+      }
+      h2 {
+        font-family: $body-font-family;
+        font-size: 18px;
+        color: $brand-darkgray;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+          font-size: 13px;
+          line-height: 19px;
+
+          a {
+            color: $brand-mediumgray;
+          }
+        }
+      }
+      .ad-space {
+        font-size: 12px;
+        color: $brand-mediumgray;
+
+        .ad-title {
+          font-size: 13px;
+          font-weight: 300;
+        }
+        a { font-weight: 300; }
+        p,
+        img { margin-bottom: 10px; }
+      }
+      .button {
+        margin-bottom: 0;
+      }
+    }
+  } // End top-bar MQ
+
+}

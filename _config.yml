@@ -1,0 +1,8 @@
+# Site settings
+title: Culligan
+
+# Sass
+sass:
+  sass_dir: _scss
+  style: :expanded
+  line_numbers: true
