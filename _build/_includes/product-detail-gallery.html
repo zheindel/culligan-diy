@@ -1,0 +1,47 @@
+<div class="row">
+	<div class="feature-image small-12 medium-12 columns">
+		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
+		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
+		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
+		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
+		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
+		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
+		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
+		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
+	</div>
+</div>
+<div class="thumbnail-image-group">
+	<div class="row">
+		<div class="thumbnail-image small-12 medium-7 medium-offset-5 columns">
+			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.feature-image').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  asNavFor: '.thumbnail-image'
+		});
+		$('.thumbnail-image').slick({
+		  slidesToShow: 6,
+		  slidesToScroll: 1,
+		  asNavFor: '.feature-image',
+		  dots: false,
+		  arrows: false,
+		  centerMode: true,
+		  focusOnSelect: true
+		});
+	});
+</script>
