@@ -1,0 +1,64 @@
+.four-featured-products{
+
+
+	.colshell{
+		border:1px solid #D5D4DA;	
+
+		img{
+			display:block;
+			max-width:170px;
+			margin:0 auto;
+		}
+		.featured-title{
+
+		}
+		.featured-description{
+
+		}
+
+		form{
+
+			label{
+				text-transform:uppercase;
+			}
+			input{
+				background:#49AE48;
+				color:#FFF;
+				padding:3px 5px;
+				text-transform:uppercase;
+			}
+		}
+
+		.view-details{
+
+
+			a{
+				color:#49AE48;
+			}
+		}
+	}
+	.featured-bar{
+		height:25px;
+		background:#49AE48;
+		width:100%;
+	}
+
+	.featured-containment:hover{
+
+		.colshell{
+			border:1px solid #0F550F;
+			.featured-title{
+				color:#0F550F;
+			}
+			.view-details{
+				a{
+					color:#0F550F;
+				}
+			}
+		}
+		.featured-bar{
+			background:#0F550F;
+		}
+	}
+}
+

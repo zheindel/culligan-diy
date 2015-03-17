@@ -430,31 +430,31 @@ table {
     Klinic Slab
    ========================================================================== */
 @font-face {
-  font-family: "klinic-slab";
-  src: url("../fonts/klinicslabbook-webfont.eot");
-  src: url("../fonts/klinicslabbook-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/klinicslabbook-webfont.woff") format("woff"), url("../fonts/klinicslabbook-webfont.ttf") format("truetype"), url("../fonts/klinicslabbook-webfont.svg#klinic-slab") format("svg");
-  font-weight: normal;
+  font-family: "dinot";
+  src: url("../fonts/DINOT-Cond.eot");
+  src: url("../fonts/DINOT-Cond.eot?#iefix") format("embedded-opentype"), url("../fonts/DINOT-Cond.woff") format("woff"), url("../fonts/DINOT-Cond.ttf") format("truetype"), url("../fonts/DINOT-Cond.svg#dinot") format("svg");
+  font-weight: 100;
   font-style: normal;
 }
 @font-face {
-  font-family: "klinic-slab";
-  src: url("../fonts/klinicslabbookit-webfont.eot");
-  src: url("../fonts/klinicslabbookit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/klinicslabbookit-webfont.woff") format("woff"), url("../fonts/klinicslabbookit-webfont.ttf") format("truetype"), url("../fonts/klinicslabbookit-webfont.svg#klinic-slab") format("svg");
-  font-weight: normal;
+  font-family: "dinot";
+  src: url("../fonts/DINOT-CondIta.eot");
+  src: url("../fonts/DINOT-CondIta.eot?#iefix") format("embedded-opentype"), url("../fonts/DINOT-CondIta.woff") format("woff"), url("../fonts/DINOT-CondIta.ttf") format("truetype"), url("../fonts/DINOT-CondIta.svg#dinot") format("svg");
+  font-weight: 100;
   font-style: italic;
 }
 @font-face {
-  font-family: "klinic-slab";
-  src: url("../fonts/klinicslablight-webfont.eot");
-  src: url("../fonts/klinicslablight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/klinicslablight-webfont.woff") format("woff"), url("../fonts/klinicslablight-webfont.ttf") format("truetype"), url("../fonts/klinicslablight-webfont.svg#klinic-slab") format("svg");
-  font-weight: 100;
+  font-family: "dinot";
+  src: url("../fonts/DINOT-CondMedi.eot");
+  src: url("../fonts/DINOT-CondMedi.eot?#iefix") format("embedded-opentype"), url("../fonts/DINOT-CondMedi.woff") format("woff"), url("../fonts/DINOT-CondMedi.ttf") format("truetype"), url("../fonts/DINOT-CondMedi.svg#dinot") format("svg");
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "klinic-slab";
-  src: url("../fonts/klinicslablightit-webfont.eot");
-  src: url("../fonts/klinicslablightit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/klinicslablightit-webfont.woff") format("woff"), url("../fonts/klinicslablightit-webfont.ttf") format("truetype"), url("../fonts/klinicslablightit-webfont.svg#klinic-slab") format("svg");
-  font-weight: 100;
+  font-family: "dinot";
+  src: url("../fonts/DINOT-CondMediIta.eot");
+  src: url("../fonts/DINOT-CondMediIta.eot?#iefix") format("embedded-opentype"), url("../fonts/DINOT-CondMediIta.woff") format("woff"), url("../fonts/DINOT-CondMediIta.ttf") format("truetype"), url("../fonts/DINOT-CondMediIta.svg#dinot") format("svg");
+  font-weight: normal;
   font-style: italic;
 }
 /* ==========================================================================
@@ -12305,7 +12305,7 @@ a.th {
   top: 0px;
   right: 0;
   height: 530px;
-  background: rgba(62, 164, 214, 0.5);
+  background: rgba(0, 53, 78, 0.5);
   color: #FFF;
   padding: 78px 35px;
 }
@@ -12352,7 +12352,7 @@ a.th {
   top: 0px;
   left: 0;
   height: 530px;
-  background: rgba(60, 131, 75, 0.5);
+  background: rgba(0, 91, 19, 0.7);
   color: #FFF;
   padding: 78px 35px;
 }
@@ -12369,6 +12369,73 @@ a.th {
 .feature-hero-section .half-background-image .colshell .hero-content {
   margin: 30px 0px;
   font-size: 19px;
+}
+
+/* line 4, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .colshell {
+  border: 1px solid #D5D4DA;
+}
+/* line 7, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .colshell img {
+  display: block;
+  max-width: 170px;
+  margin: 0 auto;
+}
+/* line 21, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .colshell form label {
+  text-transform: uppercase;
+}
+/* line 24, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .colshell form input {
+  background: #49AE48;
+  color: #FFF;
+  padding: 3px 5px;
+  text-transform: uppercase;
+}
+/* line 35, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .colshell .view-details a {
+  color: #49AE48;
+}
+/* line 40, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .featured-bar {
+  height: 25px;
+  background: #49AE48;
+  width: 100%;
+}
+/* line 48, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .featured-containment:hover .colshell {
+  border: 1px solid #0F550F;
+}
+/* line 50, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .featured-containment:hover .colshell .featured-title {
+  color: #0F550F;
+}
+/* line 54, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .featured-containment:hover .colshell .view-details a {
+  color: #0F550F;
+}
+/* line 59, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
+.four-featured-products .featured-containment:hover .featured-bar {
+  background: #0F550F;
+}
+
+/* line 8, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/innovative-droplet-full.scss */
+.innovative-droplet-full .innovative-droplet-full-image {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 4, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_left_callout.scss */
+.blue-dot-left .callout-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 360px;
+}
+/* line 11, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_left_callout.scss */
+.blue-dot-left .callout-image .dot-callout img {
+  opacity: 0.7;
 }
 
 /* ==========================================================================
