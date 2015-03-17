@@ -12267,7 +12267,7 @@ a.th {
 .home-background-image {
   position: absolute;
   z-index: 2;
-  display: block;
+  display: none;
   top: -21px;
   left: -20px;
   right: 0px;
