@@ -23,10 +23,10 @@
     Klinic Slab
    ========================================================================== */
 
-@include declare-font-face("klinic-slab", "klinicslabbook-webfont", normal, normal);
-@include declare-font-face("klinic-slab", "klinicslabbookit-webfont", normal, italic);
-@include declare-font-face("klinic-slab", "klinicslablight-webfont", 100, normal);
-@include declare-font-face("klinic-slab", "klinicslablightit-webfont", 100, italic);
+@include declare-font-face("dinot", "DINOT-Cond", 100, normal);
+@include declare-font-face("dinot", "DINOT-CondIta", 100, italic);
+@include declare-font-face("dinot", "DINOT-CondMedi", normal, normal);
+@include declare-font-face("dinot", "DINOT-CondMediIta", normal, italic);
 
 /* ==========================================================================
     Ionicons

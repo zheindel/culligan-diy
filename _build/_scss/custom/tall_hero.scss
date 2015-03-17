@@ -24,7 +24,7 @@
 		top:0px;
 		right:0;
 		height:530px;
-		background:rgba(62,164,214,.5);
+		background:rgba(0, 53, 78, 0.5);
 		color:#FFF;
 		padding:78px 35px;
 
@@ -32,13 +32,21 @@
 			width:400px;
 
 			.hero-headline{
-				font-size:58px;
+				font-size:68px;
 				font-weight:800;
 			}
 
 			.hero-content{
-				margin:30px 0px;
-				font-size:19px;
+				margin:53px 0px;
+				font-size:22px;
+			}
+			.button.blue{
+				background: $primary-button-color;
+				padding:26px 78px;
+				border:none;
+				outline:none;
+				border-radius:5px;
+				font-size:18px;
 			}
 		}
 	}

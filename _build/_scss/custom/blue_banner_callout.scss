@@ -1,0 +1,54 @@
+.blue-banner{
+	position:relative;
+	background:#006599;
+	max-height:222px;
+	overflow:visible;
+	margin-bottom:200px;
+
+	.row{
+		position:relative;
+	}
+	.water-drop{
+		position:absolute;
+		top:-158px;
+		left:-59px;
+		height:auto;
+		width:450px;
+		z-index:-1;
+	}
+
+	.banner-left{
+		text-align:right;
+		padding-right:35px;
+
+		.banner-title{
+			margin-top:27px;
+			color:#FFF;
+			font-size:23px;
+			text-transform:uppercase;
+		}
+
+		img{
+			margin-top:-13px;
+		}
+	}
+
+	.banner-content{
+		color:#FFF;
+		font-size:21px;
+		padding:20px 33px;
+		line-height:35px;
+		margin-bottom:44px;
+
+		span{
+			font-weight:800;
+		}
+	}
+	.button.transparent{
+		border:1px solid #BDBCC1;
+		max-width:none;
+		color:#000;
+		margin:20px 0px;
+		padding:23px 10px;
+	}
+}
