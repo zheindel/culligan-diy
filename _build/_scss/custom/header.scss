@@ -1,0 +1,35 @@
+
+
+.fa{
+	color:$icon-color;
+}
+
+.top-header{
+	position:relative;
+	font-family:$primary-font;
+	background:$header-footer-bg-color;
+	color:$icon-color;
+}
+
+.tag-line{
+	display:inline-block;
+	color:$tag-line-color;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.top-header form{
+	display:inline-block;
+	max-width:310px;
+	width:100%;
+	height:50px;
+
+	i{
+		position:absolute;
+	}
+
+	input{
+		border:none;
+		padding-left:40px;
+	}
+
+}

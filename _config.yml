@@ -1,6 +1,11 @@
 # Site settings
 title: Culligan
 
+# Custom Vars
+source:      _build
+destination: _deploy
+exclude:     [".gitignore", ".editorconfig", "README.md", "config.rb", "scss", "bower.json", ".bowerrc"]
+
 # Sass
 sass:
   sass_dir: _scss
