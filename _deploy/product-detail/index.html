@@ -306,19 +306,21 @@ $(function() {
 </head>
 
   <body>
-
-    
+    <div class="top-section">
+      
 <div class="top-header">
 	<div class="row">
-		<div class="small-12 medium-5 columns">
+		<div class="small-12 medium-5 columns colwrap">
 			<a class="site-title" href="/"><img src="../img/header/logo.png" /></a>
 			<div class="tag-line">Do it yourself</div>
 		</div>
-		<div class="small-12 medium-7 columns">
-			<i class="fa fa-briefcase"></i>
-			Solution Guide
-			<i class="fa fa-map-marker"></i>
-			Find a Retailer
+		<div class="medium-7 columns">
+			<span class="header-icon hide-for-small">
+				<i class="fa fa-briefcase"></i>
+				Solution Guide
+				<i class="fa fa-map-marker"></i>
+				Find a Retailer
+			</span>
 			<form>
 		      <i class="fa fa-search fa-fw"></i>
 		      <input type="text" placeholder="Search...">
@@ -327,10 +329,12 @@ $(function() {
 	</div>
 </div>
 
-
-    <div class="site-navigation">
+      <div class="site-navigation">
 	<div class="row">
 		<ul>
+			<li class="divider show-for-small">
+				<span><i class="fa fa-angle-double-down"></i></span>Products
+			</li>
 			<li>
 				<a href="#">Undersink Systems</a>
 			</li>
@@ -355,6 +359,30 @@ $(function() {
 		</ul>
 	</div>
 </div>
+    </div>
+
+
+<div class="row mobile-header">
+
+  <div class="show-for-small small-2 columns">
+    <div class="mobile-close mobile-toggle">
+      <img src="../img/header/mobile-close.png" />
+    </div>
+
+    <div class="mobile-open mobile-toggle">
+      <img src="../img/header/mobile-open.png" />
+    </div>
+  </div>
+
+  <div class="show-for-small small-10 columns">
+    <div class="show-for-small">
+      <a class="site-title" href="/"><img src="../img/header/logo.png" /></a>
+      <div class="tag-line">Do it yourself</div>
+    </div>
+  </div>
+
+</div>
+
 
     <div class="page-content">
       <div class="wrapper">
@@ -469,5 +497,24 @@ $(function() {
 </div>
 
   </body>
+
+  <script>
+    $(document).ready(function(){
+      $('.mobile-toggle').click(function(){
+        $('html').toggleClass('mobile-menu');
+        $('.mobile-close').toggleClass('indexing');
+      });
+     /* $('.mobile-close').click(function(){
+        $(this).parent().find('.top-section').addClass('mobile-closed');
+        $(this).fadeOut(2000);
+      });*/
+    });
+  </script>
+
+  <style>
+    .mobile-closed{
+        left:-600px;
+    }
+  </style>
 
 </html>
