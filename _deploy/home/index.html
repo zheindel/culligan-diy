@@ -275,6 +275,23 @@ $(function() {
 		body{
 			font-family:'dinot';
 		}
+		.button.transparent{
+			width:100%;
+			max-width:155px;
+			background:transparent;
+			border:1px solid #FFF;
+			border-radius:3px;
+			padding:11px 15px;
+			font-size:19px;
+			font-weight:100;
+			margin-right:14px;
+			margin:0px 14px 17px 0px;
+
+			&:hover{
+				color:rgba(0, 91, 19, 0.7);
+				background:#FFF;
+			}
+		}
 	</style>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -354,7 +371,7 @@ $(function() {
 			<div class="hero-content">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
 			</div>
-			<div class="button primary">
+			<div class="button blue">
 				Primary CTA
 			</div>
 		</div>
@@ -387,19 +404,35 @@ $(function() {
 				Shower Head Filters
 			</div>
 			<div class="hero-content">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. Radiis quia rerum madescit neu hominum ignea minantia. Obstabatque egens nubibus conversa aquae onerosior.
 			</div>
-			<div class="button">
-				Rain Disc
+			<div class="row">
+				<div class="small-12 medium-4 columns">
+					<div class="button transparent">
+						Rain Disc
+					</div>
+				</div>
+				<div class="small-12 medium-4 columns">
+					<div class="button transparent">
+						Hand Held
+					</div>
+				</div>
+				<div class="small-12 medium-4 columns">
+				</div>
 			</div>
-			<div class="button">
-				Hand Held
-			</div>
-			<div class="button">
-				Wall Mount
-			</div>
-			<div class="button">
-				In-Line
+			<div class="row">
+				<div class="small-12 medium-4 columns">
+					<div class="button transparent">
+						Wall Mount
+					</div>
+				</div>
+				<div class="small-12 medium-4 columns">
+					<div class="button transparent">
+						In-Line
+					</div>
+				</div>
+				<div class="small-12 medium-4 columns">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -513,15 +546,14 @@ $(function() {
 			<div class="callout-image" style="background-image:url(../img/blue-dot-callout/callout-left-main.png)">
 				<div class="dot-callout">
 					<div class="row">
-						<div class="medium-4 medium-offset-3 columns">
+						<div class="medium-4 medium-offset-4 columns">
 							<img src="../img/blue-dot-callout/blue-dot.png" />
 						</div>
 						<div class="medium-4 columns">
 							<div class="callout-text">
-								<span>
-									<img src="../img/blue-dot-callout/bar-shape.png" />
-								</span>
-								Each cartridge lasts 10,000 GALLONS
+								<img src="../img/blue-dot-callout/bar-shape.png" />
+								Each cartridge lasts
+								<span>10,000 GALLONS</span>
 							</div>
 						</div>
 					</div>
@@ -529,37 +561,145 @@ $(function() {
 			</div>
 		</div>
 		<div class="small-12 medium-6 columns">
-			<div class="callout-title">
-				Extended life refills
-			</div>
-			<div class="callout-description">
-				Inclusum illis seductaque nabataeaque moderantum siccis fronde. Obliquis occiduo uno opifex. Pressa terrae calidis feras iussit. Pluvialibus tollere deus quod pugnabant mixta aurea diverso. Fontes corpora pronaque totidemque pontus sed.
-			</div>
-			<div class="see-all">
-				<a href="#">See all filter cartridges</a>
+			<div class="colshell">
+				<div class="callout-title">
+					Extended life refills
+				</div>
+				<div class="callout-description">
+					Inclusum illis seductaque nabataeaque moderantum siccis fronde. Obliquis occiduo uno opifex. Pressa terrae calidis feras iussit. Pluvialibus tollere deus quod pugnabant mixta aurea diverso. Fontes corpora pronaque totidemque pontus sed.
+				</div>
+				<div class="see-all">
+					<a href="#">See all filter cartridges</a>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 	<div class="blue-dot-right">
+	<div class="row">
+		<div class="small-12 medium-6 columns">
+			<div class="colshell">
+				<div class="callout-title">
+					One product many uses
+				</div>
+				<div class="callout-description">
+					Inclusum illis seductaque nabataeaque moderantum siccis fronde. Obliquis occiduo uno opifex. Pressa terrae calidis feras iussit. Pluvialibus tollere deus quod pugnabant mixta aurea diverso. Fontes corpora pronaque totidemque pontus sed. Inclusum illis seductaque nabataeaque moderantum siccis fronde.
+				</div>
+				<div class="see-all">
+					Learn more about the<br>
+					<a href="#">FM-25 Chrome Faucet Mount Water Filter</a>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 medium-6 columns">
+			<div class="callout-image" style="background-image:url(../img/blue-dot-callout/callout-right-main.png)">
+				<div class="dot-callout">
+					<div class="row">
+						<div class="medium-4 medium-offset-1 columns">
+							<div class="callout-text">
+								Go from unfiltered to
+								<span>Filtered with the flip of a switch</span>
+								<img src="../img/blue-dot-callout/line-shape.png" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="medium-4 medium-offset-1 columns">
+							<img src="../img/blue-dot-callout/blue-dot.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 </div>
+
+
+<div class="blue-banner">
+	<div class="row">
+		<img class="water-drop" src="../img/blue-banner/water-drop.png" />
+	</div>
+	<div class="row">
+	<div class="small-12 medium-6 columns">
+		<div class="banner-left">
+			<div class="banner-title">
+				Aqua Clear Drinking Water System
+			</div>
+			<img src="../img/blue-banner/water-filter.png" />
+		</div>
+	</div>
+	<div class="small-12 medium-6 columns">
+		<div class="banner-content">
+			"<span>The Aqua Clear Drinking Water System</span> is ulla dictum tortor vel cursus sollicitudin. Phasellus et lacus ut sapien dapibus viverra quis at enim. Nunc aliquam eget quam ut maximus."
+		</div>
+		<div class="small-12 medium-6 columns">
+			<div class="button transparent">
+				Learn more
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
       </div>
     </div>
 
-    <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Culligan</h2>
-
-    <div class="footer-col-wrapper">
-    </div>
-
-  </div>
-
-</footer>
-
+    <div class="site-footer">
+	<div class="row">
+		<div class="small-12 medium-7 columns">
+			<div class="customer-support">
+				<div class="support-title">
+					Customer Support
+				</div>
+				<div class="medium-4 columns">
+					<ul>
+						<li><a href="#">Product Support</a></li>
+						<li><a href="#">Warranty Registration</a></li>
+						<li><a href="#">Product Manual Library</a></li>
+					</ul>
+				</div>
+				<div class="medium-4 columns">
+					<ul>
+						<li><a href="#">Contact CulliganDIY</a></li>
+						<li><a href="#">Find a Culligan Man</a></li>
+						<li><a href="#">Call Us 1-800-000-0000</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-links">
+				<ul>
+					<li>Copyright 2015 Culligan</li><span> | </span>
+					<li><a href="#">About Culligan</a></li><span> | </span>
+					<li><a href="#">Culligan Cares</a></li><span> | </span>
+					<li><a href="#">Terms</a></li><span> | </span>
+					<li><a href="#">Privacy Policy</a></li><span> | </span>
+					<li><a href="#">Sitemap</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="small-12 medium-5 columns">
+			<div class="mailing-list">
+				<div class="mailing-title">Join our mailing list</div>
+				<div class="mailing-tagline">Get the latest on new product launches and promotions!</div>
+			    <div class="row">
+				    <div class="large-12 columns">
+				      <div class="row collapse">
+				        <div class="small-10 columns">
+				          <i class="fa fa-envelope-o"></i>
+				          <input type="text" placeholder="Email Address">
+				        </div>
+				        <div class="small-2 columns">
+				          <a href="#" class="button postfix">JOIN</a>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
   </body>
 

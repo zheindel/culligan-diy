@@ -275,6 +275,23 @@ $(function() {
 		body{
 			font-family:'dinot';
 		}
+		.button.transparent{
+			width:100%;
+			max-width:155px;
+			background:transparent;
+			border:1px solid #FFF;
+			border-radius:3px;
+			padding:11px 15px;
+			font-size:19px;
+			font-weight:100;
+			margin-right:14px;
+			margin:0px 14px 17px 0px;
+
+			&:hover{
+				color:rgba(0, 91, 19, 0.7);
+				background:#FFF;
+			}
+		}
 	</style>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -396,19 +413,60 @@ $(function() {
       </div>
     </div>
 
-    <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Culligan</h2>
-
-    <div class="footer-col-wrapper">
-    </div>
-
-  </div>
-
-</footer>
-
+    <div class="site-footer">
+	<div class="row">
+		<div class="small-12 medium-7 columns">
+			<div class="customer-support">
+				<div class="support-title">
+					Customer Support
+				</div>
+				<div class="medium-4 columns">
+					<ul>
+						<li><a href="#">Product Support</a></li>
+						<li><a href="#">Warranty Registration</a></li>
+						<li><a href="#">Product Manual Library</a></li>
+					</ul>
+				</div>
+				<div class="medium-4 columns">
+					<ul>
+						<li><a href="#">Contact CulliganDIY</a></li>
+						<li><a href="#">Find a Culligan Man</a></li>
+						<li><a href="#">Call Us 1-800-000-0000</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-links">
+				<ul>
+					<li>Copyright 2015 Culligan</li><span> | </span>
+					<li><a href="#">About Culligan</a></li><span> | </span>
+					<li><a href="#">Culligan Cares</a></li><span> | </span>
+					<li><a href="#">Terms</a></li><span> | </span>
+					<li><a href="#">Privacy Policy</a></li><span> | </span>
+					<li><a href="#">Sitemap</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="small-12 medium-5 columns">
+			<div class="mailing-list">
+				<div class="mailing-title">Join our mailing list</div>
+				<div class="mailing-tagline">Get the latest on new product launches and promotions!</div>
+			    <div class="row">
+				    <div class="large-12 columns">
+				      <div class="row collapse">
+				        <div class="small-10 columns">
+				          <i class="fa fa-envelope-o"></i>
+				          <input type="text" placeholder="Email Address">
+				        </div>
+				        <div class="small-2 columns">
+				          <a href="#" class="button postfix">JOIN</a>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
   </body>
 
