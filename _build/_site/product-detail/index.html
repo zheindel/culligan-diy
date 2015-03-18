@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+  
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/foundation/foundation.js"></script>
+<!-- <script src="../js/foundation/foundation.topbar.js"></script> -->
+<script src="../js/foundation/foundation.alerts.js"></script>
+<script src="../js/foundation/foundation.dropdown.js"></script>
+<script src="../js/foundation/foundation.forms.js"></script>
+<script src="../js/foundation/foundation.section.js"></script>
+<script src="../js/foundation/foundation.tooltips.js"></script>
+<script src="../js/vendor/css-animate-auto.js"></script>
+<script src="../js/vendor/typed.js"></script>
+<script src="../js/foundation/foundation.equalizer.js"></script>
+<script src="../js/foundation/foundation.interchange.js"></script>
+<script src="../js/foundation/foundation.orbit.js"></script>
+<script src="../js/insight-subnav.js"></script>
+<script>
+//Some Global Variables
+var breakpointMedium = 768,
+    breakpointLarge = 1180;
+
+$(document).foundation();
+
+$(function() {
+
+  //
+  // GLOBAL NAV
+  //
+  // Search
+  $('#global-search-nav-input').focusin(function(){
+    $('.global-search').addClass('expanded');
+    $(this).attr('placeholder','What can we help you find?');
+  });
+  $('#global-search-nav-input').focusout(function(){
+    $('.global-search').removeClass('expanded');
+    $(this).val('');
+    $(this).attr('placeholder','');
+  });
+  // Open Menu
+  $('.toggle-topbar > a').click(function(e){
+    $('.top-bar').toggleClass('expanded');
+    e.preventDefault();
+  });
+
+  // Throttle window resize event for performance and smoothness
+  (function($,sr) {
+    // Debounce function by John Hann
+    // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+    var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced () {
+        var obj = this, args = arguments;
+        function delayed () {
+          if (!execAsap)
+            func.apply(obj, args);
+          timeout = null;
+        };
+        if (timeout)
+          clearTimeout(timeout);
+        else if (execAsap)
+          func.apply(obj, args);
+        timeout = setTimeout(delayed, threshold || 100);
+      };
+    }
+    // Smart Resize function by Paul Irish
+    // http://www.paulirish.com/2009/throttled-smartresize-jquery-event-handler/
+    jQuery.fn[sr] = function(fn) { return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+  })(jQuery,'smartresize');
+
+  // Keep all window resize scripts within the throttling function
+  $(window).smartresize(function() {
+
+    var resizedWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    // Check if window width is at nav breakpoint
+    // Update this value if desktop nav breakpoint is changed from 980px
+    if ( resizedWidth >= 980 ) {
+
+      // Mega dropdown menus in navigation
+      $('.mega-dropdown-link')
+        .mouseenter(function(){
+          var thisButton = $(this),
+              thisDropdown = $('#'+$(this).data('dropdown'));
+          // Clear closing timer when mouse is over the dropdown link
+          clearTimeout(thisButton.data('thisTimeout'));
+          // Open dropdown
+          thisDropdown.cssAnimateAuto('open');
+        })
+        .mouseleave(function(){
+          var thisButton = $(this),
+              thisDropdown = $('#'+$(this).data('dropdown')),
+              thisTimeout = setTimeout(function(){
+                thisDropdown.cssAnimateAuto('close');
+              }, 300);
+          // Set timer to delay closing
+          // This gives time for animation and for mouse to enter dropdown menu
+          thisButton.data('thisTimeout',thisTimeout);
+        });
+      $('.mega-dropdown')
+        .mouseenter(function(){
+          var thisDropdown = $(this),
+              thisButton = $('.mega-dropdown-link[data-dropdown="'+thisDropdown.attr('id')+'"]');
+          // Clear closing timer when mouse enters the dropdown menu
+          clearTimeout(thisButton.data('thisTimeout'));
+        })
+        .mouseleave(function(){
+          // Close dropdown
+          $(this).cssAnimateAuto('close');
+        });
+
+      // Check if top-bar was expanded from mobile nav and remove class
+      if ( $('.top-bar').hasClass('expanded') ) {
+        $('.top-bar').removeClass('expanded');
+      }
+    }
+    else {
+      // Unbind dropdown mouse events
+      $('.mega-dropdown-link').unbind('mouseenter').unbind('mouseleave');
+    }
+
+    //
+    //SECONDARY NAVIGATION
+    //Check and reset secondary navigation if necessary
+    if (resizedWidth >=breakpointMedium){
+      if ((Math.abs($('.table-list').first().data('lastKnownWidth') - resizedWidth)>200)|| typeof($('.table-list').first().data('lastKnownWidth'))==="undefined"){ //If we need to recheck our tableLists
+        resetTableLists();
+        $('.table-list').each(function(){
+          initTableList($(this));
+        });
+      }
+    } else if ($('.table-list-has-more').length > 0){
+      //If we're small and need to reset
+      if ($('.table-list').first().data('lastKnownWidth') > breakpointMedium)
+      {
+        //console.log("hitting the min breakpoint...2");
+        resetTableLists();
+      }
+    }
+
+  });
+
+  // Init functions inside the window resize throttle
+  var initialWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if ( initialWidth >= 980 ) {
+
+    // Mega dropdown menus in navigation
+    $('.mega-dropdown-link')
+      .mouseenter(function(){
+        var thisButton = $(this),
+            thisDropdown = $('#'+$(this).data('dropdown'));
+        // Clear closing timer when mouse is over the dropdown link
+        clearTimeout(thisButton.data('thisTimeout'));
+        // Open dropdown
+        thisDropdown.cssAnimateAuto('open');
+      })
+      .mouseleave(function(){
+        var thisButton = $(this),
+            thisDropdown = $('#'+$(this).data('dropdown')),
+            thisTimeout = setTimeout(function(){
+              thisDropdown.cssAnimateAuto('close');
+            }, 300);
+        // Set timer to delay closing
+        // This gives time for animation and for mouse to enter dropdown menu
+        thisButton.data('thisTimeout',thisTimeout);
+      });
+    $('.mega-dropdown')
+      .mouseenter(function(){
+        var thisDropdown = $(this),
+            thisButton = $('.mega-dropdown-link[data-dropdown="'+thisDropdown.attr('id')+'"]');
+        // Clear closing timer when mouse enters the dropdown menu
+        clearTimeout(thisButton.data('thisTimeout'));
+      })
+      .mouseleave(function(){
+        // Close dropdown
+        $(this).cssAnimateAuto('close');
+      });
+
+  }
+  //
+  //SECONDARY NAVIGATION
+  if (initialWidth >= breakpointMedium){
+    $('.table-list').each(function(){
+      initTableList($(this));
+    });
+  }
+  $('.sub-nav-toggle-button').click(function(){
+    $(this).closest('.default-sub-nav-container').toggleClass('open');
+  });
+
+  // Regular dropdown menus in navigation
+  $('.dropdown-link').click(function(e){
+    var thisButton = $(this),
+        activeClass = 'expanded',
+        otherButtons = $('.dropdown-link').not(thisButton).filter('.'+activeClass);
+    // Close dropdown
+    if ( thisButton.hasClass(activeClass) ) {
+      thisButton.siblings('ul').cssAnimateAuto({
+        action: 'close',
+        openClass: activeClass
+      },function(){
+        thisButton.removeClass(activeClass);
+      });
+      // Remove listener
+      $(document).off('.dropdown');
+    }
+    // Open dropdown
+    else {
+      // Close other dropdowns first
+      if ( otherButtons.length > 0 ) {
+        otherButtons.siblings('ul').cssAnimateAuto({
+          action: 'close',
+          openClass: activeClass
+        },function(){
+          otherButtons.removeClass(activeClass);
+        });
+      }
+      // Now open this one
+      thisButton.addClass(activeClass).siblings('ul').cssAnimateAuto({
+        action: 'open',
+        openClass: activeClass
+      });
+      // Add event listener to document that will close the dropdown if you click outside of it
+      $(document).on('click.dropdown',function(){
+        if ( !$(event.target).parents('.top-bar-section').length || !$(event.target).parents('.home-nav').length ){
+          // Close dropdown
+          thisButton.siblings('ul').cssAnimateAuto({
+            action: 'close',
+            openClass: activeClass
+          },function(){
+            thisButton.removeClass(activeClass);
+          });
+          // Remove listener
+          $(document).off('.dropdown');
+        }
+      });
+    }
+    e.preventDefault();
+    e.stopPropagation();
+  });
+
+});
+
+</script>
+
+
+
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--
+	  Prevent this staging site from showing up in search results.
+	  Don't use this meta tag in the production site.
+	-->
+	<meta name="robots" content="noindex,nofollow">
+
+	<title>Product Detail | Culligan</title>
+
+	<!-- Adobe Typekit Allumi -->
+	<script src="//use.typekit.net/faq3itn.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+	<link href="../css/font-awesome.css" rel="stylesheet">
+	<link href="../css/slick.css" rel="stylesheet">
+	<!-- The main app css file -->
+	<link href="../css/app.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="../js/slick.min.js"></script>
+	<!-- modernizr to help with some feature detection -->
+	<script src="../js/vendor/custom.modernizr.js"></script>
+</head>
+
+  <body>
+
+    
+<div class="top-header">
+	<div class="row">
+		<div class="small-12 medium-5 columns">
+			<a class="site-title" href="/"><img src="../img/header/logo.png" /></a>
+			<div class="tag-line">Do it yourself</div>
+		</div>
+		<div class="small-12 medium-7 columns">
+			<i class="fa fa-briefcase"></i>
+			Solution Guide
+			<i class="fa fa-map-marker"></i>
+			Find a Retailer
+			<form>
+		      <i class="fa fa-search fa-fw"></i>
+		      <input type="text" placeholder="Search...">
+			</form>
+		</div>
+	</div>
+</div>
+
+
+    <div class="site-navigation">
+	<div class="row">
+		<ul>
+			<li>
+				<a href="#">Undersink Systems</a>
+			</li>
+			<li>
+				<a href="#">Whole House Systems</a>
+			</li>
+			<li>
+				<a href="#">Faucet Filters</a>
+			</li>
+			<li>
+				<a href="#">Refrigerator Filters</a>
+			</li>
+			<li class="active">
+				<a href="#">Shower Head Filter</a>
+			</li>
+			<li>
+				<a href="#">Specialty Filters</a>
+			</li>
+			<li>
+				<a href="#">Replacements</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="detail-background-image" style="background-image:url(../img/product-detail/screenshot.png)"></div>
+
+<div class="product-detail-gallery">
+	<div class="gallery-background-image" style="background-image:url(../img/product-detail/remodelbath.jpg)"></div>
+	<div class="row">
+	<div class="feature-image small-12 medium-12 columns">
+		<div><img src="../img/product-detail-gallery/feature-image-1.png" /></div>
+		<div><img src="../img/product-detail-gallery/feature-image-2.png" /></div>
+		<div><img src="../img/product-detail-gallery/feature-image-1.png" /></div>
+		<div><img src="../img/product-detail-gallery/feature-image-2.png" /></div>
+		<div><img src="../img/product-detail-gallery/feature-image-1.png" /></div>
+		<div><img src="../img/product-detail-gallery/feature-image-2.png" /></div>
+		<div><img src="../img/product-detail-gallery/feature-image-1.png" /></div>
+		<div><img src="../img/product-detail-gallery/feature-image-2.png" /></div>
+	</div>
+</div>
+<div class="thumbnail-image-group">
+	<div class="row">
+		<div class="thumbnail-image small-12 medium-7 medium-offset-5 columns">
+			<div><img src="../img/product-detail-gallery/thumbnail-image-1.png" /></div>
+			<div><img src="../img/product-detail-gallery/thumbnail-image-2.png" /></div>
+			<div><img src="../img/product-detail-gallery/thumbnail-image-1.png" /></div>
+			<div><img src="../img/product-detail-gallery/thumbnail-image-2.png" /></div>
+			<div><img src="../img/product-detail-gallery/thumbnail-image-1.png" /></div>
+			<div><img src="../img/product-detail-gallery/thumbnail-image-2.png" /></div>
+			<div><img src="../img/product-detail-gallery/thumbnail-image-1.png" /></div>
+			<div><img src="../img/product-detail-gallery/thumbnail-image-2.png" /></div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.feature-image').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  asNavFor: '.thumbnail-image'
+		});
+		$('.thumbnail-image').slick({
+		  slidesToShow: 6,
+		  slidesToScroll: 1,
+		  asNavFor: '.feature-image',
+		  dots: false,
+		  arrows: false,
+		  centerMode: true,
+		  focusOnSelect: true
+		});
+	});
+</script>
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Culligan</h2>
+
+    <div class="footer-col-wrapper">
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
