@@ -1,11 +1,11 @@
 .blue-dot-left{
 	position:relative;
-	margin-bottom:130px;
+	margin-bottom:90px;
 
 	.callout-image{
 		background-size:contain;
 		background-repeat:no-repeat;
-		height:360px;
+		height:270px;
 		background-position:center;
 
 		.dot-callout{
@@ -36,21 +36,21 @@
 		max-width:none;
 
 		.callout-title{
-			font-size:61px;
+			font-size:48px;
 			color:#000;
 			font-weight:800;
 			margin-top:20px;
 		}
 		.callout-description{
-			font-size:28px;
+			font-size:24px;
 			margin:20px 0px 40px;
-			line-height:38px;
+			line-height:28px;
 		}
 		.see-all{
 
 			a{
 				color:#006896;
-				font-size:38px;
+				font-size:29px;
 			}
 		}
 	}
@@ -64,6 +64,7 @@
 
 		.callout-image{
 			background-position:72px 20px;
+			height:360px;
 
 			.dot-callout{
 
