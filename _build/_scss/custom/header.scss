@@ -30,13 +30,14 @@ html.mobile-menu{
 }
 
 .mobile-open{
-	position:relative;
+	position:absolute;
 	z-index:3;
 	cursor:pointer;
 }
 
 .mobile-header{
 	background:#393939;
+	min-height:130px;
 }
 
 .fa{
@@ -66,7 +67,7 @@ html.mobile-menu{
 	padding-bottom:32px;
 
 	.colwrap{
-		padding:24px 10px;
+		padding:29px 10px;
 		border-bottom:1px solid #FFF;
 	}
 
@@ -143,8 +144,10 @@ html.mobile-menu{
 		font-family:$primary-font;
 		background:$header-footer-bg-color;
 		color:$icon-color;
+		padding-bottom:0;
 
 		.colwrap{
+			padding:15px 10px;
 			border-bottom:0;
 		}
 	}
@@ -154,21 +157,45 @@ html.mobile-menu{
 		color:$tag-line-color;
 		text-transform:uppercase;
 		font-weight:bold;
+		font-size:19px;
 	}
-	.top-header form{
-		display:inline-block;
-		max-width:310px;
-		width:100%;
-		height:50px;
+	.top-header{
+
+
+		span{
+			margin-top:40px;
+		}
 
 		i{
-			position:absolute;
+			font-size:20px;
 		}
 
-		input{
-			border:none;
-			padding-left:40px;
+		form{
+			display:inline-block;
+			max-width:310px;
+			width:100%;
+			height:50px;
+			margin-top:30px;
+
+			i{
+				position:absolute;
+				font-size:20px;
+				top:8px;
+				left:18px;
+			}
+
+			input{
+				border:none;
+				padding-left:40px;
+				font-size:17px;
+				margin:0;
+			}
 		}
 
 	}
+
+	.mobile-header{
+		min-height:0;
+	}
+
 }
