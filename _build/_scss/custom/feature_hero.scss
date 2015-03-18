@@ -21,30 +21,29 @@
 		display:block;
 		top:0px;
 		left:0;
-		min-height:430px;
 		background:rgba(0, 91, 19, 0.7);
 		color:#FFF;
-		padding:63px 50px;
+		padding:50px 28px;
 
 		.colshell{
 			width:auto;
 			float:none;
 
 			.hero-title{
-				font-size:48px;
+				font-size:34px;
 				font-weight:800;
 			}
 			.hero-headline{
-				font-size:50px;
+				font-size:40px;
 				font-weight:800;
 				margin-top:13px;
 				text-transform:uppercase;
 			}
 
 			.hero-content{
-				margin:30px 0px 15px;
-				font-size:30px;
-				line-height:37px;
+				margin:17px 0px 15px;
+				font-size:23px;
+				line-height:27px;
 			}
 		}
 	}
