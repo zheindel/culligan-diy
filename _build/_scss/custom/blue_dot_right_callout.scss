@@ -4,7 +4,7 @@
 	.callout-image{
 		background-size:contain;
 		background-repeat:no-repeat;
-		height:360px;
+		height:270px;
 		background-position:center;
 
 		.dot-callout{
@@ -37,26 +37,26 @@
 		padding-left:0px;
 
 		.callout-title{
-			font-size:61px;
+			font-size:45px;
 			max-width:none;
-			margin-top:53px;
+			margin-top:40px;
 			color:#000;
 			font-weight:800;
 		}
 		.callout-description{
-			font-size:28px;
-			margin:20px 0px 36px;
-			line-height:38px;
+			font-size:24px;
+			margin:20px 0px 25px;
+			line-height:28px;
 		}
 		.see-all{
 				color:#006896;
-				font-size:31px;
+				font-size:27px;
 
 			a{
 				color:#006896;
 				display:block;
-				margin-top:10px;
-				font-size:31px;
+				margin-top:5px;
+				font-size:27px;
 			}
 		}
 	}

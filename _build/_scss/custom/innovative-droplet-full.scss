@@ -1,19 +1,20 @@
 .innovative-droplet-full{
-	margin-top:40px;
+	margin-top:30px;
 
 	.innovative-header{
-		font-size:85px;
+		font-size:65px;
 		text-align:center;
 		font-weight:800;
 		padding:15px 20px;
 		color:#000;
+		margin-bottom:35px;
 	}
 
 	.innovative-droplet-full-image{
 		width:100%;
-		height:450px;
+		height:200px;
 		background-repeat:no-repeat;
-		background-size:cover;
+		background-size:contain;
 	}
 }
 
@@ -26,9 +27,15 @@
 		.innovative-header{
 			font-size:68px;
 			padding:15px 0px;
+			margin-bottom:0px;
 		}
 
 		.innovative-droplet-full-image{
+		width:100%;
+		height:450px;
+		background-repeat:no-repeat;
+		background-size:cover;
+
 		}
 	}
 }
