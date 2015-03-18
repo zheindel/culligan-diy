@@ -1,12 +1,12 @@
 .blue-dot-left{
 	position:relative;
-	margin-bottom:180px;
+	margin-bottom:130px;
 
 	.callout-image{
 		background-size:contain;
 		background-repeat:no-repeat;
 		height:360px;
-		background-position:72px 20px;
+		background-position:center;
 
 		.dot-callout{
 
@@ -32,23 +32,75 @@
 	}
 
 	.colshell{
-		padding-left:90px;
-		max-width:475px;
+		padding-left:0px;
+		max-width:none;
 
 		.callout-title{
-			font-size:49px;
+			font-size:61px;
+			color:#000;
+			font-weight:800;
+			margin-top:20px;
 		}
 		.callout-description{
-			font-size:18px;
-			margin:33px 0px;
-			line-height:26px;
+			font-size:28px;
+			margin:20px 0px 40px;
+			line-height:38px;
 		}
 		.see-all{
 
 			a{
 				color:#006896;
-				font-size:19px;
+				font-size:38px;
 			}
 		}
 	}
+}
+
+
+@media #{$small} {
+
+	.blue-dot-left{
+		margin-bottom:185px;
+
+		.callout-image{
+			background-position:72px 20px;
+
+			.dot-callout{
+
+				img{
+				}
+				.callout-text{
+
+					span{
+					}
+						
+					img{
+					}
+				}
+			}
+		}
+
+		.colshell{
+			padding-left:90px;
+			max-width:475px;
+
+			.callout-title{
+				font-size:49px;
+				font-weight:500;
+				margin-top:0px;
+			}
+			.callout-description{
+				font-size:18px;
+				margin:33px 0px;
+				line-height:26px;
+			}
+			.see-all{
+
+				a{
+					font-size:19px;
+				}
+			}
+		}
+	}
+
 }

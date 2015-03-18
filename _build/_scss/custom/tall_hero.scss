@@ -21,18 +21,19 @@
 		position:absolute;
 		z-index:1;
 		display:block;
-		top:0px;
 		right:0;
-		height:530px;
+		min-height:50%;
+		bottom:0;
 		background:rgba(0, 53, 78, 0.5);
 		color:#FFF;
-		padding:78px 35px;
+		padding:22px 35px;
 
 		.colshell{
-			width:400px;
+			width:auto;
+			margin-bottom:-200px;
 
 			.hero-headline{
-				font-size:68px;
+				font-size:91px;
 				font-weight:800;
 			}
 
@@ -42,12 +43,51 @@
 			}
 			.button.blue{
 				background: $primary-button-color;
-				padding:26px 78px;
+				padding:38px 25px;
 				border:none;
 				outline:none;
 				border-radius:5px;
-				font-size:18px;
+				font-size:33px;
+				margin-top:75px;
+				max-width:445px;
+				width:100%;
 			}
 		}
 	}
+}
+
+
+@media #{$small} {
+	
+	.home-hero-section{
+		
+		.hero-background-image{
+		}
+
+		.half-background-image{
+			top:0px;
+			padding:78px 35px;
+			height:530px;
+
+			.colshell{
+				width:400px;
+				margin-bottom:0px;
+
+				.hero-headline{
+					font-size:68px;
+				}
+
+				.hero-content{
+				}
+				.button.blue{
+					margin-top:0px;
+					max-width:none;
+					font-size:18px;
+					padding:26px 78px;
+					width:auto;
+				}
+			}
+		}
+	}
+
 }

@@ -1,0 +1,201 @@
+
+.site-footer{
+	background:$header-footer-bg-color;
+	
+	.customer-support{
+
+		.support-title{
+			font-size:51px;
+			font-weight:800;
+			margin-top:50px;
+			margin-bottom:20px;
+			color:#FFF;
+
+		}
+		ul{
+			list-style:none;
+			padding-left:0;
+
+			li{
+				margin:14px 0px;
+
+				a{
+					color:#99989D;
+					font-size:25px;
+				}
+			}
+		}
+	}
+
+	.mailing-list{
+
+		.mailing-title{
+			font-size:54px;
+			font-weight:500;
+			margin-top:40px;
+			margin-bottom:20px;
+			color:#FFF;
+		}
+		.mailing-tagline{
+			color:#FFF;
+			font-size:28px;
+			margin-bottom:22px;
+		}
+		i{
+			position:absolute;
+			font-size:30px;
+			top:21px;
+			left:30px;
+		}
+		input{
+			padding-left:80px;
+			font-size:25px;
+			border:0;
+			border-radius:5px 0px 0px 5px;
+			height:75px;
+		}
+		a{
+			font-size:32px;
+			background:#40A6D7;
+		}
+	}
+
+	.social-links{
+		margin-top:30px;
+
+		ul{
+			list-style:none;
+			padding-left:0;
+
+			li{
+				display:inline-block;
+				margin-right:42px;
+
+				a{
+					font-size:50px;
+
+					i{
+						color:#FFF;
+					}
+				}
+			}
+		}
+	}
+
+	.footer-links{
+		margin-top:10px;
+		ul{
+			list-style:none;
+			padding-left:0;
+
+			span{
+				color:#99989D;
+				display:inline-block;
+				margin:0px 12px;
+				font-size:20px;
+			}
+
+			li{
+				color:#99989D;
+				display:inline-block;
+				font-size:27px;
+
+				a{
+					color:#99989D;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media #{$small} {
+
+
+	.site-footer{
+		
+		.customer-support{
+
+			.support-title{
+				font-size:26px;
+				margin-top:42px;
+				margin-bottom:12px;
+			}
+
+			.columns{
+				padding:0;
+			}
+			ul{
+
+				li{
+					margin:0;
+
+					a{
+						font-size:14px;
+					}
+				}
+			}
+		}
+
+		.mailing-list{
+
+			.mailing-title{
+				font-size:22px;
+				margin-top:47px;
+				margin-bottom:5px;
+			}
+			.mailing-tagline{
+				font-size:16px;
+				margin-bottom:16px;
+			}
+			i{
+				font-size:18px;
+				top:11px;
+				left:11px;
+			}
+			input{
+				padding-left:43px;
+				font-size:18px;
+				height:41px;
+			}
+			a{
+				font-size:18px;
+			}
+		}
+
+		.social-links{
+			margin-top:0;
+
+			ul{
+
+				li{
+					margin-right:18px;
+
+					a{
+						font-size:27px;
+
+						i{
+						}
+					}
+				}
+			}
+		}
+
+		.footer-links{
+			ul{
+
+				span{
+				}
+
+				li{
+					font-size:12px;
+
+					a{
+					}
+				}
+			}
+		}
+	}
+
+}

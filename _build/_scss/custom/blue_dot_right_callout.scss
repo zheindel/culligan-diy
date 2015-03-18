@@ -5,7 +5,7 @@
 		background-size:contain;
 		background-repeat:no-repeat;
 		height:360px;
-		background-position:105px 0px;
+		background-position:center;
 
 		.dot-callout{
 
@@ -34,26 +34,93 @@
 	}
 
 	.colshell{
-		padding-left:90px;
+		padding-left:0px;
 
 		.callout-title{
-			font-size:49px;
-			max-width:300px;
-			margin-top:20px;
+			font-size:61px;
+			max-width:none;
+			margin-top:53px;
+			color:#000;
+			font-weight:800;
 		}
 		.callout-description{
-			font-size:18px;
-			margin:33px 0px;
-			line-height:26px;
+			font-size:28px;
+			margin:20px 0px 36px;
+			line-height:38px;
 		}
 		.see-all{
 				color:#006896;
-				font-size:19px;
+				font-size:31px;
 
 			a{
 				color:#006896;
 				display:block;
-				margin-top:10px;			}
+				margin-top:10px;
+				font-size:31px;
+			}
 		}
 	}
+}
+
+
+
+
+
+@media #{$small} {
+
+	.blue-dot-right{
+
+		.callout-image{
+			background-position:15px 0px;
+
+			.dot-callout{
+
+				img{
+				}
+				.callout-text{
+
+					span{
+					}
+						
+					img{
+					}
+				}
+			}
+		}
+
+		.colshell{
+			padding-left:90px;
+
+			.callout-title{
+				font-size:49px;
+				max-width:300px;
+				margin-top:20px;
+				font-weight:500;
+			}
+			.callout-description{
+				font-size:18px;
+				margin:33px 0px;
+				line-height:26px;
+			}
+			.see-all{
+					font-size:19px;
+				a{
+					font-size:19px;
+				}
+			}
+		}
+	}
+
+}
+
+
+@media #{$medium} {
+
+	.blue-dot-right{
+
+		.callout-image{
+			background-position:105px 0px;
+		}
+	}
+
 }
