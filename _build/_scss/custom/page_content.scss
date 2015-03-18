@@ -1,11 +1,35 @@
 .page-content-include{
-	margin:28px 0px 100px;
+	margin:190px 0px 103px;
+	padding:0px 35px;
 
 	.content-title{
-		font-size:55px;
-		margin-bottom:42px;
+		font-size:60px;
+		margin-bottom:37px;
+		font-weight:800;
 	}
 	.content-description{
-		font-size:18px;
+		font-size:27px;
+		line-height:35px;
 	}
+}
+
+
+
+
+@media #{$small} {
+
+	.page-content-include{
+		margin:28px 0px 100px;
+		padding:0px 20px;
+
+		.content-title{
+			font-size:55px;
+			margin-bottom:32px;
+		}
+		.content-description{
+			font-size:18px;
+			line-height:23px;
+		}
+	}
+
 }

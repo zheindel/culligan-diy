@@ -1,11 +1,12 @@
 .innovative-droplet-full{
-	
+	margin-top:40px;
 
 	.innovative-header{
-		font-size:68px;
+		font-size:85px;
 		text-align:center;
 		font-weight:800;
-		padding:15px 0px;
+		padding:15px 20px;
+		color:#000;
 	}
 
 	.innovative-droplet-full-image{
@@ -13,5 +14,21 @@
 		height:450px;
 		background-repeat:no-repeat;
 		background-size:cover;
+	}
+}
+
+
+@media #{$small} {
+	.innovative-droplet-full{
+		margin-top:0px;
+		
+
+		.innovative-header{
+			font-size:68px;
+			padding:15px 0px;
+		}
+
+		.innovative-droplet-full-image{
+		}
 	}
 }

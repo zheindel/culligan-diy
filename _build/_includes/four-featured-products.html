@@ -2,7 +2,14 @@
 	<div class="row">
 		{% include featured-product.html %}
 		{% include featured-product.html %}
-		{% include featured-product.html %}
-		{% include featured-product.html %}
+		<div class="hide-for-small">
+			{% include featured-product.html %}
+			{% include featured-product.html %}
+		</div>
+	</div>
+	<div class="show-for-small mobile-view-all">
+		<div class="button secondary">
+			<a href="#">View all shower head filters</a>
+		</div>
 	</div>
 </div>

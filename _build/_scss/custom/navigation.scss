@@ -13,6 +13,38 @@
 		li{
 			display:block;
 
+			&.mobile-social{
+				position:relative;
+				color:#9A999E;
+				font-size:35px;
+				padding:22px 0px;
+				display:block;
+				border-bottom:1px solid #8E8E8E;
+				padding-left:120px;
+				transition:padding-left .5s;
+				cursor:pointer;
+
+				span{
+					position:absolute;
+					top:20px;
+					left:50px;
+
+
+					.wide-load{
+						margin-left:-10px;
+					}
+				}
+				&:hover{
+					background-color:#006599;
+					color:#FFF;
+					padding-left:130px;
+
+					i{
+						color:#FFF;
+					}
+				}
+			}
+
 			&.divider{
 				position:relative;
 				color:#FFF;
@@ -21,29 +53,36 @@
 				padding:22px 0px;
 				display:block;
 				border-bottom:1px solid #8E8E8E;
-				padding-left:112px;
+				padding-left:120px;
 
 				span{
 					position:absolute;
 					top:20px;
 					left:50px;
+
+					i{
+						color:#FFF;
+					}
 				}
 			}
 			a{
 				color:#9A999E;
 				font-size:35px;
-				padding:22px 0px;
+				padding:23px 0px;
 				display:block;
 				border-bottom:1px solid #8E8E8E;
-				margin-left:112px;
+				margin-left:120px;
 			}
 			a:hover{
 				background-color:#006599;
+				color:#FFF;
+				padding-left:10px;
 			}
 			&.active{
 				a{
 					background-color:#006599;
 					color:#FFF;
+					padding-left:10px;
 				}
 			}
 		}
@@ -65,7 +104,7 @@
 				display:inline-block;
 				a{
 					color:#FFF;
-					font-size:13px;
+					font-size:15px;
 					padding:14px 14px;
 					display:block;
 					margin-left:0;
@@ -73,10 +112,12 @@
 				}
 				a:hover{
 					background-color:#4E94B8;
+					padding-left:14px;
 				}
 				&.active{
 					a{
 						background-color:#4E94B8;
+						padding-left:14px;
 					}
 				}
 			}
@@ -99,18 +140,21 @@
 				display:inline-block;
 				a{
 					color:#FFF;
-					font-size:15px;
-					padding:14px 23px;
+					font-size:17px;
+					padding:10px 22px;
 					display:block;
 					margin-left:0;
 					border-bottom:none;
 				}
 				a:hover{
 					background-color:#4E94B8;
+					padding-left:22px;
+
 				}
 				&.active{
 					a{
 						background-color:#4E94B8;
+						padding-left:22px;
 					}
 				}
 			}
