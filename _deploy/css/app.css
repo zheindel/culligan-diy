@@ -12773,18 +12773,19 @@ html.mobile-menu {
   /* line 66, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
   .feature-hero-section .half-background-image .colshell {
     float: right;
+    max-width: 550px;
   }
-  /* line 69, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
+  /* line 70, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
   .feature-hero-section .half-background-image .colshell .hero-title {
     font-size: 38px;
     font-weight: 500;
   }
-  /* line 73, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
+  /* line 74, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
   .feature-hero-section .half-background-image .colshell .hero-headline {
     font-size: 43px;
     margin-top: 10px;
   }
-  /* line 78, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
+  /* line 79, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
   .feature-hero-section .half-background-image .colshell .hero-content {
     font-size: 19px;
     line-height: 24px;
