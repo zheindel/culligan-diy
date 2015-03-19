@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+
+  
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/foundation/foundation.js"></script>
+<!-- <script src="../js/foundation/foundation.topbar.js"></script> -->
+<script src="../js/foundation/foundation.alerts.js"></script>
+<script src="../js/foundation/foundation.dropdown.js"></script>
+<script src="../js/foundation/foundation.forms.js"></script>
+<script src="../js/foundation/foundation.section.js"></script>
+<script src="../js/foundation/foundation.tooltips.js"></script>
+<script src="../js/vendor/css-animate-auto.js"></script>
+<script src="../js/vendor/typed.js"></script>
+<script src="../js/foundation/foundation.equalizer.js"></script>
+<script src="../js/foundation/foundation.interchange.js"></script>
+<script src="../js/foundation/foundation.orbit.js"></script>
+<script src="../js/insight-subnav.js"></script>
+<script>
+//Some Global Variables
+var breakpointMedium = 768,
+    breakpointLarge = 1180;
+
+$(document).foundation();
+
+$(function() {
+
+  //
+  // GLOBAL NAV
+  //
+  // Search
+  $('#global-search-nav-input').focusin(function(){
+    $('.global-search').addClass('expanded');
+    $(this).attr('placeholder','What can we help you find?');
+  });
+  $('#global-search-nav-input').focusout(function(){
+    $('.global-search').removeClass('expanded');
+    $(this).val('');
+    $(this).attr('placeholder','');
+  });
+  // Open Menu
+  $('.toggle-topbar > a').click(function(e){
+    $('.top-bar').toggleClass('expanded');
+    e.preventDefault();
+  });
+
+  // Throttle window resize event for performance and smoothness
+  (function($,sr) {
+    // Debounce function by John Hann
+    // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+    var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced () {
+        var obj = this, args = arguments;
+        function delayed () {
+          if (!execAsap)
+            func.apply(obj, args);
+          timeout = null;
+        };
+        if (timeout)
+          clearTimeout(timeout);
+        else if (execAsap)
+          func.apply(obj, args);
+        timeout = setTimeout(delayed, threshold || 100);
+      };
+    }
+    // Smart Resize function by Paul Irish
+    // http://www.paulirish.com/2009/throttled-smartresize-jquery-event-handler/
+    jQuery.fn[sr] = function(fn) { return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+  })(jQuery,'smartresize');
+
+  // Keep all window resize scripts within the throttling function
+  $(window).smartresize(function() {
+
+    var resizedWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    // Check if window width is at nav breakpoint
+    // Update this value if desktop nav breakpoint is changed from 980px
+    if ( resizedWidth >= 980 ) {
+
+      // Mega dropdown menus in navigation
+      $('.mega-dropdown-link')
+        .mouseenter(function(){
+          var thisButton = $(this),
+              thisDropdown = $('#'+$(this).data('dropdown'));
+          // Clear closing timer when mouse is over the dropdown link
+          clearTimeout(thisButton.data('thisTimeout'));
+          // Open dropdown
+          thisDropdown.cssAnimateAuto('open');
+        })
+        .mouseleave(function(){
+          var thisButton = $(this),
+              thisDropdown = $('#'+$(this).data('dropdown')),
+              thisTimeout = setTimeout(function(){
+                thisDropdown.cssAnimateAuto('close');
+              }, 300);
+          // Set timer to delay closing
+          // This gives time for animation and for mouse to enter dropdown menu
+          thisButton.data('thisTimeout',thisTimeout);
+        });
+      $('.mega-dropdown')
+        .mouseenter(function(){
+          var thisDropdown = $(this),
+              thisButton = $('.mega-dropdown-link[data-dropdown="'+thisDropdown.attr('id')+'"]');
+          // Clear closing timer when mouse enters the dropdown menu
+          clearTimeout(thisButton.data('thisTimeout'));
+        })
+        .mouseleave(function(){
+          // Close dropdown
+          $(this).cssAnimateAuto('close');
+        });
+
+      // Check if top-bar was expanded from mobile nav and remove class
+      if ( $('.top-bar').hasClass('expanded') ) {
+        $('.top-bar').removeClass('expanded');
+      }
+    }
+    else {
+      // Unbind dropdown mouse events
+      $('.mega-dropdown-link').unbind('mouseenter').unbind('mouseleave');
+    }
+
+    //
+    //SECONDARY NAVIGATION
+    //Check and reset secondary navigation if necessary
+    if (resizedWidth >=breakpointMedium){
+      if ((Math.abs($('.table-list').first().data('lastKnownWidth') - resizedWidth)>200)|| typeof($('.table-list').first().data('lastKnownWidth'))==="undefined"){ //If we need to recheck our tableLists
+        resetTableLists();
+        $('.table-list').each(function(){
+          initTableList($(this));
+        });
+      }
+    } else if ($('.table-list-has-more').length > 0){
+      //If we're small and need to reset
+      if ($('.table-list').first().data('lastKnownWidth') > breakpointMedium)
+      {
+        //console.log("hitting the min breakpoint...2");
+        resetTableLists();
+      }
+    }
+
+  });
+
+  // Init functions inside the window resize throttle
+  var initialWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if ( initialWidth >= 980 ) {
+
+    // Mega dropdown menus in navigation
+    $('.mega-dropdown-link')
+      .mouseenter(function(){
+        var thisButton = $(this),
+            thisDropdown = $('#'+$(this).data('dropdown'));
+        // Clear closing timer when mouse is over the dropdown link
+        clearTimeout(thisButton.data('thisTimeout'));
+        // Open dropdown
+        thisDropdown.cssAnimateAuto('open');
+      })
+      .mouseleave(function(){
+        var thisButton = $(this),
+            thisDropdown = $('#'+$(this).data('dropdown')),
+            thisTimeout = setTimeout(function(){
+              thisDropdown.cssAnimateAuto('close');
+            }, 300);
+        // Set timer to delay closing
+        // This gives time for animation and for mouse to enter dropdown menu
+        thisButton.data('thisTimeout',thisTimeout);
+      });
+    $('.mega-dropdown')
+      .mouseenter(function(){
+        var thisDropdown = $(this),
+            thisButton = $('.mega-dropdown-link[data-dropdown="'+thisDropdown.attr('id')+'"]');
+        // Clear closing timer when mouse enters the dropdown menu
+        clearTimeout(thisButton.data('thisTimeout'));
+      })
+      .mouseleave(function(){
+        // Close dropdown
+        $(this).cssAnimateAuto('close');
+      });
+
+  }
+  //
+  //SECONDARY NAVIGATION
+  if (initialWidth >= breakpointMedium){
+    $('.table-list').each(function(){
+      initTableList($(this));
+    });
+  }
+  $('.sub-nav-toggle-button').click(function(){
+    $(this).closest('.default-sub-nav-container').toggleClass('open');
+  });
+
+  // Regular dropdown menus in navigation
+  $('.dropdown-link').click(function(e){
+    var thisButton = $(this),
+        activeClass = 'expanded',
+        otherButtons = $('.dropdown-link').not(thisButton).filter('.'+activeClass);
+    // Close dropdown
+    if ( thisButton.hasClass(activeClass) ) {
+      thisButton.siblings('ul').cssAnimateAuto({
+        action: 'close',
+        openClass: activeClass
+      },function(){
+        thisButton.removeClass(activeClass);
+      });
+      // Remove listener
+      $(document).off('.dropdown');
+    }
+    // Open dropdown
+    else {
+      // Close other dropdowns first
+      if ( otherButtons.length > 0 ) {
+        otherButtons.siblings('ul').cssAnimateAuto({
+          action: 'close',
+          openClass: activeClass
+        },function(){
+          otherButtons.removeClass(activeClass);
+        });
+      }
+      // Now open this one
+      thisButton.addClass(activeClass).siblings('ul').cssAnimateAuto({
+        action: 'open',
+        openClass: activeClass
+      });
+      // Add event listener to document that will close the dropdown if you click outside of it
+      $(document).on('click.dropdown',function(){
+        if ( !$(event.target).parents('.top-bar-section').length || !$(event.target).parents('.home-nav').length ){
+          // Close dropdown
+          thisButton.siblings('ul').cssAnimateAuto({
+            action: 'close',
+            openClass: activeClass
+          },function(){
+            thisButton.removeClass(activeClass);
+          });
+          // Remove listener
+          $(document).off('.dropdown');
+        }
+      });
+    }
+    e.preventDefault();
+    e.stopPropagation();
+  });
+
+});
+
+</script>
+
+
+
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--
+	  Prevent this staging site from showing up in search results.
+	  Don't use this meta tag in the production site.
+	-->
+	<meta name="robots" content="noindex,nofollow">
+
+	<title>Home | Culligan</title>
+
+	<!-- Adobe Typekit Allumi -->
+	<script src="//use.typekit.net/faq3itn.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+	<link href="../css/font-awesome.css" rel="stylesheet">
+	<link href="../css/slick.css" rel="stylesheet">
+	<!-- The main app css file -->
+	<link href="../css/app.css" rel="stylesheet">
+	<style>
+		body{
+			font-family:'dinot';
+		}
+		.button.transparent{
+			width:100%;
+			max-width:155px;
+			background:transparent;
+			border:1px solid #FFF;
+			border-radius:3px;
+			padding:11px 15px;
+			font-size:19px;
+			font-weight:100;
+			margin-right:14px;
+			margin:0px 14px 17px 0px;
+
+			&:hover{
+				color:rgba(0, 91, 19, 0.7);
+				background:#FFF;
+			}
+		}
+	</style>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="../js/slick.min.js"></script>
+	<!-- modernizr to help with some feature detection -->
+	<script src="../js/vendor/custom.modernizr.js"></script>
+</head>
+
+  <body>
+    <div class="top-section">
+      
+<div class="top-header">
+	<div class="row">
+		<div class="small-12 medium-5 columns colwrap">
+			<a class="site-title" href="/"><img src="../img/header/logo.png" /></a>
+			<div class="tag-line">Do it yourself</div>
+		</div>
+		<div class="medium-7 columns">
+			<span class="header-icon hide-for-small medium-6 columns">
+				<div class="colshell medium-12 large-6 columns">
+					<i class="fa fa-briefcase"></i>
+					Solution Guide
+				</div>
+				<div class="colshell medium-12 large-6 columns">
+					<i class="fa fa-map-marker"></i>
+					Find a Retailer
+				</div>
+			</span>
+			<div class="small-12 medium-6 columns">
+				<form>
+			      <i class="fa fa-search fa-fw"></i>
+			      <input type="text" placeholder="Search...">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+      <div class="site-navigation">
+	<div class="row">
+		<ul>
+			<li class="divider show-for-small">
+				<span><i class="fa fa-angle-double-down"></i></span>Products
+			</li>
+			<li>
+				<a href="#">Undersink Systems</a>
+			</li>
+			<li>
+				<a href="#">Whole House Systems</a>
+			</li>
+			<li>
+				<a href="#">Faucet Filters</a>
+			</li>
+			<li>
+				<a href="#">Refrigerator Filters</a>
+			</li>
+			<li class="active">
+				<a href="#">Shower Head Filter</a>
+			</li>
+			<li>
+				<a href="#">Specialty Filters</a>
+			</li>
+			<li>
+				<a href="#">Replacements</a>
+			</li>
+			<li class="mobile-social show-for-small">
+				<span><i class="fa fa-briefcase wide-load"></i></span>Products
+			</li>
+			<li class="mobile-social show-for-small">
+				<span><i class="fa fa-map-marker"></i></span>Products
+			</li>
+		</ul>
+	</div>
+</div>
+    </div>
+
+
+<div class="row mobile-header">
+
+  <div class="show-for-small columns">
+    <div class="mobile-close mobile-toggle">
+      <img src="../img/header/mobile-close.png" />
+    </div>
+
+    <div class="mobile-open mobile-toggle">
+      <img src="../img/header/mobile-open.png" />
+    </div>
+  </div>
+
+  <div class="show-for-small small-10 small-offset-2 columns">
+    <div class="show-for-small">
+      <div class="small-12 columns">
+        <a class="site-title" href="/"><img src="../img/header/logo.png" /></a>
+        <div class="tag-line">Do it yourself</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="home-background-image" style="background-image:url(../img/home/mobile-screenshot.png)"></div>
+
+<div class="home-hero-section">
+	<div class="hero-background-image" style="background-image:url(../img/home/hero-image.png)"></div>
+	<div class="row">
+	<div class="medium-6 medium-offset-6 columns half-background-image">
+		<div class="colshell">
+			<div class="hero-headline">
+				Big headline goes here
+			</div>
+			<div class="hero-content hide-for-small">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+			</div>
+			<div class="button blue">
+				Primary CTA
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<div class="row">
+	<div class="small-12 medium-8 columns">
+		<div class="page-content-include">
+	<div class="row">
+		<div class="content-title">What is Culligan DIY</div>
+		<div class="content-description">Radiis quia rerum madescit neu hominum ignea minantia. Obstabatque egens nubibus conversa aquae onerosior. Sive facientes ligavit: ambitae flamma consistere? Dispositam orbe. Quinta duris origine cinxit mentisque instabilis. Conversa dissaepserat viseret grandia illas dei proxima.</div>
+	</div>
+</div>
+	</div>
+</div>
+
+
+<div class="feature-hero-section">
+	<div class="feature-hero-background-image" style="background-image:url(../img/feature-hero/feature-hero-image.png)">
+		
+<div class="half-background-image">
+	<div class="row">
+		<div class="colshell medium-6 columns ">
+			<div class="hero-title">
+				Feature on Culligan
+			</div>
+			<div class="hero-headline">
+				Shower Head Filters
+			</div>
+			<div class="hero-content">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. Radiis quia rerum madescit neu hominum ignea minantia. Obstabatque egens nubibus conversa aquae onerosior.
+			</div>
+			<div class="row hide-for-small">
+				<div class="small-12 medium-12 large-4 columns">
+					<div class="button transparent">
+						Rain Disc
+					</div>
+				</div>
+				<div class="small-12 medium-12 large-4 columns">
+					<div class="button transparent">
+						Hand Held
+					</div>
+				</div>
+				<div class="small-12 medium-12 large-4 columns">
+				</div>
+			</div>
+			<div class="row hide-for-small">
+				<div class="small-12 medium-12 large-4 columns">
+					<div class="button transparent">
+						Wall Mount
+					</div>
+				</div>
+				<div class="small-12 medium-12 large-4 columns">
+					<div class="button transparent">
+						In-Line
+					</div>
+				</div>
+				<div class="small-12 medium-12 large-4 columns">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+</div>
+
+
+<div class="">
+	<div class="row">
+		<div class="four-featured-products">
+	<div class="row">
+		
+<div class="featured-containment small-12 medium-6 large-3 columns">
+	<div class="colshell">
+		<div class="small-6 medium-12 columns">
+			<img src="../img/four-featured-products/feature-image-1.png" />
+		</div>
+		<div class="small-6 medium-12 columns">
+			<div class="featured-title">Product Name</div>
+			<div class="featured-description hide-for-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+			<form>
+				<label>The Perfect Solution for</label>
+				<input type="submit" class="tablet" value="Chlorine">
+				<input type="submit" class="tablet" value="Scale">
+				<input type="submit" class="tablet" value="Hard Water">
+			</form>
+
+			<div class="view-details">
+				<a href="#">View details</a>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div class="featured-bar"></div>
+</div>
+		
+<div class="featured-containment small-12 medium-6 large-3 columns">
+	<div class="colshell">
+		<div class="small-6 medium-12 columns">
+			<img src="../img/four-featured-products/feature-image-1.png" />
+		</div>
+		<div class="small-6 medium-12 columns">
+			<div class="featured-title">Product Name</div>
+			<div class="featured-description hide-for-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+			<form>
+				<label>The Perfect Solution for</label>
+				<input type="submit" class="tablet" value="Chlorine">
+				<input type="submit" class="tablet" value="Scale">
+				<input type="submit" class="tablet" value="Hard Water">
+			</form>
+
+			<div class="view-details">
+				<a href="#">View details</a>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div class="featured-bar"></div>
+</div>
+		<div class="hide-for-small">
+			
+<div class="featured-containment small-12 medium-6 large-3 columns">
+	<div class="colshell">
+		<div class="small-6 medium-12 columns">
+			<img src="../img/four-featured-products/feature-image-1.png" />
+		</div>
+		<div class="small-6 medium-12 columns">
+			<div class="featured-title">Product Name</div>
+			<div class="featured-description hide-for-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+			<form>
+				<label>The Perfect Solution for</label>
+				<input type="submit" class="tablet" value="Chlorine">
+				<input type="submit" class="tablet" value="Scale">
+				<input type="submit" class="tablet" value="Hard Water">
+			</form>
+
+			<div class="view-details">
+				<a href="#">View details</a>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div class="featured-bar"></div>
+</div>
+			
+<div class="featured-containment small-12 medium-6 large-3 columns">
+	<div class="colshell">
+		<div class="small-6 medium-12 columns">
+			<img src="../img/four-featured-products/feature-image-1.png" />
+		</div>
+		<div class="small-6 medium-12 columns">
+			<div class="featured-title">Product Name</div>
+			<div class="featured-description hide-for-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+			<form>
+				<label>The Perfect Solution for</label>
+				<input type="submit" class="tablet" value="Chlorine">
+				<input type="submit" class="tablet" value="Scale">
+				<input type="submit" class="tablet" value="Hard Water">
+			</form>
+
+			<div class="view-details">
+				<a href="#">View details</a>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div class="featured-bar"></div>
+</div>
+		</div>
+	</div>
+	<div class="show-for-small mobile-view-all">
+		<div class="button secondary">
+			<a href="#">View all shower head filters</a>
+		</div>
+	</div>
+</div>
+	</div>
+</div>
+
+<div class="innovative-droplet-full">
+	<div class="row">
+		<div class="innovative-header">
+	Culligan never stops innovating
+</div>
+	</div>
+	<div class="innovative-droplet-full-image" style="background-image:url(../img/innovative-droplet-full/droplet-full.png)"></div>
+</div>
+
+
+<div class="blue-dot-callout">
+	<div class="blue-dot-left">
+	<div class="row">
+		<div class="small-12 medium-6 columns">
+			<div class="callout-image" style="background-image:url(../img/blue-dot-callout/callout-left-main.png)">
+				<div class="dot-callout hide-for-small hide-for-medium">
+					<div class="row">
+						<div class="medium-4 medium-offset-4 columns">
+							<img src="../img/blue-dot-callout/blue-dot.png" />
+						</div>
+						<div class="medium-4 columns">
+							<div class="callout-text">
+								<img src="../img/blue-dot-callout/bar-shape.png" />
+								Each cartridge lasts
+								<span>10,000 GALLONS</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 medium-6 columns">
+			<div class="colshell">
+				<div class="callout-title">
+					Extended life refills
+				</div>
+				<div class="callout-description">
+					Inclusum illis seductaque nabataeaque moderantum siccis fronde. Obliquis occiduo uno opifex. Pressa terrae calidis feras iussit. Pluvialibus tollere deus quod pugnabant mixta aurea diverso. Fontes corpora pronaque totidemque pontus sed.
+				</div>
+				<div class="see-all">
+					<a href="#">See all filter cartridges</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="blue-dot-right">
+	<div class="row">
+		<div class="small-12 medium-6 columns">
+			<div class="colshell">
+				<div class="callout-image show-for-small" style="background-image:url(../img/blue-dot-callout/callout-right-main.png)"></div>
+				<div class="callout-title">
+					One product many uses
+				</div>
+				<div class="callout-description">
+					Inclusum illis seductaque nabataeaque moderantum siccis fronde. Obliquis occiduo uno opifex. Pressa terrae calidis feras iussit. Pluvialibus tollere deus quod pugnabant mixta aurea diverso. Fontes corpora pronaque totidemque pontus sed. Inclusum illis seductaque nabataeaque moderantum siccis fronde.
+				</div>
+				<div class="see-all">
+					Learn more about the<br>
+					<a href="#">FM-25 Chrome Faucet Mount Water Filter</a>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 medium-6 columns">
+			<div class="callout-image hide-for-small" style="background-image:url(../img/blue-dot-callout/callout-right-main.png)">
+				<div class="dot-callout hide-for-small hide-for-medium">
+					<div class="row">
+						<div class="medium-4 medium-offset-1 columns">
+							<div class="callout-text">
+								Go from unfiltered to
+								<span>Filtered with the flip of a switch</span>
+								<img src="../img/blue-dot-callout/line-shape.png" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="medium-4 medium-offset-1 columns">
+							<img src="../img/blue-dot-callout/blue-dot.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<div class="blue-banner">
+	<div class="row">
+		<img class="water-drop" src="../img/blue-banner/water-drop.png" />
+	</div>
+	<div class="row">
+	<div class="banner-title show-for-small">
+		Aqua Clear Drinking Water System
+	</div>
+	<div class="small-12 medium-6 columns">
+		<div class="banner-left">
+			<div class="banner-title hide-for-small hide-for-medium">
+				Aqua Clear Drinking Water System
+			</div>
+			<img src="../img/blue-banner/water-filter.png" />
+		</div>
+	</div>
+	<div class="small-12 medium-6 columns">
+		<div class="banner-content">
+			"<span>The Aqua Clear Drinking Water System</span> is ulla dictum tortor vel cursus sollicitudin. Phasellus et lacus ut sapien dapibus viverra quis at enim. Nunc aliquam eget quam ut maximus ulla dictum tortor."
+		</div>
+		<div class="content-author show-for-small">
+			- Jane D., Scottsdale Arizona
+		</div>
+		<div class="small-12 medium-6 columns hide-for-small">
+			<div class="button transparent">
+				Learn more
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="site-footer">
+	<div class="row">
+		<div class="small-12 medium-8 columns">
+			<div class="customer-support">
+				<div class="support-title">
+					Customer Support
+				</div>
+				<div class="small-6 medium-4 columns">
+					<ul>
+						<li><a href="#">Product Support</a></li>
+						<li><a href="#">Warranty Registration</a></li>
+						<li><a href="#">Product Manual Library</a></li>
+					</ul>
+				</div>
+				<div class="small-6 medium-4 columns">
+					<ul>
+						<li><a href="#">Contact CulliganDIY</a></li>
+						<li><a href="#">Find a Culligan Man</a></li>
+						<li><a href="#">Call Us 1-800-000-0000</a></li>
+					</ul>
+				</div>
+				<div class="hide-for-small medium-4 columns">
+				</div>
+			</div>
+		</div>
+		<div class="small-12 medium-4 columns">
+			<div class="mailing-list">
+				<div class="mailing-title">Join our mailing list</div>
+				<div class="mailing-tagline">Get the latest on new product launches and promotions!</div>
+			    <div class="row">
+				    <div class="large-12 columns">
+				      <div class="row collapse">
+				        <div class="small-10 columns">
+				          <i class="fa fa-envelope"></i>
+				          <input type="text" placeholder="Email Address">
+				        </div>
+				        <div class="small-2 columns">
+				          <a href="#" class="button postfix">JOIN</a>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+			</div>
+			<div class="social-links">
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="small-12 medium-7">
+			<div class="footer-links">
+				<ul>
+					<li>Copyright 2015 Culligan</li><span>|</span>
+					<li><a href="#">About Culligan</a></li><span>|</span>
+					<li><a href="#">Culligan Cares</a></li><span>|</span>
+					<li><a href="#">Terms</a></li><span>|</span>
+					<li><a href="#">Privacy Policy</a></li><span>|</span>
+					<li><a href="#">Sitemap</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+  </body>
+
+  <script>
+    $(document).ready(function(){
+      $('.mobile-toggle').click(function(){
+        $('html').toggleClass('mobile-menu');
+        $('.mobile-close').toggleClass('indexing');
+      });
+     /* $('.mobile-close').click(function(){
+        $(this).parent().find('.top-section').addClass('mobile-closed');
+        $(this).fadeOut(2000);
+      });*/
+    });
+  </script>
+
+  <style>
+    .mobile-closed{
+        left:-600px;
+    }
+  </style>
+
+</html>
