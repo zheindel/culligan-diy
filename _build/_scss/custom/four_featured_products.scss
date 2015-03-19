@@ -107,21 +107,6 @@
 
 }
 
-
-@media screen and (max-width: 500px) {
-	.four-featured-products{
-		.featured-containment{
-			margin-bottom:20px;
-
-			.columns{
-				width:100%;
-			}
-		}
-	}
-}
-
-
-
 @media #{$small} {
 
 	.four-featured-products{
@@ -163,9 +148,6 @@
 			.view-details{
 				margin:26px 0px;
 				font-size:22px;
-
-				a{
-				}
 			}
 		}
 		.featured-bar{
