@@ -1,0 +1,20 @@
+.find-store-near-you {
+	background-color:$brand-blue;
+	padding:40px 0;
+
+	.button {
+		font-weight: 100;
+	}
+
+	.found-at {
+		color: #fff;
+		display: inline-block;
+		font-size: 24px;
+		margin-top: 3%;
+
+		img {
+			vertical-align: text-bottom;
+			margin-left:12px; 
+		}
+	}
+}

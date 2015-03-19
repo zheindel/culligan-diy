@@ -790,9 +790,9 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
           &:hover {
             background: transparent;
 
-            > a { border-bottom-color: $brand-crimson; }
+            > a { border-bottom-color: $brand-blue; }
             .nav-title,
-            .nav-subtitle { color: $brand-crimson; }
+            .nav-subtitle { color: $brand-blue; }
           }
         }
         .nav-title { color: #000; }
@@ -840,7 +840,7 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
         &.cart-full {
 
           .cart-total {
-            color: $brand-crimson;
+            color: $brand-blue;
             font-weight: 400;
           }
           .expanded .cart-total { color: #fff; }
