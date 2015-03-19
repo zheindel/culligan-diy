@@ -1,88 +1,59 @@
-.hero-section{
+.hero-image-container{
+	background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 	position:relative;
-	padding-bottom:25px;
-	height:312px;
 	margin-bottom:30px;
+	padding-top:162px;
 	
-	&.short-hero {
-		.hero-background-image{
-			height:100px;
-		}
-	}
-	
-	.hero-background-image{
-		position:absolute;
-		z-index:1;
-		display:block;
-		top:0px;
-		opacity:1;
-		width:100%;
-		height:200px;
-		margin:0 auto;
-		background-size:cover;
-		background-repeat:no-repeat;
-	}
-
 	.half-background-image{
-		position:absolute;
-		z-index:1;
-		display:block;
-		right:0;
-		min-height:60%;
-		bottom:0;
 		background:rgba(2, 35, 51, 0.5);
 		color:#FFF;
 		padding:12px 35px;
 
 		.colshell{
 			width:auto;
-			margin-bottom:-192px;
 
 			.hero-headline{
-				font-size:35px;
+				font-size:60px;
 				font-weight:800;
 				line-height:52px;
+				padding-top: 10px;
+				padding-bottom: 25px;
 			}
 
 			.hero-content{
 				margin:53px 0px;
 				font-size:22px;
 			}
-			.button.blue{
-				background: $primary-button-color;
-				padding:22px 25px;
-				border:none;
-				outline:none;
-				border-radius:5px;
-				font-size:23px;
-				margin-top:95px;
-				max-width:265px;
-				width:100%;
-			}
 		}
 	}
 }
-
+.hero-image-container.short-hero {
+	height: 200px;
+}
+.button.blue{
+	background: $primary-button-color;
+	padding:22px 25px;
+	border:none;
+	outline:none;
+	border-radius:5px;
+	font-size:23px;
+	max-width:265px;
+	width:100%;
+}
+.button.small {
+	width:280px;
+	margin-left:26px;
+}
 
 @media #{$small} {
 	
-	.hero-section{
-		height:530px;
-		
-		&.short-hero {
-			.hero-background-image{
-				height: 150px;
-			}
-		}
-		
-		.hero-background-image{
-			height:530px;
-		}
-
+	.hero-image-container{
+		padding-top: 0;
 		.half-background-image{
-			top:0px;
 			padding:6% 46px 0 46px;
-			height:530px;
+			margin-left:50%;
 
 			.colshell{
 				margin-bottom:0px;
@@ -98,7 +69,7 @@
 					line-height:30px;
 				}
 				.button.blue{
-					margin-top:16px;
+					margin-top:95px;
 					max-width:none;
 					font-size:20px;
 					padding:22px 75px;
