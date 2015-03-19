@@ -123,30 +123,6 @@ html.mobile-menu{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media #{$small} {
 
 	.top-section{
@@ -199,7 +175,6 @@ html.mobile-menu{
 			letter-spacing:1px;
 		}
 
-
 		span{
 			margin-top:40px;
 		}
@@ -222,7 +197,6 @@ html.mobile-menu{
 				top:13px;
 				left:8px;
 			}
-
 			input{
 				border:none;
 				padding-left:40px;
@@ -232,89 +206,31 @@ html.mobile-menu{
 				border-radius:5px;
 			}
 		}
-
 		.header-icon{
 			margin-top:18px;
-
 			&.columns{
 				padding:0;
 			}
-			.columns{
-				padding:0;
-			}
-
 			.colshell{
 				margin-bottom:15px;
 			}
-
 		}
-
 	}
-
 	.mobile-header{
 		min-height:0;
 	}
-
 }
 
-
-
-
-
-
-
-
 @media #{$large} {
-
 	.top-header{
-
-		.colwrap{
-		}
-	}
-
-	.tag-line{
-	}
-	.top-header{
-
-		.site-title{
-
-			img{
-			}
-		}
-
-		.tag-line{
-		}
-
-
-		span{
-		}
-
-		i{
-		}
-
 		form{
 			margin-top:32px;
 			margin-bottom:10px;
-
-			i{
-			}
-
-			input{
-			}
 		}
-
 		.header-icon{
 			margin-top:40px;
-			
-			&.columns{
-			}
-			.columns{
-			}
-
 		}
-
 	}
-
 }
 
 
