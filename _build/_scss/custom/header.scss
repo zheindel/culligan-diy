@@ -1,3 +1,6 @@
+body{
+	font-family:$body-font-family;
+}
 html{
 	left:0;
 	transition:left 2s;
@@ -7,7 +10,26 @@ html{
 html.mobile-menu{
 	left:88%;
 }
+.button {
+	box-shadow:none;
+	&.transparent{
+		width:100%;
+		max-width:155px;
+		background:transparent;
+		border:1px solid #FFF;
+		border-radius:3px;
+		padding:11px 15px;
+		font-size:19px;
+		font-weight:100;
+		margin-right:14px;
+		margin:0px 14px 17px 0px;
 
+		&:hover{
+			color:rgba(0, 91, 19, 0.7);
+			background:#FFF;
+		}
+	}
+}
 
 .top-section{
 	position:absolute;
@@ -123,30 +145,6 @@ html.mobile-menu{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media #{$small} {
 
 	.top-section{
@@ -229,89 +227,29 @@ html.mobile-menu{
 				border-radius:5px;
 			}
 		}
-
 		.header-icon{
 			margin-top:18px;
 
 			&.columns{
 				padding:0;
 			}
-			.columns{
-				padding:0;
-			}
-
 			.colshell{
 				margin-bottom:15px;
 			}
-
 		}
-
 	}
-
 	.mobile-header{
 		min-height:0;
 	}
-
 }
-
-
-
-
-
-
-
 
 @media #{$large} {
-
 	.top-header{
-
-		.colwrap{
-		}
-	}
-
-	.tag-line{
-	}
-	.top-header{
-
-		.site-title{
-
-			img{
-			}
-		}
-
-		.tag-line{
-		}
-
-
-		span{
-		}
-
-		i{
-		}
-
 		form{
 			margin-top:26px;
-
-			i{
-			}
-
-			input{
-			}
 		}
-
 		.header-icon{
 			margin-top:35px;
-			
-			&.columns{
-			}
-			.columns{
-			}
-
 		}
-
 	}
-
 }
-
-
-
