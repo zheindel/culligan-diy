@@ -1405,7 +1405,10 @@ $callout-bg-dark-brown: #2f2b27;
 
 
 
-
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/DINOT.otf);
+}
 
 
 
@@ -1424,7 +1427,7 @@ $primary-button-color: #1AB3FF;
 
 $icon-color: #9B9A9F;
 $header-footer-bg-color: #393939;
-$primary-font: sans-serif;
+$primary-font: 'myFirstFont';
 $secondary-font: '';
 $tag-line-color: #FFF;
 $input-bg-color: #1C1C1C;
