@@ -1,0 +1,15 @@
+.featured-products{
+	
+	&.two-featured-products{
+
+		.featured-containment{
+			.medium-12{
+				width:30% !important;
+
+				&.greater-than{
+					width:70% !important;
+				}
+			}
+		}
+	}
+}

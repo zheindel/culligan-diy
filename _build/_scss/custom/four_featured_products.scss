@@ -1,4 +1,4 @@
-.four-featured-products{
+.featured-products{
 	margin-bottom:50px;
 
 	.colshell{
@@ -108,7 +108,7 @@
 
 
 @media screen and (max-width: 500px) {
-	.four-featured-products{
+	.featured-products{
 		.featured-containment{
 			margin-bottom:20px;
 
@@ -123,7 +123,7 @@
 
 @media #{$small} {
 
-	.four-featured-products{
+	.featured-products{
 		padding:0px 20px;
 		margin-bottom:70px;
 
