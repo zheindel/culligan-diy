@@ -63,9 +63,6 @@
 
 	.featured-containment{
 		margin-bottom:20px;
-
-		.columns{
-		}
 	}
 
 	.featured-containment:hover{
@@ -83,6 +80,7 @@
 		}
 		.featured-bar{
 			background:#0F550F;
+			height:19px;
 		}
 	}
 
@@ -174,20 +172,5 @@
 			width:100%;
 			height:23px;
 		}
-
-		.featured-containment{
-		}
-
-		.featured-containment:hover{
-
-			.colshell{
-				}
-				.view-details{
-					a{
-					}
-				}
-			}
-			.featured-bar{
-			}
-		}
 	}
+}
