@@ -4,3 +4,45 @@ title: Category Landing
 slug: category-landing
 path: ../
 ---
+
+<div class="hero-section">
+	<div class="hero-background-image" style="background-image:url(../img/home/hero-image.png)">
+		{% include tall-hero.html %}
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="small-12 medium-8 columns">
+		{% include page-content.html %}
+	</div>
+</div>
+
+
+<div class="feature-hero-section">
+	<div class="feature-hero-background-image" style="background-image:url(../img/feature-hero/feature-hero-image.png)">
+		{% include feature-hero.html %}
+	</div>
+</div>
+
+
+<div class="">
+	<div class="row">
+		{% include four-featured-products.html %}
+	</div>
+</div>
+
+
+<div class="">
+	<div class="row">
+		{% include four-featured-products.html %}
+	</div>
+</div>
+
+
+<div class="blue-banner">
+	<div class="row">
+		<img class="water-drop" src="{{ page.path }}img/blue-banner/water-drop.png" />
+	</div>
+	{% include blue-banner-callout.html %}
+</div>
