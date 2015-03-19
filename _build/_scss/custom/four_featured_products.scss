@@ -1,4 +1,4 @@
-.featured-products{
+.four-featured-products{
 	margin-bottom:50px;
 
 	.colshell{
@@ -107,24 +107,9 @@
 
 }
 
-
-@media screen and (max-width: 500px) {
-	.featured-products{
-		.featured-containment{
-			margin-bottom:20px;
-
-			.columns{
-				width:100%;
-			}
-		}
-	}
-}
-
-
-
 @media #{$small} {
 
-	.featured-products{
+	.four-featured-products{
 		padding:0px 20px;
 		margin-bottom:70px;
 
@@ -163,9 +148,6 @@
 			.view-details{
 				margin:26px 0px;
 				font-size:22px;
-
-				a{
-				}
 			}
 		}
 		.featured-bar{
