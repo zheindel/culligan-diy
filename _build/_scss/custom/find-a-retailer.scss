@@ -1,0 +1,44 @@
+.culligan-retailers {
+	a { 
+		display:block;
+		margin-top:24px;
+		margin-bottom: 60px;
+	}
+	h4 { margin-bottom:27px; }
+}
+.exclusive-product-line {
+	background-color:#f0eff3;
+	padding:20px 24px;
+	max-width:480px;
+
+	a { 
+		display: inline-block;
+		margin-bottom:8px; 
+	}
+
+	.exclusive-logo {
+		margin-top: 10px;
+		margin-bottom: 18px;
+	}
+
+	.image-grid {
+		img {
+			width:47%;
+			float: left;
+			margin-top: 14px;
+			&:first-child{
+				margin-right:13px;
+			}
+		}
+	}
+}
+
+@media #{$small} {
+	.exclusive-product-line {
+		.image-grid {
+			img {
+				width:48%;
+			}
+		}
+	}
+}
