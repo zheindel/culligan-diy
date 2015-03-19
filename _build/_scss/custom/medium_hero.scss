@@ -1,99 +1,17 @@
-.hero-section{
-	position:relative;
-	padding-bottom:25px;
-	height:312px;
-	margin-bottom:30px;
-	
-	.hero-background-image{
-		position:absolute;
-		z-index:1;
-		display:block;
-		top:0px;
-		opacity:1;
-		width:100%;
-		height:200px;
-		margin:0 auto;
-		background-size:cover;
-		background-repeat:no-repeat;
-	}
-
-	.half-background-image{
-		position:absolute;
-		z-index:1;
-		display:block;
-		right:0;
-		min-height:60%;
-		bottom:0;
-		background:rgba(2, 35, 51, 0.5);
-		color:#FFF;
-		padding:12px 35px;
-
-		.colshell{
-			width:auto;
-			margin-bottom:-192px;
-
-			.hero-headline{
-				font-size:35px;
-				font-weight:800;
-				line-height:52px;
-			}
-
-			.hero-content{
-				margin:53px 0px;
-				font-size:22px;
-			}
-			.button.blue{
-				background: $primary-button-color;
-				padding:22px 25px;
-				border:none;
-				outline:none;
-				border-radius:5px;
-				font-size:23px;
-				margin-top:95px;
-				max-width:265px;
-				width:100%;
-			}
-		}
-	}
-}
-
 
 @media #{$small} {
 	
-	.hero-section{
-		height:530px;
-		
+	.hero-section.medium-sized-hero{
+		height:420px;
 		.hero-background-image{
-			height:530px;
+			height:420px;
 		}
-
 		.half-background-image{
-			top:0px;
-			padding:6% 46px 0 46px;
-			height:530px;
-
-			.colshell{
-				margin-bottom:0px;
-
-				.hero-headline{
-					font-size:65px;
-					line-height:72px;
-				}
-
-				.hero-content{
-					margin:32px 0px;
-					font-size:20px;
-					line-height:30px;
-				}
-				.button.blue{
-					margin-top:16px;
-					max-width:none;
-					font-size:20px;
-					padding:22px 75px;
-					width:auto;
-					box-shadow:0px 0px 124px #201F1F;
-				}
+			height:420px;
+			.button.blue{
+				display:none;
 			}
 		}
 	}
+	
 }
