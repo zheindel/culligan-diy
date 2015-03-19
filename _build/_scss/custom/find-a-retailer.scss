@@ -33,6 +33,16 @@
 	}
 }
 
+.hero-image-container {
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+.hero-image-container.short-hero {
+	height: 200px;
+}
+
 @media #{$small} {
 	.exclusive-product-line {
 		.image-grid {
