@@ -1,0 +1,15 @@
+
+@media #{$small} {
+	
+	.hero-section.short-sized-hero{
+		margin-bottom:5px;
+		height:150px;
+		.hero-background-image{
+			height:150px;
+		}
+		.half-background-image{
+			display:none;
+		}
+	}
+	
+}

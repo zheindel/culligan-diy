@@ -1,24 +1,30 @@
 ---
 layout: default
-title: Category Landing
-slug: category-landing
+title: Solutions Main
+slug: solutions-main
 path: ../
 ---
 
-<div class="hero-section medium-sized-hero">
+<div class="hero-section short-sized-hero">
 	<div class="hero-background-image" style="background-image:url(../img/home/hero-image.png)">
 		{% include tall-hero.html %}
 	</div>
-</div>
-
-<div class="navigation-subcategory">
-	  {% include navigation-subcategory.html %}
 </div>
 
 
 <div class="row">
 	<div class="small-12 medium-8 columns">
 		{% include page-content.html %}
+	</div>
+</div>
+
+
+<div class="blue-banner solutions-callout">
+	<div class="row">
+		<div class="small-12 medium-8 columns">
+			<img class="water-drop" src="{{ page.path }}img/blue-banner/water-drop.png" />
+			{% include solutions-callout.html %}
+		</div>
 	</div>
 </div>
 
@@ -41,12 +47,4 @@ path: ../
 	<div class="row">
 		{% include two-featured-products.html %}
 	</div>
-</div>
-
-
-<div class="blue-banner">
-	<div class="row">
-		<img class="water-drop" src="{{ page.path }}img/blue-banner/water-drop.png" />
-	</div>
-	{% include blue-banner-callout.html %}
 </div>
