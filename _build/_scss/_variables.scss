@@ -78,14 +78,13 @@ $font-smoothing: antialiased;
 
 $text-direction: ltr;
 
-// Insight brand colors
+// Culligan brand colors
 
-$brand-crimson: #d30b54;
 $brand-red: #ed1844;
 $brand-magenta: #d30d8c;
 $brand-violet: #b01b86;
 $brand-cyan: #0098bb;
-$brand-blue: #58b6e7;
+$brand-blue: #0099FF;
 
 $brand-darkgray: #554741;
 $brand-mediumgray: #7d716d;
@@ -95,7 +94,7 @@ $home-hero-font-color: $brand-darkgray;
 
 // Default Foundation color variables
 
-$primary-color: $brand-crimson;
+$primary-color: $brand-blue;
 $secondary-color: #e9e9e9;
 $alert-color: #c60f13;
 $success-color: #5da423;
@@ -196,7 +195,7 @@ $block-grid-media-queries: true;
 
 // Control header font styles
 
-$header-font-family: "klinic-slab", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "dinot", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $header-font-weight: 400;
 $header-font-style: normal;
 $header-font-color: #222;

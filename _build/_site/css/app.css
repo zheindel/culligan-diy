@@ -424,40 +424,6 @@ table {
 }
 
 /* ==========================================================================
-    Self Hosted Fonts
-   ========================================================================== */
-/* ==========================================================================
-    Klinic Slab
-   ========================================================================== */
-@font-face {
-  font-family: "klinic-slab";
-  src: url("../fonts/klinicslabbook-webfont.eot");
-  src: url("../fonts/klinicslabbook-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/klinicslabbook-webfont.woff") format("woff"), url("../fonts/klinicslabbook-webfont.ttf") format("truetype"), url("../fonts/klinicslabbook-webfont.svg#klinic-slab") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "klinic-slab";
-  src: url("../fonts/klinicslabbookit-webfont.eot");
-  src: url("../fonts/klinicslabbookit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/klinicslabbookit-webfont.woff") format("woff"), url("../fonts/klinicslabbookit-webfont.ttf") format("truetype"), url("../fonts/klinicslabbookit-webfont.svg#klinic-slab") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "klinic-slab";
-  src: url("../fonts/klinicslablight-webfont.eot");
-  src: url("../fonts/klinicslablight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/klinicslablight-webfont.woff") format("woff"), url("../fonts/klinicslablight-webfont.ttf") format("truetype"), url("../fonts/klinicslablight-webfont.svg#klinic-slab") format("svg");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "klinic-slab";
-  src: url("../fonts/klinicslablightit-webfont.eot");
-  src: url("../fonts/klinicslablightit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/klinicslablightit-webfont.woff") format("woff"), url("../fonts/klinicslablightit-webfont.ttf") format("truetype"), url("../fonts/klinicslablightit-webfont.svg#klinic-slab") format("svg");
-  font-weight: 100;
-  font-style: italic;
-}
-/* ==========================================================================
     Ionicons
    ========================================================================== */
 @font-face {

@@ -5,9 +5,16 @@ slug: product-detail
 path: ../
 ---
 
-<div class="detail-background-image" style="background-image:url(../img/product-detail/screenshot.png)"></div>
-
 <div class="product-detail-gallery">
 	<div class="gallery-background-image" style="background-image:url(../img/product-detail/remodelbath.jpg)"></div>
 	{% include product-detail-gallery.html %}
+</div>
+
+{% include find-store-near-you.html %}
+
+<div class="related-products" style="background-image:url(../img/product-detail/full-screen-splash.png)">
+	<h2 class="text-center">Related Products</h2>
+	<div class="row">
+		{% include four-featured-products.html %}
+	</div>
 </div>

@@ -59,7 +59,7 @@ $experimental: true !default;
 }
 
 // We can control whether or not we have inset shadows edges.
-@mixin inset-shadow($active:true) {
+/*@mixin inset-shadow($active:true) {
   @if $experimental {
     -webkit-box-shadow: $shiny-edge-size $shiny-edge-color inset;
   }
@@ -70,7 +70,7 @@ $experimental: true !default;
       -webkit-box-shadow: $shiny-edge-size $shiny-edge-active-color inset;
     }
     box-shadow: $shiny-edge-size $shiny-edge-active-color inset; } }
-}
+}*/
 
 // We use this to add transitions to elements
 @mixin single-transition($property:all, $speed:300ms, $ease:ease-in-out) {
