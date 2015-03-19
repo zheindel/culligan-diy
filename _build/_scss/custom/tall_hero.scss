@@ -4,6 +4,12 @@
 	height:312px;
 	margin-bottom:30px;
 	
+	&.short-hero {
+		.hero-background-image{
+			height:100px;
+		}
+	}
+	
 	.hero-background-image{
 		position:absolute;
 		z-index:1;
@@ -62,6 +68,12 @@
 	
 	.hero-section{
 		height:530px;
+		
+		&.short-hero {
+			.hero-background-image{
+				height: 150px;
+			}
+		}
 		
 		.hero-background-image{
 			height:530px;
