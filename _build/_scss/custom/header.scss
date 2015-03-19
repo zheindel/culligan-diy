@@ -28,7 +28,7 @@ html.mobile-menu{
 	}
 
 	img{
-		max-height:95px;
+		max-height:80px;
 	}
 }
 
@@ -38,7 +38,7 @@ html.mobile-menu{
 	cursor:pointer;
 
 	img{
-		max-height:95px;
+		max-height:80px;
 	}
 }
 
@@ -184,6 +184,7 @@ html.mobile-menu{
 	.top-header{
 
 		.site-title{
+			width:auto;
 			margin:13px 0px 0px 35px;
 
 			img{
@@ -194,6 +195,8 @@ html.mobile-menu{
 
 		.tag-line{
 			margin-left:35px;
+			top:6px;
+			letter-spacing:1px;
 		}
 
 
@@ -290,7 +293,8 @@ html.mobile-menu{
 		}
 
 		form{
-			margin-top:26px;
+			margin-top:32px;
+			margin-bottom:10px;
 
 			i{
 			}
@@ -300,7 +304,7 @@ html.mobile-menu{
 		}
 
 		.header-icon{
-			margin-top:35px;
+			margin-top:40px;
 			
 			&.columns{
 			}

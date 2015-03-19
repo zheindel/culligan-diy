@@ -10,7 +10,7 @@
 		.dot-callout{
 
 			img{
-				opacity:0.7;
+				opacity:0.8;
 			}
 			.callout-text{
 				margin:15px 0px 0px 0px;
@@ -72,14 +72,18 @@
 
 		.callout-image{
 			background-position:15px 0px;
+			height:350px;
 
 			.dot-callout{
 
 				img{
 				}
 				.callout-text{
+					margin:22px 0px 0px 0px;
+					font-size:17px;
 
 					span{
+						font-size:22px;
 					}
 						
 					img{
@@ -92,20 +96,20 @@
 			padding-left:90px;
 
 			.callout-title{
-				font-size:49px;
+				font-size:44px;
 				max-width:300px;
 				margin-top:20px;
 				font-weight:500;
 			}
 			.callout-description{
 				font-size:18px;
-				margin:33px 0px;
+				margin:40px 0px;
 				line-height:26px;
 			}
 			.see-all{
-					font-size:19px;
+					font-size:20px;
 				a{
-					font-size:19px;
+					font-size:20px;
 				}
 			}
 		}

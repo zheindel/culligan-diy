@@ -24,7 +24,7 @@
 		right:0;
 		min-height:50%;
 		bottom:0;
-		background:rgba(0, 53, 78, 0.5);
+		background:rgba(2, 35, 51, 0.5);
 		color:#FFF;
 		padding:22px 35px;
 
@@ -69,7 +69,7 @@
 
 		.half-background-image{
 			top:0px;
-			padding:78px 35px;
+			padding:82px 46px;
 			height:530px;
 
 			.colshell{
@@ -77,17 +77,22 @@
 				margin-bottom:0px;
 
 				.hero-headline{
-					font-size:68px;
+					font-size:65px;
+					line-height:72px;
 				}
 
 				.hero-content{
+					margin:32px 0px;
+					font-size:20px;
+					line-height:30px;
 				}
 				.button.blue{
-					margin-top:0px;
+					margin-top:16px;
 					max-width:none;
-					font-size:18px;
-					padding:26px 78px;
+					font-size:20px;
+					padding:22px 75px;
 					width:auto;
+					box-shadow:0px 0px 124px #201F1F;
 				}
 			}
 		}

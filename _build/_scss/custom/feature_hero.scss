@@ -46,6 +46,26 @@
 				line-height:22px;
 			}
 		}
+
+
+		.button.transparent{
+			width:100%;
+			max-width:155px;
+			background:transparent;
+			border:1px solid #FFF;
+			border-radius:3px;
+			padding:12px 15px;
+			font-size:16px;
+			letter-spacing:1px;
+			font-weight:100;
+			margin-right:14px;
+			margin:0px 14px 17px 0px;
+
+			&:hover{
+				color:rgba(0, 91, 19, 0.7);
+				background:#FFF;
+			}
+		}
 	}
 }
 
@@ -59,7 +79,7 @@
 		}
 
 		.half-background-image{
-			padding:31px 40px;
+			padding:44px 50px;
 			width:50%;
 
 			.colshell{
@@ -67,17 +87,17 @@
 				max-width:550px;
 
 				.hero-title{
-					font-size:38px;
+					font-size:34px;
 					font-weight:500;
 				}
 				.hero-headline{
-					font-size:43px;
+					font-size:48px;
 					margin-top:10px;
 				}
 
 				.hero-content{
-					font-size:19px;
-					line-height:24px;
+					font-size:17px;
+					line-height:23px;
 					margin:20px 0px 33px;
 				}
 			}

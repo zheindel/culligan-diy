@@ -1,6 +1,6 @@
 .blue-banner{
 	position:relative;
-	background:rgba(10, 80, 239, 0.5);
+	background:rgba(7, 100, 183, 0.73);
 	max-height:none;
 	overflow:visible;
 	margin-bottom:0px;
@@ -32,7 +32,7 @@
 		padding-right:0px;
 
 		img{
-			margin-top:24px auto;
+			margin:24px auto;
 			max-width:300px;
 			width:100%;
 			display:block;
@@ -78,13 +78,14 @@
 		}
 		.water-drop{
 			top:-158px;
-			left:-59px;
+			left:-38px;
+			width:450px;
 		}
 
 		.banner-title{
 			margin-top:27px;
 			color:#FFF;
-			font-size:23px;
+			font-size:24px;
 			text-transform:uppercase;
 			margin-bottom:0px;
 			font-weight:500;
@@ -96,17 +97,38 @@
 
 			img{
 				margin-top:-13px;
+				max-width:370px;
+				float:right;
 			}
 		}
 
 		.banner-content{
-			font-size:21px;
+			font-size:20px;
 			line-height:36px;
+			padding:13px 41px;
+			margin-bottom:55px;
 
 			span{
 			}
 		}
+
+
 		.button.transparent{
+			width:100%;
+			max-width:260px;
+			background:transparent;
+			border:1px solid #000;
+			border-radius:3px;
+			padding:22px 15px;
+			font-size:18px;
+			letter-spacing:1px;
+			font-weight:100;
+			margin:18px 14px 17px 0px;
+
+			&:hover{
+				color:rgba(0, 91, 19, 0.7);
+				background:#FFF;
+			}
 		}
 	}
 
