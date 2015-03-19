@@ -5,6 +5,7 @@
 
 .site-navigation{
 	background-color:#1C1C1C;
+	padding-bottom:50px;
 
 	ul{
 		list-style:none;
@@ -16,28 +17,28 @@
 			&.mobile-social{
 				position:relative;
 				color:#9A999E;
-				font-size:35px;
-				padding:22px 0px;
+				font-size:20px;
+				padding:14px 0px;
 				display:block;
-				border-bottom:1px solid #8E8E8E;
-				padding-left:120px;
+				border-top:1px solid #8E8E8E;
+				padding-left:65px;
 				transition:padding-left .5s;
 				cursor:pointer;
 
 				span{
 					position:absolute;
-					top:20px;
-					left:50px;
+					top:12px;
+					left:26px;
 
 
 					.wide-load{
-						margin-left:-10px;
+						margin-left:-5px;
 					}
 				}
 				&:hover{
 					background-color:#006599;
 					color:#FFF;
-					padding-left:130px;
+					padding-left:75px;
 
 					i{
 						color:#FFF;
@@ -49,16 +50,17 @@
 				position:relative;
 				color:#FFF;
 				background-color:#006599;
-				font-size:35px;
-				padding:22px 0px;
+				font-size:20px;
+				padding:14px 0px;
 				display:block;
 				border-bottom:1px solid #8E8E8E;
-				padding-left:120px;
+				padding-left:65px;
 
 				span{
 					position:absolute;
-					top:20px;
-					left:50px;
+					font-size:21px;
+					top:10px;
+					left:25px;
 
 					i{
 						color:#FFF;
@@ -67,11 +69,15 @@
 			}
 			a{
 				color:#9A999E;
-				font-size:35px;
-				padding:23px 0px;
+				font-size:20px;
+				padding:14px 0px;
 				display:block;
 				border-bottom:1px solid #8E8E8E;
-				margin-left:120px;
+				margin-left:65px;
+
+				&.last-child{
+					border-bottom:none;
+				}
 			}
 			a:hover{
 				background-color:#006599;
@@ -94,6 +100,7 @@
 
 	.site-navigation{
 		background-color:#006599;
+		padding-bottom:0px;
 
 		ul{
 			list-style:none;
