@@ -1,0 +1,18 @@
+
+@media #{$small} {
+	
+	.hero-section.medium-sized-hero{
+		margin-bottom:0;
+		height:420px;
+		.hero-background-image{
+			height:420px;
+		}
+		.half-background-image{
+			height:420px;
+			.button.blue{
+				display:none;
+			}
+		}
+	}
+	
+}
