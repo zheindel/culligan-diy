@@ -70,7 +70,7 @@ script {
  */
 /* line 70, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/_normalize.scss */
 html {
-  font-family: sans-serif;
+  font-family: dinot;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -431,29 +431,25 @@ table {
    ========================================================================== */
 @font-face {
   font-family: "dinot";
-  src: url("../fonts/DINOT.eot");
-  src: url("../fonts/DINOT.eot?#iefix") format("embedded-opentype"), url("../fonts/DINOT.woff") format("woff"), url("../fonts/DINOT.ttf") format("truetype"), url("../fonts/DINOT.svg#dinot") format("svg");
+  src: url("../fonts/DINOT.otf");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "dinot";
-  src: url("../fonts/DINOT-Italic.eot");
-  src: url("../fonts/DINOT-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/DINOT-Italic.woff") format("woff"), url("../fonts/DINOT-Italic.ttf") format("truetype"), url("../fonts/DINOT-Italic.svg#dinot") format("svg");
+  src: url("../fonts/DINOT-Italic.otf");
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
   font-family: "dinot";
-  src: url("../fonts/DINOT-Medium.eot");
-  src: url("../fonts/DINOT-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/DINOT-Medium.woff") format("woff"), url("../fonts/DINOT-Medium.ttf") format("truetype"), url("../fonts/DINOT-Medium.svg#dinot") format("svg");
+  src: url("../fonts/DINOT-Medium.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "dinot";
-  src: url("../fonts/DINOT-MediumItalic.eot");
-  src: url("../fonts/DINOT-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/DINOT-MediumItalic.woff") format("woff"), url("../fonts/DINOT-MediumItalic.ttf") format("truetype"), url("../fonts/DINOT-MediumItalic.svg#dinot") format("svg");
+  src: url("../fonts/DINOT-MediumItalic.otf");
   font-weight: normal;
   font-style: italic;
 }
@@ -462,8 +458,7 @@ table {
    ========================================================================== */
 @font-face {
   font-family: "ionicons";
-  src: url("../fonts/ionicons.eot");
-  src: url("../fonts/ionicons.eot?#iefix") format("embedded-opentype"), url("../fonts/ionicons.woff") format("woff"), url("../fonts/ionicons.ttf") format("truetype"), url("../fonts/ionicons.svg#ionicons") format("svg");
+  src: url("../fonts/ionicons.otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -4897,6 +4892,10 @@ Modified icons to fit ioniconΓÇÖs grid from original.
 /* ==========================================================================
     Foundation Core
    ========================================================================== */
+@font-face {
+  font-family: myFirstFont;
+  src: url(../fonts/DINOT.otf);
+}
 /* line 275, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/foundation/_global.scss */
 meta.foundation-mq-small {
   font-family: "only screen and (min-width: 768px)";
@@ -12189,7 +12188,7 @@ html.mobile-menu {
 /* line 45, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/header.scss */
 .mobile-header {
   background: #393939;
-  min-height: 95px;
+  min-height: 82px;
 }
 
 /* line 50, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/header.scss */
@@ -12202,10 +12201,10 @@ html.mobile-menu {
   position: relative;
   display: inline-block;
   margin-top: 25px;
-  width: 150px;
-  margin-right: 42px;
+  width: 127px;
+  margin-right: 30px;
   z-index: 5;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 /* line 63, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/header.scss */
 .site-title img {
@@ -12220,14 +12219,14 @@ html.mobile-menu {
   color: #FFF;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   z-index: 5;
 }
 
 /* line 78, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/header.scss */
 .top-header {
   position: relative;
-  font-family: sans-serif;
+  font-family: "myFirstFont";
   background: #1C1C1C;
   color: #9B9A9F;
   padding-bottom: 32px;
@@ -12291,7 +12290,7 @@ html.mobile-menu {
   /* line 164, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/header.scss */
   .top-header {
     position: relative;
-    font-family: sans-serif;
+    font-family: "myFirstFont";
     background: #393939;
     color: #9B9A9F;
     padding-bottom: 0;
@@ -12611,20 +12610,20 @@ html.mobile-menu {
   position: absolute;
   z-index: 4;
   display: none;
-  top: 6px;
+  top: 137px;
   left: 0px;
   right: 0px;
   opacity: 0.2;
-  width: 1320px;
-  height: 5070px;
+  width: 450px;
+  height: 4033px;
   margin: 0 auto;
   background-repeat: no-repeat;
 }
 
 /* line 15, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/home.scss */
 .blue-dot-callout {
-  margin: -120px 0px 145px;
-  padding: 0px 25px;
+  margin: -138px 0px 120px;
+  padding: 0px 15px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -12638,7 +12637,7 @@ html.mobile-menu {
 .home-hero-section {
   position: relative;
   padding-bottom: 25px;
-  height: 390px;
+  height: 312px;
   margin-bottom: 30px;
 }
 /* line 7, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/tall_hero.scss */
@@ -12649,7 +12648,7 @@ html.mobile-menu {
   top: 0px;
   opacity: 1;
   width: 100%;
-  height: 390px;
+  height: 312px;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -12673,9 +12672,9 @@ html.mobile-menu {
 }
 /* line 35, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/tall_hero.scss */
 .home-hero-section .half-background-image .colshell .hero-headline {
-  font-size: 64px;
+  font-size: 52px;
   font-weight: 800;
-  line-height: 75px;
+  line-height: 52px;
 }
 /* line 41, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/tall_hero.scss */
 .home-hero-section .half-background-image .colshell .hero-content {
@@ -12685,13 +12684,13 @@ html.mobile-menu {
 /* line 45, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/tall_hero.scss */
 .home-hero-section .half-background-image .colshell .button.blue {
   background: #1AB3FF;
-  padding: 27px 25px;
+  padding: 22px 25px;
   border: none;
   outline: none;
   border-radius: 5px;
-  font-size: 30px;
+  font-size: 23px;
   margin-top: 40px;
-  max-width: 325px;
+  max-width: 265px;
   width: 100%;
 }
 
@@ -12755,7 +12754,7 @@ html.mobile-menu {
   left: 0;
   background: rgba(0, 91, 19, 0.7);
   color: #FFF;
-  padding: 50px 28px;
+  padding: 36px 28px;
 }
 /* line 28, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
 .feature-hero-section .half-background-image .colshell {
@@ -12764,12 +12763,12 @@ html.mobile-menu {
 }
 /* line 32, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
 .feature-hero-section .half-background-image .colshell .hero-title {
-  font-size: 34px;
+  font-size: 26px;
   font-weight: 800;
 }
 /* line 36, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
 .feature-hero-section .half-background-image .colshell .hero-headline {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 800;
   margin-top: 13px;
   text-transform: uppercase;
@@ -12777,8 +12776,8 @@ html.mobile-menu {
 /* line 43, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/feature_hero.scss */
 .feature-hero-section .half-background-image .colshell .hero-content {
   margin: 17px 0px 15px;
-  font-size: 23px;
-  line-height: 27px;
+  font-size: 17px;
+  line-height: 22px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -12820,8 +12819,8 @@ html.mobile-menu {
 /* line 4, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .colshell {
   border: 1px solid #D5D4DA;
-  padding: 0px 25px;
-  margin: 0px 25px;
+  padding: 0px 0px;
+  margin: 0px 10px;
 }
 /* line 9, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .colshell img {
@@ -12832,9 +12831,9 @@ html.mobile-menu {
 }
 /* line 15, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .colshell .featured-title {
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 800px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 /* line 20, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .colshell .featured-description {
@@ -12848,7 +12847,7 @@ html.mobile-menu {
 /* line 28, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .colshell form label {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 10px;
   font-weight: 800;
 }
@@ -12856,19 +12855,19 @@ html.mobile-menu {
 .four-featured-products .colshell form input {
   background: #49AE48;
   color: #FFF;
-  padding: 6px 10px;
+  padding: 3px 10px;
   text-transform: uppercase;
   border: none;
   border-radius: 3px;
-  font-size: 14px;
-  margin-bottom: 16px;
+  font-size: 12px;
+  margin-bottom: 10px;
   font-weight: 800;
-  margin-right: 12px;
+  margin-right: 6px;
 }
 /* line 48, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .colshell .view-details {
-  margin: 61px 0px 22px;
-  font-size: 30px;
+  margin: 45px 0px 22px;
+  font-size: 24px;
 }
 /* line 52, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .colshell .view-details a {
@@ -12876,10 +12875,10 @@ html.mobile-menu {
 }
 /* line 57, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .featured-bar {
-  height: 25px;
+  height: 17px;
   background: #49AE48;
   width: auto;
-  margin: 0px 25px;
+  margin: 0px 10px;
 }
 /* line 64, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .featured-containment {
@@ -12914,8 +12913,8 @@ html.mobile-menu {
   border-radius: 5px;
   outline: 0;
   border: 0;
-  font-size: 26px;
-  padding: 30px 15px;
+  font-size: 22px;
+  padding: 22px 15px;
 }
 /* line 100, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/four_featured_products.scss */
 .four-featured-products .mobile-view-all .button a {
@@ -12973,7 +12972,7 @@ html.mobile-menu {
 }
 /* line 4, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/innovative-droplet-full.scss */
 .innovative-droplet-full .innovative-header {
-  font-size: 65px;
+  font-size: 50px;
   text-align: center;
   font-weight: 800;
   padding: 15px 20px;
@@ -13010,13 +13009,13 @@ html.mobile-menu {
 /* line 1, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_left_callout.scss */
 .blue-dot-left {
   position: relative;
-  margin-bottom: 90px;
+  margin-bottom: 55px;
 }
 /* line 5, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_left_callout.scss */
 .blue-dot-left .callout-image {
   background-size: contain;
   background-repeat: no-repeat;
-  height: 270px;
+  height: 215px;
   background-position: center;
 }
 /* line 13, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_left_callout.scss */
@@ -13046,16 +13045,16 @@ html.mobile-menu {
 }
 /* line 38, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_left_callout.scss */
 .blue-dot-left .colshell .callout-title {
-  font-size: 48px;
+  font-size: 35px;
   color: #000;
   font-weight: 800;
-  margin-top: 20px;
+  margin-top: 11px;
 }
 /* line 44, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_left_callout.scss */
 .blue-dot-left .colshell .callout-description {
-  font-size: 24px;
-  margin: 20px 0px 40px;
-  line-height: 28px;
+  font-size: 18px;
+  margin: 11px 0px 20px;
+  line-height: 22px;
 }
 /* line 51, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_left_callout.scss */
 .blue-dot-left .colshell .see-all a {
@@ -13103,7 +13102,7 @@ html.mobile-menu {
 .blue-dot-right .callout-image {
   background-size: contain;
   background-repeat: no-repeat;
-  height: 270px;
+  height: 215px;
   background-position: center;
 }
 /* line 12, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_right_callout.scss */
@@ -13135,29 +13134,29 @@ html.mobile-menu {
 }
 /* line 39, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_right_callout.scss */
 .blue-dot-right .colshell .callout-title {
-  font-size: 45px;
+  font-size: 34px;
   max-width: none;
-  margin-top: 40px;
+  margin-top: 34px;
   color: #000;
   font-weight: 800;
 }
 /* line 46, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_right_callout.scss */
 .blue-dot-right .colshell .callout-description {
-  font-size: 24px;
-  margin: 20px 0px 25px;
-  line-height: 28px;
+  font-size: 18px;
+  margin: 10px 0px 18px;
+  line-height: 23px;
 }
 /* line 51, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_right_callout.scss */
 .blue-dot-right .colshell .see-all {
   color: #006896;
-  font-size: 27px;
+  font-size: 19px;
 }
 /* line 55, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_dot_right_callout.scss */
 .blue-dot-right .colshell .see-all a {
   color: #006896;
   display: block;
-  margin-top: 5px;
-  font-size: 27px;
+  margin-top: 7px;
+  font-size: 19px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -13220,13 +13219,13 @@ html.mobile-menu {
 }
 /* line 20, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
 .blue-banner .banner-title {
-  margin-top: 32px;
+  margin-top: 25px;
   color: #FFF;
-  font-size: 25px;
+  font-size: 22px;
   text-transform: uppercase;
   font-weight: 800;
   padding: 0px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 /* line 30, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
 .blue-banner .banner-left {
@@ -13235,29 +13234,32 @@ html.mobile-menu {
 }
 /* line 34, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
 .blue-banner .banner-left img {
-  margin-top: 24px;
+  margin-top: 24px auto;
+  max-width: 300px;
+  width: 100%;
+  display: block;
 }
-/* line 39, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+/* line 42, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
 .blue-banner .banner-content {
   color: #FFF;
-  font-size: 25px;
+  font-size: 21px;
   padding: 5px 15px 12px 0px;
-  line-height: 37px;
-  margin-bottom: 16px;
+  line-height: 28px;
+  margin-bottom: 10px;
 }
-/* line 46, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+/* line 49, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
 .blue-banner .banner-content span {
   font-weight: 800;
 }
-/* line 50, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+/* line 53, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
 .blue-banner .content-author {
   color: #FFF;
-  font-size: 28px;
+  font-size: 21px;
   padding: 3px 15px 3px 0px;
-  line-height: 40px;
+  line-height: 28px;
   margin-bottom: 30px;
 }
-/* line 57, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+/* line 60, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
 .blue-banner .button.transparent {
   border: 1px solid #BDBCC1;
   max-width: none;
@@ -13267,17 +13269,17 @@ html.mobile-menu {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 70, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+  /* line 73, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
   .blue-banner {
     max-height: 222px;
     margin-bottom: 235px;
   }
-  /* line 76, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+  /* line 79, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
   .blue-banner .water-drop {
     top: -158px;
     left: -59px;
   }
-  /* line 81, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+  /* line 84, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
   .blue-banner .banner-title {
     margin-top: 27px;
     color: #FFF;
@@ -13287,15 +13289,15 @@ html.mobile-menu {
     font-weight: 500;
     padding: 0;
   }
-  /* line 91, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+  /* line 94, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
   .blue-banner .banner-left {
     padding-right: 35px;
   }
-  /* line 94, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+  /* line 97, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
   .blue-banner .banner-left img {
     margin-top: -13px;
   }
-  /* line 99, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
+  /* line 102, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/blue_banner_callout.scss */
   .blue-banner .banner-content {
     font-size: 21px;
     line-height: 36px;
@@ -13303,20 +13305,20 @@ html.mobile-menu {
 }
 /* line 1, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/page_content.scss */
 .page-content-include {
-  margin: 145px 0px 70px;
+  margin: 105px 0px 55px;
   padding: 0px 35px;
   color: #000;
 }
 /* line 6, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/page_content.scss */
 .page-content-include .content-title {
-  font-size: 44px;
+  font-size: 36px;
   margin-bottom: 25px;
   font-weight: 800;
 }
 /* line 11, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/page_content.scss */
 .page-content-include .content-description {
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 17px;
+  line-height: 22px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -13342,9 +13344,9 @@ html.mobile-menu {
 }
 /* line 7, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .customer-support .support-title {
-  font-size: 39px;
+  font-size: 30px;
   font-weight: 800;
-  margin-top: 36px;
+  margin-top: 29px;
   margin-bottom: 10px;
   color: #FFF;
 }
@@ -13355,53 +13357,53 @@ html.mobile-menu {
 }
 /* line 19, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .customer-support ul li {
-  margin: 13px 0px;
+  margin: 9px 0px;
 }
 /* line 22, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .customer-support ul li a {
   color: #99989D;
-  font-size: 19px;
+  font-size: 15px;
 }
 /* line 32, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .mailing-list .mailing-title {
-  font-size: 42px;
+  font-size: 30px;
   font-weight: 500;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   color: #FFF;
 }
 /* line 39, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .mailing-list .mailing-tagline {
   color: #FFF;
-  font-size: 21px;
-  margin-bottom: 12px;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 /* line 44, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .mailing-list i {
   position: absolute;
-  font-size: 25px;
-  top: 15px;
+  font-size: 17px;
+  top: 12px;
   left: 15px;
 }
 /* line 50, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .mailing-list input {
-  padding-left: 65px;
-  font-size: 22px;
+  padding-left: 51px;
+  font-size: 17px;
   border: 0;
   border-radius: 5px 0px 0px 5px;
-  height: 55px;
+  height: 42px;
   color: #FFF;
 }
 /* line 58, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .mailing-list a {
-  font-size: 23px;
+  font-size: 19px;
   background: #40A6D7;
   border: 0;
-  line-height: 56px;
+  line-height: 42px;
 }
 /* line 66, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .social-links {
-  margin-top: 30px;
+  margin-top: 17px;
   margin-left: 10px;
 }
 /* line 70, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
@@ -13412,11 +13414,11 @@ html.mobile-menu {
 /* line 74, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .social-links ul li {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 25px;
 }
 /* line 78, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .social-links ul li a {
-  font-size: 35px;
+  font-size: 28px;
 }
 /* line 81, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .social-links ul li a i {
@@ -13436,88 +13438,88 @@ html.mobile-menu {
 .site-footer .footer-links ul span {
   color: #99989D;
   display: inline-block;
-  margin: 0px 10px;
-  font-size: 19px;
-  font-weight: 800;
+  margin: 0px 7px;
+  font-size: 17px;
 }
-/* line 105, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+/* line 104, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .footer-links ul li {
   color: #99989D;
   display: inline-block;
-  font-size: 19px;
+  font-size: 15px;
 }
-/* line 110, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+/* line 109, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
 .site-footer .footer-links ul li a {
   color: #99989D;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 127, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 126, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .customer-support .support-title {
     font-size: 26px;
     margin-top: 42px;
     margin-bottom: 12px;
   }
-  /* line 133, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 132, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .customer-support .columns {
     padding: 0;
   }
-  /* line 138, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 137, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .customer-support ul li {
     margin: 0;
   }
-  /* line 141, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 140, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .customer-support ul li a {
     font-size: 14px;
   }
-  /* line 150, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 149, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .mailing-list .mailing-title {
     font-size: 22px;
     margin-top: 47px;
     margin-bottom: 5px;
   }
-  /* line 155, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 154, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .mailing-list .mailing-tagline {
     font-size: 16px;
     margin-bottom: 16px;
   }
-  /* line 159, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 158, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .mailing-list i {
     font-size: 18px;
     top: 11px;
     left: 11px;
   }
-  /* line 164, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 163, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .mailing-list input {
     padding-left: 43px;
     font-size: 18px;
     height: 41px;
     color: #FFF;
   }
-  /* line 170, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 169, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .mailing-list a {
     font-size: 18px;
     border: 0;
   }
-  /* line 176, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 175, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .social-links {
     margin-top: 0;
   }
-  /* line 181, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 180, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .social-links ul li {
     margin-right: 18px;
   }
-  /* line 184, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 183, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .social-links ul li a {
     font-size: 27px;
   }
-  /* line 194, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 193, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .footer-links {
     position: absolute;
     bottom: 0;
     left: 10px;
+    padding: 0px;
   }
-  /* line 204, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
+  /* line 205, C:/Users/MThompson/Desktop/culligan-diy/_build/_scss/custom/footer.scss */
   .site-footer .footer-links ul li {
     font-size: 12px;
   }

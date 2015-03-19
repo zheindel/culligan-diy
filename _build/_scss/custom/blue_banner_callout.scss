@@ -18,13 +18,13 @@
 	}
 
 	.banner-title{
-		margin-top:32px;
+		margin-top:25px;
 		color:#FFF;
-		font-size:25px;
+		font-size:22px;
 		text-transform:uppercase;
 		font-weight:800;
 		padding:0px 15px;
-		margin-bottom:20px;
+		margin-bottom:10px;
 	}
 
 	.banner-left{
@@ -32,16 +32,19 @@
 		padding-right:0px;
 
 		img{
-			margin-top:24px;
+			margin-top:24px auto;
+			max-width:300px;
+			width:100%;
+			display:block;
 		}
 	}
 
 	.banner-content{
 		color:#FFF;
-		font-size:25px;
+		font-size:21px;
 		padding:5px 15px 12px 0px;
-		line-height:37px;
-		margin-bottom:16px;
+		line-height:28px;
+		margin-bottom:10px;
 
 		span{
 			font-weight:800;
@@ -49,9 +52,9 @@
 	}
 	.content-author{
 		color:#FFF;
-		font-size:28px;
+		font-size:21px;
 		padding:3px 15px 3px 0px;
-		line-height:40px;
+		line-height:28px;
 		margin-bottom:30px;
 	}
 	.button.transparent{
