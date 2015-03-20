@@ -1,47 +1,61 @@
 <div class="row">
-	<div class="feature-image small-12 medium-12 columns">
-		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
-		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
-		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
-		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
-		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
-		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
-		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
-		<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
-	</div>
-</div>
-<div class="thumbnail-image-group">
-	<div class="row">
-		<div class="thumbnail-image small-12 medium-7 medium-offset-5 columns">
-			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
-			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
-			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
-			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
-			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
-			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
-			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
-			<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
+	<div class="column medium-5 feature-image-col">
+		<div class="feature-image" >
+			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
+			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
 		</div>
 	</div>
 </div>
-
+<div class="thumbnail-image-group show-for-medium-up">
+	<div class="row">
+		<div class="column medium-7 medium-offset-5">
+			<div class="thumbnail-image">
+				<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
+				<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
+				<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
+				<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
+				<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
+				<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
+				<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-1.png" /></div>
+				<div><img src="{{ page.path }}img/product-detail-gallery/thumbnail-image-2.png" /></div>
+			</div>
+		</div>
+	</div>
+</div>
 <script>
 	$(document).ready(function(){
 		$('.feature-image').slick({
-		  slidesToShow: 1,
-		  slidesToScroll: 1,
-		  arrows: false,
-		  fade: true,
-		  asNavFor: '.thumbnail-image'
+			mobileFirst:true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			dots:true,
+			responsive:[
+				{
+					breakpoint:768,
+					settings:{
+						dots:false,
+						asNavFor: '.thumbnail-image',
+					}
+				}
+			]
 		});
 		$('.thumbnail-image').slick({
-		  slidesToShow: 6,
-		  slidesToScroll: 1,
-		  asNavFor: '.feature-image',
-		  dots: false,
-		  arrows: false,
-		  centerMode: true,
-		  focusOnSelect: true
+			mobileFirst:true,
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			asNavFor: '.feature-image',
+			dots: false,
+			arrows: false,
+			centerMode: true,
+			focusOnSelect: true,
 		});
 	});
 </script>

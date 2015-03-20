@@ -1,0 +1,22 @@
+---
+layout: default
+title: Search Results
+slug: search-results
+path: ../
+---
+
+{% include short-hero.html %}
+
+<div class="row">
+	<div class="column small-12">
+		<h2>58 results for “showerhead”</h2>
+	</div>
+</div>
+
+{% include full-width-search-bar.html %}
+
+{% for i in (1..10) %}
+	{% include search-result-row.html %}
+{% endfor %}
+
+{% include search-load-more.html %}

@@ -10,56 +10,85 @@
 	left:-39px;
 }
 
-
 .product-detail-gallery{
 	position:relative;
-	padding-bottom:25px;
-	
-	.gallery-background-image{
-		position:absolute;
-		z-index:1;
-		display:block;
-		top:0px;
-		opacity:1;
-		width:100%;
-		height:528px;
-		margin:0 auto;
-		background-size:cover;
-		background-repeat:no-repeat;
+	opacity:1;
+	width:100%;
+	margin:0 auto;
+	background-repeat:no-repeat;
+	background-size:0;
+	.feature-image-col{
+		padding:0;
 	}
-
 	.feature-image{
-		position:relative;
-		max-width:500px;
-		height:auto;
-		z-index:3;
-		margin:193px 0px -150px;
+		.slick-slide{
+			img{
+				width:100%;
+			}
+		}
+		.slick-dots{
+			display: block;
+			width: 100%;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+			li{
+				position: relative;
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				margin: 0 5px;
+				padding: 0;
+				cursor: pointer;
+				button{
+					font-size: 0;
+					line-height: 0;
+					display: block;
+					width: 15px;
+					height: 15px;
+					padding: 5px;
+					cursor: pointer;
+					color: transparent;
+					border: 0;
+					outline: none;
+					-webkit-border-radius:50%;
+					-moz-border-radius:50%;
+					border-radius:50%;
+					background: #3a393a;
+				}
+				&.slick-active{
+					button{
+						background:#0199ff;
+					}
+				}
+			}
+		}
 	}
-
 	.thumbnail-image-group{
-		position:relative;
+		position:absolute;
 		z-index:2;
 		background:rgba(0,0,0,.4);
-		padding:15px 0px;
-
+		width:100%;
+		bottom:0;
+		padding:15px 0;
 		.thumbnail-image{
-			position:relative;
-			z-index:2;
-			
 			.slick-slide{
-
+				padding-left:10px;
+				padding-right:10px;
+				img{
+					max-height:80px;
+					max-width:80px;
+					width:100%;
+				}
 				&.slick-center{
-
 					img{
 						border:3px solid #1BB5FF;
-						max-height:80px;
 					}
 				}
 			}
 		}
 	}
 }
-
 .related-products {
 	background-size:0;
 	padding-top:80px;
@@ -71,6 +100,24 @@
 }
 
 @media #{$small} {
+	.product-detail-gallery{
+		background-size:cover;
+		height:528px;
+		margin-bottom:25px;
+		.feature-image-col{
+			padding-left:10px;
+			padding-right:10px;
+		}
+		.feature-image{
+			position:absolute;
+			height:auto;
+			z-index:3;
+			bottom:-553px;
+			max-width:460px;
+			width:100%;
+		}
+	}
+
 	.related-products {
 		background-size:cover;
 	}
