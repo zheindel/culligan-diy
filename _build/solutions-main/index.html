@@ -5,11 +5,27 @@ slug: solutions-main
 path: ../
 ---
 
-<div class="hero-section short-sized-hero">
-	<div class="hero-background-image" style="background-image:url(../img/home/hero-image.png)">
-		{% include tall-hero.html %}
-	</div>
-</div>
+<style>
+	.background-image{
+		position:absolute;
+		z-index:5;
+		top:0px;
+		width:1293px;
+		height:3500px;
+		margin:0 auto;
+		left:0;
+		right:0;
+		background-size:contain;
+		background-repeat:no-repeat;
+		opacity:0.2;
+		display:none;
+	}
+</style>
+
+<div class="background-image" style="background-image:url(../img/home/solutions.png)"></div>
+
+
+{% include short-hero.html %}
 
 
 <div class="row">
@@ -21,18 +37,20 @@ path: ../
 
 <div class="blue-banner solutions-callout">
 	<div class="row">
-		<div class="small-12 medium-8 columns">
+		<div class="small-12 medium-9 columns">
 			<img class="water-drop" src="{{ page.path }}img/blue-banner/water-drop.png" />
 			{% include solutions-callout.html %}
 		</div>
 	</div>
 </div>
 
+<div class="row">
+	<div class="solutions-possible">Possible Solutions</div>
+</div>
 
-<div class="feature-hero-section">
-	<div class="feature-hero-background-image" style="background-image:url(../img/feature-hero/feature-hero-image.png)">
-		{% include feature-hero.html %}
-	</div>
+<div class="three-forth-hero">
+	<div class="innovative-droplet-full-image" style="background-image:url(../img/innovative-droplet-full/droplet-full.png)"></div>
+		{% include three-forth-hero.html %}
 </div>
 
 
@@ -45,6 +63,6 @@ path: ../
 
 <div class="">
 	<div class="row">
-		{% include two-featured-products.html %}
+		{% include four-featured-products.html %}
 	</div>
 </div>
