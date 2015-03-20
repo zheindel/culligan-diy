@@ -1,0 +1,164 @@
+.one-forth-hero{
+	color:#222222;
+	position:relative;
+	margin:0px 0px 50px;
+
+	.one-forth-background{
+		position:absolute;
+		z-index:2;
+		height:100%;
+		width:100%;
+		background:rgba(0, 77, 129, 0.85);
+	}
+
+	.one-forth-background-image{
+		position:relative;
+		z-index:3;
+		width:100%;
+		padding: 30px 15px;
+		background:none;
+	}
+
+
+	img.droplet{
+		position:absolute;
+		z-index:1;
+		width:450px;
+		top:0px;
+		margin-left:-115px;
+	}
+
+	img{
+		max-width:300px;
+		width:100%;
+		margin:0 auto;
+		display:block;
+	}
+	.featured-title{
+		font-size:22px;
+		font-weight:500;
+		margin-top:3px;
+	}
+	.featured-description{
+		font-size:14px;
+	}
+
+
+	form{
+		margin-top:17px;
+
+		label{
+			text-transform:uppercase;
+			font-size:12px;
+			margin-bottom:10px;
+			font-weight:800;
+			color:#222222;
+		}
+		input{
+			background:#545454;
+			color:#FFF;
+			padding:3px 10px;
+			text-transform:uppercase;
+			border:none;
+			border-radius:3px;
+			font-size:12px;
+			margin-bottom:10px;
+			font-weight:500;
+			margin-right:6px;
+		}
+	}
+
+
+
+	.view-details{
+		margin:25px 0px 22px;
+		font-size:18px;
+
+		a{
+			color:#FFF;
+			padding:20px 15px;
+			width:100%;
+			max-width:300px;
+			display:block;
+			text-align:center;
+			background:#004D81;
+		}
+	}
+
+}
+
+
+
+
+@media #{$small} {
+
+	.one-forth-hero{
+
+		.one-forth-background{
+			width:38%;
+		}
+
+		.one-forth-background-image{
+			width:87%;
+			padding: 15px 30px;
+
+			.featured-containment{
+				max-width:1007px;
+				float:right;
+				margin-right:80px;
+			}
+		}
+
+		.innovative-droplet-full-image{
+			width:100%;
+			height:450px;
+			background-repeat:no-repeat;
+			background-size:cover;
+		}
+
+
+		img{
+			max-width:480px;
+			width:100%;
+		}
+		.featured-title{
+			font-size:30px;
+			font-weight:500;
+			margin:3px 0px 10px;
+		}
+		.featured-description{
+			font-size:17px;
+			line-height:22px;
+		}
+
+
+		form{
+			margin-top:26px;
+
+			label{
+				font-size:12px;
+				font-weight:500;
+				margin-bottom:10px;
+			}
+			input{
+				font-size:13px;
+				padding:4px 10px;
+				margin-bottom:6px;
+			}
+		}
+
+		.view-details{
+			margin:34px 0px 15px;
+			font-size:17px;
+
+			a{
+				color:#FFF;
+				padding:16px 15px;
+				width:100%;
+				max-width:380px;
+			}
+		}
+
+	}
+
+}

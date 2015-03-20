@@ -6,9 +6,7 @@ path: ../
 ---
 
 <div class="hero-section medium-sized-hero">
-	<div class="hero-background-image" style="background-image:url(../img/home/hero-image.png)">
-		{% include medium-hero.html %}
-	</div>
+	{% include medium-hero.html %}
 </div>
 
 <div class="navigation-subcategory">
@@ -22,18 +20,27 @@ path: ../
 	</div>
 </div>
 
+{% include subcategory-headline.html %}
 
-<div class="feature-hero-section">
-	<div class="feature-hero-background-image" style="background-image:url(../img/feature-hero/feature-hero-image.png)">
-		{% include feature-hero.html %}
-	</div>
+
+<div class="three-forth-hero">
+	<div class="innovative-droplet-full-image" style="background-image:url(../img/innovative-droplet-full/droplet-full.png)"></div>
+		{% include three-forth-hero.html %}
 </div>
 
 
-<div class="">
+
+<div class="four-container">
 	<div class="row">
 		{% include four-featured-products.html %}
 	</div>
+</div>
+
+{% include subcategory-headline.html %}
+
+
+<div class="one-forth-hero">
+		{% include one-forth-hero.html %}
 </div>
 
 
@@ -43,10 +50,3 @@ path: ../
 	</div>
 </div>
 
-
-<div class="blue-banner">
-	<div class="row">
-		<img class="water-drop" src="{{ page.path }}img/blue-banner/water-drop.png" />
-	</div>
-	{% include blue-banner-callout.html %}
-</div>

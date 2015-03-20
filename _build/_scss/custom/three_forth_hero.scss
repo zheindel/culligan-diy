@@ -1,0 +1,156 @@
+.three-forth-hero{
+	color:#FFF;
+	position:relative;
+
+	.three-forth-background-image{
+		position:relative;
+		z-index:2;
+		width:100%;
+		padding: 30px 15px;
+		background:rgba(0, 77, 129, 0.85);
+		margin-bottom:35px;
+
+		.featured-containment{
+			max-width:750px;
+			float:right;
+			padding:0;
+		}
+	}
+
+	.innovative-droplet-full-image{
+		position:absolute;
+		top:100px;
+		z-index:1;
+		width:100%;
+		height:200px;
+		background-repeat:no-repeat;
+		background-size:contain;
+	}
+
+
+	img{
+		max-width:300px;
+		width:100%;
+		margin:0 auto;
+		display:block;
+	}
+	.featured-title{
+		font-size:22px;
+		font-weight:500;
+		margin-top:3px;
+	}
+	.featured-description{
+		font-size:14px;
+	}
+
+
+	form{
+		margin-top:17px;
+
+		label{
+			text-transform:uppercase;
+			font-size:12px;
+			margin-bottom:10px;
+			font-weight:800;
+			color:#FFF;
+		}
+		input{
+			background:#FFF;
+			color:#4EA7D3;
+			padding:3px 10px;
+			text-transform:uppercase;
+			border:none;
+			border-radius:3px;
+			font-size:12px;
+			margin-bottom:10px;
+			font-weight:800;
+			margin-right:6px;
+		}
+	}
+
+
+
+	.view-details{
+		margin:25px 0px 22px;
+		font-size:18px;
+
+		a{
+			color:#FFF;
+			padding:20px 15px;
+			width:100%;
+			max-width:300px;
+			border:1px solid #FFF;
+			border-radius:5px;
+			display:block;
+			text-align:center;
+		}
+	}
+
+}
+
+
+
+
+@media #{$small} {
+
+	.three-forth-hero{
+
+		.three-forth-background-image{
+			width:61%;
+			padding: 30px 30px;
+		}
+
+		.innovative-droplet-full-image{
+			width:100%;
+			height:450px;
+			background-repeat:no-repeat;
+			background-size:cover;
+		}
+
+
+		img{
+			max-width:400px;
+			width:100%;
+		}
+		.featured-title{
+			font-size:30px;
+			font-weight:500;
+			margin-top:3px;
+			margin-bottom:12px;
+		}
+		.featured-description{
+			font-size:16px;
+			line-height:23px;
+		}
+
+
+		form{
+			margin-top:30px;
+
+			label{
+				font-size:14px;
+				font-weight:500;
+				margin-bottom:10px;
+			}
+			input{
+				font-size:14px;
+				padding:3px 10px;
+				margin-bottom:7px;
+			}
+		}
+
+		.view-details{
+			margin:7px 14px 0px 0px;
+			font-size:19px;
+
+			a{
+				color:#FFF;
+				padding:14px 15px;
+				width:100%;
+				max-width:none;
+			}
+		}
+
+	}
+
+}
