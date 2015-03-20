@@ -1,5 +1,11 @@
-.four-featured-products{
+.four-container{
+	margin-bottom:100px;
+}
+
+.featured-products{
+	position:relative;
 	margin-bottom:50px;
+	z-index:2;
 
 	.colshell{
 		border:1px solid #D5D4DA;	
@@ -57,7 +63,7 @@
 	}
 	.featured-bar{
 		height:17px;
-		background:#49AE48;
+		background:#1A801A;
 		width:auto;
 		margin:0px 10px;
 	}
@@ -109,7 +115,7 @@
 
 @media #{$small} {
 
-	.four-featured-products{
+	.featured-products{
 		padding:0px 20px;
 		margin-bottom:70px;
 

@@ -8,6 +8,17 @@
 
 				&.greater-than{
 					width:70% !important;
+					margin:10px 0px;
+
+					.featured-title{
+						margin-bottom:18px;
+					}
+					.featured-description{
+						line-height:24px;
+					}
+					.view-details{
+						font-size:18px;
+					}
 				}
 			}
 		}

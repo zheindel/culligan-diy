@@ -1,9 +1,18 @@
+
+.solutions-possible{
+	font-size:35px;
+	font-weight:800;
+	text-transform:uppercase;
+	padding:0px 10px;
+	margin-bottom:20px;
+}
+
 .blue-banner.solutions-callout{
 	position:relative;
 	background:none;
 	max-height:none;
 	overflow:visible;
-	margin-bottom:150px;
+	margin:0px 0px 100px;
 
 	.row{
 		position:relative;
@@ -66,15 +75,28 @@
 		padding:23px 10px;
 		background-color: transparent;
 	}
+	.banner-start a{
+		color:#006599;
+		font-size:19px;
+
+		span{
+			font-size:21px;
+			vertical-align:top;
+			margin:0px 2px 0px -11px;
+		}
+		i{
+			color:#006599;
+		}
+	}
 }
 
 
 
 @media #{$small} {
 
-	.blue-banner{
+	.blue-banner.solutions-callout{
 		max-height:222px;
-		margin-bottom:235px;
+		margin-bottom:150px;
 
 		.row{
 		}
@@ -85,17 +107,17 @@
 		}
 
 		.banner-title{
-			margin-top:27px;
-			color:#FFF;
-			font-size:24px;
+			margin-top:30px;
+			color:#000;
+			font-size:32px;
 			text-transform:uppercase;
-			margin-bottom:0px;
-			font-weight:500;
+			margin-bottom:20px;
+			font-weight:800;
 			padding:0;
 		}
 
 		.banner-left{
-			padding-right:35px;
+			padding-right:0px;
 
 			img{
 				margin-top:-13px;
@@ -117,15 +139,15 @@
 
 		.button.transparent{
 			width:100%;
-			max-width:260px;
+			max-width:177px;
 			background:transparent;
 			border:1px solid #000;
 			border-radius:3px;
 			padding:22px 15px;
-			font-size:18px;
+			font-size:20px;
 			letter-spacing:1px;
 			font-weight:100;
-			margin:18px 14px 17px 0px;
+			margin:13px 13px 13px 0px;
 
 			&:hover{
 				color:rgba(0, 91, 19, 0.7);
