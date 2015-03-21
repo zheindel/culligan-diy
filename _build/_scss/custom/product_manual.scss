@@ -1,0 +1,59 @@
+.proudct-manual-container{
+	padding:10px 10px 15px;
+	background-color:#f0eff3;
+	margin:0 -10px 45px -10px;
+	img{
+		margin-bottom:35px;
+	}
+	.warranty{
+		font-size:18px;
+		color:#212121;
+		margin: 0 0 20px 30px;
+		font-weight:400;
+	}
+	.manual-button,.help-button{
+		font-size:15px;
+		line-height:24px;
+		-webkit-border-radius:3px;
+		-moz-border-radius:3px;
+		border-radius:3px;
+		border:none;
+		padding:13px;
+		text-align: left;
+	}
+	.manual-button{
+		color:#534302;
+		background-color:#ffcc01;
+		margin:0 0 15px;
+		.fa{
+			font-size:24px;
+			color:#534302;
+			margin-right:22px;
+			&:before{
+				vertical-align:middle;
+			}
+		}
+	}
+	.help-button{
+		color:#fff;
+		background-color:#3a393a;
+		margin:0;
+		.fa{
+			font-size:24px;
+			color:#fff;
+			margin-right:22px;
+			&:before{
+				vertical-align:middle;
+			}
+		}
+	}
+}
+@media #{$small}{
+	.proudct-manual-container{
+		padding:10px 25px 15px;
+		margin: 0 0 45px;
+		.warranty{
+			margin: 0 0 20px;
+		}	
+	}
+}

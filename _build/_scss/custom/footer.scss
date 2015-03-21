@@ -1,4 +1,3 @@
-
 .site-footer{
 	background:$header-footer-bg-color;
 	
@@ -10,8 +9,8 @@
 			margin-top:29px;
 			margin-bottom:10px;
 			color:#FFF;
-
 		}
+
 		ul{
 			list-style:none;
 			padding-left:0;
@@ -54,6 +53,11 @@
 			border-radius:5px 0px 0px 5px;
 			height:42px;
 			color:#FFF;
+
+			&[type="text"]{
+				box-shadow:none;
+				background-color: #1c1c1c;
+			}
 		}
 		a{
 			font-size:19px;
@@ -88,7 +92,6 @@
 
 	.footer-links{
 		margin-top:10px;
-		padding:0px 20px;
 		
 		ul{
 			list-style:none;
@@ -120,17 +123,11 @@
 
 
 	.site-footer{
-		
 		.customer-support{
-
 			.support-title{
 				font-size:25px;
 				margin-top:45px;
 				margin-bottom:12px;
-			}
-
-			.columns{
-				padding:0;
 			}
 			ul{
 
@@ -174,7 +171,7 @@
 
 		.social-links{
 			margin-top:0;
-			margin-left:2px;
+			margin-left:0;
 
 			ul{
 
@@ -183,21 +180,12 @@
 
 					a{
 						font-size:27px;
-
-						i{
-						}
 					}
 				}
 			}
 		}
 
 		.footer-links{
-			position:absolute;
-			bottom:11px;
-			left:10px;
-			padding:0px;
-
-
 			ul{
 
 				span{
@@ -206,12 +194,8 @@
 
 				li{
 					font-size:12px;
-
-					a{
-					}
 				}
 			}
 		}
 	}
-
 }

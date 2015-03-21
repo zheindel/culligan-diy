@@ -1,20 +1,60 @@
-.find-store-near-you {
-	background-color:$brand-blue;
-	padding:40px 0;
+.find-store-container {
+	margin-bottom:30px;
+	.top-text-wrapper{
+		margin-bottom:30px;
+	}
+	.top-text{
+		color:#3a393a;
+		font-size:22px;
+		text-transform:uppercase;
+		font-weight:500;
+		display:inline-block;
+		line-height:36px;
+		height:36px;
+		vertical-align:middle;
+		margin-right:15px;
+	}
+	.bottom-text{
+		font-size:16px;
+		color:#000;
 
+	}
 	.button {
 		font-weight: 100;
+		border:1px solid $brand-blue;
+		-webkit-border-radius:3px;
+		-moz-border-radius:3px;
+		border-radius:3px;
+		color:#fff;
+		font-size:18px;
+		background-color:$brand-blue;
+		line-height:24px;
+		margin-bottom:20px;
+		padding:18px;
+		.fa {
+			color:#fff;
+			font-size:24px;
+			margin-right:25px;
+			&:before{
+				vertical-align: middle;
+			}
+		}
 	}
-
-	.found-at {
-		color: #fff;
-		display: inline-block;
-		font-size: 24px;
-		margin-top: 3%;
-
-		img {
-			vertical-align: text-bottom;
-			margin-left:12px; 
+}
+@media #{$small}{
+	.find-store-container{
+		&.full-width{
+			background-color:$brand-blue;
+			padding:35px 0 40px;
+			margin:0;
+			.top-text-wrapper{
+				margin:18px 0 0;
+			}
+			.button {
+				background-color:transparent;
+				border:1px solid #fff;
+				margin:0;
+			}
 		}
 	}
 }
