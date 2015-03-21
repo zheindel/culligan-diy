@@ -1,0 +1,41 @@
+.customer-relations{
+	position:relative;
+	background:rgba(7, 100, 183, 0.73);
+	color:#FFF;
+	padding:40px 52px;
+
+	img{
+		position:absolute;
+		top:-50;
+		right:-277px;
+		max-width:500px;
+		width:100%;
+		height:auto;
+		z-index:-1;
+	}
+	.colshell{
+
+
+		.relations-title{
+			font-size:29px;
+		}
+		.relations-phone{
+			font-size:33px;
+			font-weight:500;
+			margin:25px 0px 15px;
+			letter-spacing:2px;
+		}
+		.relations-hours{
+			font-size:17px;
+			margin-bottom:40px;
+		}
+		.relations-address{
+			font-size:17px;
+			line-height:24px;
+
+			span{
+				font-weight:800;
+			}
+		}
+	}
+}
