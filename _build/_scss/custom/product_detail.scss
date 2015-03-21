@@ -3,7 +3,7 @@
 	h1{
 		font-size:33px;
 		line-height:33px;
-		margin:0 0 30px;
+		margin:0 0 60px;
 		color:#000;
 		.trademark{
 			font-size:18px;
@@ -28,14 +28,15 @@
 					$title-bg-hover:#3a393a,
 					$title-bg-active:#3a393a,
 					$title-color-active:#fff,
-					$content-bg:#fff,
-					$content-padding:10px,
+					$content-bg:transparent,
+					$content-padding:0,
 					$section-border-size:0,
 					$section-border-style:solid,
 					$section-border-color:transparent
 				);
 			}
 			.content-custom{
+				padding:10px !important;
 				p{
 					font-size:16px;
 					color:#000;
@@ -125,8 +126,9 @@
 .related-products {
 	background-size:0;
 	padding-top:80px;
+	padding-bottom:80px;
 	h2{ 
-		font-size:30px; 
+		font-size:35px; 
 		font-weight: 500;
 		margin-bottom: 40px;
 	}
@@ -137,14 +139,23 @@
 		h1{
 			font-size:52px;
 			line-height:52px;
+			margin-top:30px;
 			.trademark{
 				font-size:18px;
 				line-height:52px;
 			}
 		}
 		.solution-container{
+			position:relative;
 			h2{
 				margin:8px 0 0;
+			}
+			.small-splash-bg{
+				position:absolute;
+				left:-10px;
+				bottom:-140px;
+				width:100%;
+				max-width:410px;
 			}
 		}
 		.accordion-container{
@@ -153,6 +164,10 @@
 			.section-custom-accordion{
 				margin-bottom:100px;
 				.content-custom{
+					padding:0 !important;
+					.spec-image{
+						margin-left:-10px;
+					}
 					ul{
 						li{
 							font-size:18px;
