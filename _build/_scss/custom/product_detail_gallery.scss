@@ -20,6 +20,7 @@
 			padding: 0;
 			list-style: none;
 			text-align: center;
+			margin-bottom:50px;
 			li{
 				position: relative;
 				display: inline-block;
@@ -91,7 +92,7 @@
 			margin-top:10%;
 			margin-right:auto;
 			margin-left:auto;
-			max-width:70%;
+			max-width:800px;
 			width:100%;
 			max-height:750px;
 		}
@@ -127,7 +128,7 @@
 	.product-detail-gallery{
 		background-size:cover;
 		height:528px;
-		margin-bottom:25px;
+		margin-bottom:30px;
 		.feature-image-col{
 			padding-left:10px;
 			padding-right:10px;
@@ -136,7 +137,7 @@
 			position:absolute;
 			height:auto;
 			z-index:3;
-			bottom:-553px;
+			bottom:-573px;
 			max-width:460px;
 			width:100%;
 		}

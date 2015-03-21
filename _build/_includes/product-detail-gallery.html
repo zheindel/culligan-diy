@@ -9,7 +9,7 @@
 			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
 			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-1.png" /></div>
 			<div><img src="{{ page.path }}img/product-detail-gallery/feature-image-2.png" /></div>
-			<div><div class="video-content"></div></div>
+			<div><img class="video" src="http://img.youtube.com/vi/RWBN230iKts/1.jpg" /></div>
 		</div>
 	</div>
 </div>
@@ -31,9 +31,12 @@
 	</div>
 </div>
 <div class="video-modal" style="display:none;">
-	<a href="#" class="close-video-modal" >Close</a>
-	<div class="video-content"><iframe src="https://www.youtube.com/embed/RWBN230iKts" frameborder="0" allowfullscreen></iframe></div>
+	<div class="video-modal-wrapper">
+		<div class="video-content"><iframe src="https://www.youtube.com/embed/RWBN230iKts" frameborder="0" allowfullscreen></iframe></div>
+		<a href="#" class="close-video-modal" >Close</a>
+	</div>
 </div>
+
 <script>
 	$(document).ready(function(){
 		$('.feature-image').slick({
@@ -66,7 +69,7 @@
 		$('.feature-image').on('afterChange', function(event, slick, currentSlide){
 
 			var curObj = $('.feature-image .slick-slide[data-slick-index="'+currentSlide+'"]');
-			var is_video = curObj.children('div.video-content').length > 0;
+			var is_video = curObj.children('img.video').length > 0;
 			if(is_video){
 				$('.video-modal').show();
 			}

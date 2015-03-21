@@ -1,23 +1,17 @@
-<div class="featured-products">
- 	<div class="row">
- 		<div class="featured-containment small-12 medium-6 large-3 columns">
-			{% include featured-product.html %}
-		</div>
-		<div class="featured-containment small-12 medium-6 large-3 columns">
-			{% include featured-product.html %}
-		</div>
-		<div class="hide-for-small">
-			<div class="featured-containment small-12 medium-6 large-3 columns">
-					{% include featured-product.html %}
-			</div>
-			<div class="featured-containment small-12 medium-6 large-3 columns">
-					{% include featured-product.html %}
-			</div>
-		</div>
- 	</div>
- 	<div class="show-for-small mobile-view-all">
- 		<div class="button secondary">
- 			<a href="#">View all shower head filters</a>
-		</div>
+
+<div class="row featured-products">
+	<div class="small-12 medium-6 large-3 columns">
+		{% include featured-product.html %}
+	</div>
+	<div class="small-12 medium-6 large-3 columns">
+		{% include featured-product.html %}
+	</div>
+	<div class="small-12 medium-6 large-3 columns hide-for-small">
+		{% include featured-product.html %}
+	</div>
+	<div class="small-12 medium-6 large-3 columns hide-for-small">
+		{% include featured-product.html %}
 	</div>
 </div>
+<a class="button secondary show-for-small view-all-button" href="#">View all shower head filters</a>
+

@@ -41,6 +41,7 @@ path: ../
 								<a href="#" class="button primary transparent">Scale</a>
 								<a href="#" class="button primary transparent">Sulfur Odor</a>
 							</div>
+							<img class="small-splash-bg show-for-medium-up" src="{{page.path}}img/product-detail/small-splash.png">
 						</div>
 					</div>
 				</div>
@@ -51,7 +52,7 @@ path: ../
 							<div class="content-custom" data-section-content>
 								<div class="row">
 									<div class="columns medium-6 show-for-medium-up">
-										<img src="{{page.path}}img/product-detail/spec-image.png">
+										<img class="spec-image" src="{{page.path}}img/product-detail/spec-image.png">
 									</div>
 									<div class="columns small-12 medium-5 end">
 										<h2 class="hide-for-small">Features &amp; benefits</h2>
@@ -100,9 +101,11 @@ path: ../
 	{% include find-store-full-width.html %}
 
 	<div class="related-products" style="background-image:url(../img/product-detail/full-screen-splash.png)">
-		<h2 class="text-center">Related Products</h2>
 		<div class="row">
-			{% include four-featured-products.html %}
+			<div class="column">
+				<h2 class="text-center">Related Products</h2>
+				{% include four-featured-products.html %}
+			</div>
 		</div>
 	</div>
 </div>
