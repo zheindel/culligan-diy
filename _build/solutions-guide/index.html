@@ -1,0 +1,45 @@
+---
+layout: default
+title: Solutions Guide
+slug: solutions-guide
+path: ../
+---
+
+
+{% include short-hero.html %}
+
+
+<div class="row">
+	<div class="solutions-guide">
+	    <p class="title-sample" data-section-title><a href="#section5">find similar</a></p>
+	    <div class="content-sample" data-slug="section5" data-section-content>
+	    	<h3>Find Similar Products</h3>
+	      	<p>Inclusum illis seductaque nabataeaque moderantum siccis fronde. Obliquis occiduo uno opifex. Pressa terrae calidis feras iussit. Pluvialibus tollere deus quod pugnabant mixta aurea diverso. Fontes corpora pronaque totidemque pontus sed.</p>
+	      	<form class="custom similar-search-form">
+				<div class="row">
+					<div class="medium-6 columns">
+						{% for i in (1..6) %}
+					     	<label for="checkbox{{ i }}">
+					      		<input name="checkbox{{i}}" type="checkbox" id="checkbox{{ i }}" style="display:none;">
+					      		<span class="custom checkbox"></span>
+					      		Feature Type Label
+					      		<span class="value">Value</span>
+					      	</label>
+						{% endfor %}
+					</div>
+					<div class="medium-6 columns">
+						{% for i in (7..11) %}
+					     	<label for="checkbox{{ i }}">
+					      		<input name="checkbox{{i}}" type="checkbox" id="checkbox{{ i }}" style="display:none;">
+					      		<span class="custom checkbox"></span>
+					      		Feature Type Label
+					      		<span class="value">Value</span>
+					      	</label>
+						{% endfor %}
+					</div>
+				</div>
+			  <div class="button primary">Find Similar</div>
+			</form>
+	    </div>
+	</div>
+</div>
