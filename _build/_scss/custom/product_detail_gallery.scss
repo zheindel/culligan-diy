@@ -61,13 +61,18 @@
 		bottom:0;
 		padding:15px 0;
 		.thumbnail-image{
+			max-width:600px;
+			.slick-list{
+				padding:0 !important; // prevent image cut off
+			}
 			.slick-slide{
-				padding-left:10px;
-				padding-right:10px;
+
 				img{
+					margin:10px;
 					max-height:80px;
 					max-width:80px;
 					width:100%;
+					border:3px solid transparent;
 				}
 				&.slick-center{
 					img{
