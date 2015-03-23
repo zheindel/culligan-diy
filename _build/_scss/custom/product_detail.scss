@@ -35,6 +35,9 @@
 					$section-border-color:transparent
 				);
 			}
+			&.features .features-row{
+				background-size:0;
+			}
 			.content-custom{
 				padding:10px !important;
 				p{
@@ -174,6 +177,11 @@
 						}
 						margin-bottom:60px;
 					}
+				}
+				&.features .features-row{
+					background-repeat:no-repeat;
+					background-position:0 0;
+					background-size:auto;
 				}
 			}
 		}
