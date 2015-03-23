@@ -11,9 +11,11 @@
 
 		}
 		margin-bottom:20px;
+		
 		.inner-wrapper{
-			padding-left:10px;
-			padding-right:10px;
+			padding-top:36px;
+			padding-left:24px;
+			padding-right:24px;
 			border:{
 				top:1px solid #d5d4da;
 				left:1px solid #d5d4da;
@@ -24,28 +26,29 @@
 
 			img{
 				display:block;
-				max-width:none;
+				max-width:168px;
 				width:100%;
-				margin:28px auto 30px;
+				margin:0 auto;
 			}
 			.featured-title{
-				font-size:24px;
+				font-size:22px;
 				font-weight:800px;
-				margin-top:10px;
+				margin-top:28px;
+				font-weight: 100;
 			}
 			.featured-description{
-				margin:10px 0px;
+				margin:12px 0 20px;
 				line-height:20px;
 			}
 
 			form{
-				margin-top:17px;
+				margin-top:0;
 
 				label{
 					text-transform:uppercase;
 					font-size:12px;
 					margin-bottom:10px;
-					font-weight:800;
+					font-weight:100;
 				}
 				input{
 					background:#49AE48;
@@ -53,17 +56,17 @@
 					padding:3px 10px;
 					text-transform:uppercase;
 					border:none;
-					border-radius:3px;
+					border-radius:2px;
 					font-size:12px;
-					margin-bottom:10px;
-					font-weight:800;
+					margin-bottom:8px;
+					font-weight:300;
 					margin-right:6px;
 				}
 			}
 
 			.view-details{
-				margin:45px 0px 22px;
-				font-size:24px;
+				margin:28px 0px 22px;
+				font-size:20px;
 
 				a{
 					color:#49AE48;
