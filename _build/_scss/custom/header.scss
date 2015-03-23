@@ -169,7 +169,7 @@ html.mobile-menu{
 
 		.site-title{
 			width:auto;
-			margin:13px 0px 0px 35px;
+			margin:13px 30px 0px 5px;
 
 			img{
 				max-width:160px;
@@ -178,7 +178,7 @@ html.mobile-menu{
 		}
 
 		.tag-line{
-			margin-left:35px;
+			margin-left:0px;
 			top:6px;
 			letter-spacing:1px;
 		}
@@ -215,12 +215,22 @@ html.mobile-menu{
 			}
 		}
 		.header-icon{
-			margin-top:26px;
+			margin:10px 0px;
 			&.columns{
 				padding:0;
 			}
 			.colshell{
-				margin-bottom:15px;
+				padding:15px 10px;
+				margin:0px 8px;
+				font-size:15px;
+				text-align:center;
+				border-radius:10px;
+				max-width:195px;
+				cursor:pointer;
+
+				i{
+					font-size:18px;
+				}
 			}
 			a { 
 				display:inline-block; 
@@ -238,6 +248,9 @@ html.mobile-menu{
 		form{
 			margin-top:32px;
 			margin-bottom:10px;
+		}
+		.header-icon{
+			margin:28px 0px 0px;
 		}
 	}
 }
