@@ -34,6 +34,21 @@
 					$section-border-style:solid,
 					$section-border-color:transparent
 				);
+				p.title-custom{
+					a:after{
+						content:'\f067';
+						font-family:FontAwesome;
+						float:right;
+						margin-right:10px;
+					}
+				}
+				&.active{
+					p.title-custom{
+						a:after{
+							content:'\f068';
+						}
+					}
+				}
 			}
 			&.features .features-row{
 				background-size:0;
@@ -159,6 +174,7 @@
 				bottom:-140px;
 				width:100%;
 				max-width:410px;
+				z-index:-1;
 			}
 		}
 		.accordion-container{
