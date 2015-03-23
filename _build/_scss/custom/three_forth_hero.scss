@@ -1,7 +1,10 @@
+.four-container {
+	z-index:999;
+	position: relative;
+}
 .three-forth-hero{
 	color:#FFF;
 	position:relative;
-	height:600px;
 
 	.three-forth-background-image{
 		position:relative;
@@ -18,21 +21,21 @@
 		}
 	}
 
-	.innovative-droplet-full-image{
+	.droplet-bg {
 		position:absolute;
 		top:100px;
 		z-index:1;
+		max-width: 100%;
 		width:100%;
-		height:200px;
-		background-repeat:no-repeat;
-		background-size:contain;
+		height:380px;
 	}
 
 	.water-bg{
-		background-position: center top;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	    height: 597px;
+		position: absolute; 
+		height: 557px; 
+		max-width: 100%; 
+		width: 100%; 
+		z-index: 1;
 	}
 
 
