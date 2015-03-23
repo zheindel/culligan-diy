@@ -1442,10 +1442,43 @@ $green-dark: #0E551D;
 
 
 
+//Global Headers
+
+  h1{
+
+  }
+  h2{
+
+  }
+  h3{
+  
+  }
 
 
 
 
+//Primary Button
+  .primary{
+      background:$primary-button-color;
+  }
+  .primary:hover{
+      background:#0099FF;
+  }
+  .primary:active{
+      background:#007FE6;
+  }
+
+
+//Dark Buttons
+  .dark-button{
+      background:#3A3A3A;
+  }
+  .dark-button:hover{
+      background:#545454;
+  }
+  .dark-button:active{
+      background:#212121;
+  }
 
 
 
