@@ -1,162 +1,37 @@
 
-
-
-
-
-
 .solutions-guide {
+    form.custom{
+        label{
+            padding:18px 0;
+            border-bottom:1px solid #ccc;
+            max-width:380px;
+            position:relative;
 
-    .ion-checkmark-circled {
-      color: #608926;
-      font-size: 17px;
-      float: left;
-    }
-    .approved {
-      font-size: 30px;
-      padding-left: 45px;
-      background-repeat: no-repeat;
-      background-position: top left;
-      height: 20px;
-      color: #608926;
-    }
-    .prod-price {
-      font-size: 51px;
-      font-weight: bold;
-      color: #6E6158;
-      line-height: 1;
-    }
-    .prod-stock{
-      font-size:14px;
-    }
-    .title {
-      color: #000;
-      font-family: $header-font-family;
-      font-size: 64px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0px;
-      margin-top: 10px;
-      li {
-        line-height: 31px;
-        span {
-          width: 100px;
-          float: left;
+            span.value{
+                font-weight:100;
+                margin-left:30px;
+            }
+
+            span.custom.checkbox{
+                border-width:3px;
+                margin-right:10px;
+                -webkit-border-radius: 10px 9px 9px 10px/9px 9px 10px 10px;
+                -moz-border-radius: 10px 9px 9px 10px/9px 9px 10px 10px;
+                border-radius: 10px 9px 9px 10px/9px 9px 10px 10px;
+                &.checked{
+                    &:before{
+                        content: "\f120";
+                        font-family: "ionicons";
+                        color: #58b6e7;
+                        top: -8px;
+                        left: 0px;
+                        font-size: 21px;
+                        background: #fff;
+                        display: block;
+                        position: absolute;
+                    }
+                }
+            }
         }
-      }
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media #{$small} {
-  .product-detail-description { 
-    .prod-description-bottom {
-      padding:10px 0px;
-      .approved{
-        font-size:16px;
-        padding: 1px 0px 0px 24px;
-      }
-      .ion-checkmark-circled{
-        color:#608926;
-        font-size:17px;
-        float:left;
-      }
-      .prod-price{
-        font-size:31px;
-        font-weight:500;
-        color:#554741; 
-      }
-      .prod-monthly-rate{
-        font-size:14px;
-        line-height:3;
-        margin:0;
-      }
-    }
-    .prod-ordering-section{
-      padding: 10px 12px;
-      background: #f6f6f2;
-      .add-to.button {
-        padding: 26px 0;
-        font-size: 15px;
-        font-weight: 500;
-        margin: 0px 0px 0px 5px;
-        white-space: nowrap;
-        width:100%;
-      }
-      .content {
-        font-weight: 500;
-        font-size: 15px;
-        padding: 4px 0px 0px 16px;
-        a {
-          color: #000;
-          font-size: 17px;
-        }
-      }
-    }
-    .title{
-      font-size:44px;
-      text-align:left;
-      margin-bottom:0px;
-    }
-  }
-  .product-detail-gallery {
-    margin-top: 120px;
-  }
-}
-
-@media #{$medium} {
-  .product-detail-description { 
-    margin-top: 65px;
-  }
-  .product-detail-gallery { 
-    .thumbnail-container {
-      display:block;
-      position: relative;
-      width:100%;
-      overflow: hidden;
-      padding: 0px 25px;
-    }
-    .slider.large{
-      max-height:328px;
-      height:328px;
-    }
-  }
 }
