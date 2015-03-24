@@ -1,28 +1,30 @@
 .solutions-guide {
-    padding:0px 10px;
-
-    .guide-title{
+    padding-bottom:120px;
+    h1{
         margin:18px 0px;
     }
 
-    p.narrow{
-        font-size:17px;
+    p{
+        font-size:16px;
         color:#000;
     }
 
-    .form-title{
-        font-size:28px;
-        font-weight:500;
-        margin:5px 0px;
-    }
     form.custom{
-
         padding-right:0px;
+        h2{
+            font-size:26px;
+            color:#cdc6c6;
+            font-weight:500;
+            margin:5px 0px;
+        }
         label{
             padding:23px 0;
             border-top:1px solid #ccc;
             position:relative;
-
+            color:#cdc6c6;
+            &:first-child{
+                border-top:none;
+            }
             span.custom.checkbox{
                 border-width:3px;
                 margin-right:10px;
@@ -32,8 +34,8 @@
                 border-radius: 10px 9px 9px 10px/9px 9px 10px 10px;
                 &.checked{
                     &:before{
-                        content: "\f120";
-                        font-family: "ionicons";
+                        content: "\f058";
+                        font-family: "FontAwesome";
                         color: #58b6e7;
                         top: -8px;
                         left: 0px;
@@ -45,12 +47,23 @@
                 }
             }
         }
+        &.active {
+            h2{
+                color:#545454;
+            }
+            label{
+                color:#000;
+                &.active{
+                    color:#58b6e7;
+                }
+            }
 
-        label:first-child{
-            border-top:none;
+            .button{
+                display:block;
+            }
         }
-
         .button{
+            display:none;
             margin-top:16px;
             border-radius:5px;
             width:100%;
@@ -70,7 +83,5 @@
 }
 
 @media #{$large} {
-    .solutions-guide {
-        padding-right:100px;
-    }
+
 }
