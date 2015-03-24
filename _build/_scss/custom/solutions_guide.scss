@@ -14,7 +14,7 @@
         h2{
             font-size:26px;
             color:#cdc6c6;
-            font-weight:500;
+            font-weight:300;
             margin:5px 0px;
         }
         label{
@@ -22,6 +22,7 @@
             border-top:1px solid #ccc;
             position:relative;
             color:#cdc6c6;
+            font-weight: 300;
             &:first-child{
                 border-top:none;
             }
@@ -52,7 +53,7 @@
                 color:#545454;
             }
             label{
-                color:#000;
+                color:#545454;
                 &.active{
                     color:#58b6e7;
                 }
