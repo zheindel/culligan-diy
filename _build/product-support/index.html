@@ -5,52 +5,44 @@ slug: product-support
 path: ../
 ---
 
-<style>
-	.background-image{
-		position:absolute;
-		z-index:5;
-		top:0px;
-		width:1293px;
-		height:3500px;
-		margin:0 auto;
-		left:0;
-		right:0;
-		background-size:contain;
-		background-repeat:no-repeat;
-		opacity:0.2;
-		display:none;
-	}
-</style>
-
-<div class="background-image" style="background-image:url(../img/home/relations.png)"></div>
-
-
 {% include short-hero.html %}
-
-
-<div class="row">
-	<div class="small-12 medium-8 columns">
-		{% include page-content.html %}
-	</div>
-</div>
-
-<div class="two_column">
+<div class="product-support-wrapper">
 	<div class="row">
-		<div class="small-12 medium-6 columns">
+		<div class="column">
+			{% include page-content.html %}
+			<div class="row">
+				<div class="columns medium-6">
+					<div class="support-form">
+						<h2>Get Product Support</h2>
+						<form>						
+					        <select>
+								<option value="default">What product do you need support for?<i class="fa fa-angle-down"></i></option>
+								<option value="husker">Mary</option>
+								<option value="starbuck">Little</option>
+								<option value="hotdog">Hot Dog</option>
+								<option value="apollo">Lamb</option>
+					        </select>
 
-			{% include support-form.html %}
+				    		<input type="text" placeholder="Your Name" />
 
+				    		<input type="text" placeholder="Email Address" />
+
+				    		<input type="text" placeholder="Phone [Optional]" />
+
+					        <textarea placeholder="Comment/Question/Concern"></textarea>
+					      	<input id="checkbox1" type="checkbox"><span>Yes, I would like to receive email communications from Culligan.<a href="#">Privacy Policy</a></span>
+					      	<div class="button primary">
+					      		Submit
+					      	</div>
+						</form>
+					</div>
+				</div>
+				<div class="columns medium-5">
+					{% include customer-relations.html %}
+					{% include support-links.html %}
+				</div>
+			</div>			
 		</div>
-
-
-	    <div class="small-12 medium-5 medium-offset-1 columns">
-
-			{% include customer-relations.html %}
-
-			{% include support-links.html %}
-
-	    </div>
-	
 	</div>
 </div>
 
