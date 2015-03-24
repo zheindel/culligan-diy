@@ -43,6 +43,8 @@
 			a{
 				color:#006896;
 				display:block;
+				font-size:19px;
+				line-height: 21px;
 			}
 		}
 	}
@@ -82,11 +84,18 @@
 			line-height:26px;
 		}
 
+		.colshell{
+			.see-all{
+				a{
+					font-size:17px;
+				}
+			}
+		}
+		
 		.dot-callout{
 			.callout-text{
 				font-size:17px;
 			}
 		}
 	}
-
 }
