@@ -14,3 +14,18 @@
 <div class="button blue primary hide-for-medium-up small">
 	Primary CTA
 </div>
+
+<script type="text/javascript">
+	var fixLeftAlign = function () {
+      var col = $('.site-title')
+      var padding = Math.floor(col.offset().left) + Math.floor(col.css('padding-left').replace('px',''));
+      $(".half-background-image").css('padding-left', padding + 'px');
+    };
+    $(window).on('resize', function () {
+      fixLeftAlign();
+    });
+
+    $(window).on('load', function () {
+      fixLeftAlign();
+    });
+</script>
