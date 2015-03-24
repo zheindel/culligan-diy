@@ -85,6 +85,7 @@ $brand-magenta: #d30d8c;
 $brand-violet: #b01b86;
 $brand-cyan: #0098bb;
 $brand-blue: #0099FF;
+$brand-green: #1a801a;
 
 $brand-darkgray: #554741;
 $brand-mediumgray: #7d716d;
@@ -95,7 +96,7 @@ $home-hero-font-color: $brand-darkgray;
 // Default Foundation color variables
 
 $primary-color: $brand-blue;
-$secondary-color: #e9e9e9;
+$secondary-color: $brand-green;
 $alert-color: #c60f13;
 $success-color: #5da423;
 
