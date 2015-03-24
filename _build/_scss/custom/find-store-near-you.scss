@@ -1,5 +1,7 @@
 .find-store-container {
 	margin-bottom:30px;
+	margin-top:5px;
+	
 	.top-text-wrapper{
 		margin-bottom:30px;
 	}
@@ -31,6 +33,7 @@
 		line-height:24px;
 		margin-bottom:20px;
 		padding:18px;
+		letter-spacing: 2px;
 		.fa {
 			color:#fff;
 			font-size:24px;
@@ -49,6 +52,9 @@
 			margin:0;
 			.top-text-wrapper{
 				margin:18px 0 0;
+				.top-text {
+					color: #fff;
+				}
 			}
 			.button {
 				background-color:transparent;

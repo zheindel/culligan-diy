@@ -1,4 +1,3 @@
-
 .product-detail-content{
 	h1{
 		font-size:33px;
@@ -114,18 +113,20 @@
 	}
 	.solution-container{
 		margin-bottom:15px;
+		margin-top: 30px;
 		h2{
 			font-size:25px;
-			color:#3a393a;
+			color:#000;
 			text-transform:uppercase;
-			font-weight:400;
+			font-weight:bold;
 			margin:0 0 20px;
 		}
 		.button.transparent{
-			padding:13px 33px;
+			padding:22px 48px;
 			margin: 0 25px 15px 0;
 			font-size:18px;
 			color:#212121;
+			letter-spacing: 2px;
 		}
 	}
 }
@@ -155,9 +156,9 @@
 @media #{$small} {
 	.product-detail-content{
 		h1{
-			font-size:52px;
 			line-height:52px;
 			margin-top:30px;
+			margin-bottom:18px;
 			.trademark{
 				font-size:18px;
 				line-height:52px;
@@ -166,12 +167,12 @@
 		.solution-container{
 			position:relative;
 			h2{
-				margin:8px 0 0;
+				margin:15px 0 0;
 			}
 			.small-splash-bg{
 				position:absolute;
 				left:-10px;
-				bottom:-140px;
+				bottom:-126px;
 				width:100%;
 				max-width:410px;
 				z-index:-1;
@@ -182,6 +183,15 @@
 			padding-right:10px;
 			.section-custom-accordion{
 				margin-bottom:100px;
+				.features-content {
+					margin-top: 45px;
+				}
+				.features-benefits {
+					margin-top: 40px;
+				}
+				.product-detail-main {
+					margin-top: 70px;
+				}
 				.content-custom{
 					padding:0 !important;
 					display:block !important;

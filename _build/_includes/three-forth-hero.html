@@ -23,16 +23,16 @@
 	</div>
 </div>
 <script type="text/javascript">
-	var fixLeftAlign = function () {
-      var col = $('.site-title')
+	var fixThreeFourthAlign = function () {
+      var col = $('.site-title');
       var padding = Math.floor(col.offset().left) + Math.floor(col.css('padding-left').replace('px',''));
       $("#three-forth-hero").css('padding-left', padding + 'px');
     };
     $(window).on('resize', function () {
-      fixLeftAlign();
+      fixThreeFourthAlign();
     });
 
     $(window).on('load', function () {
-      fixLeftAlign();
+      fixThreeFourthAlign();
     });
 </script>

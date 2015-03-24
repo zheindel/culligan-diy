@@ -15,6 +15,7 @@ $header-text-rendering: optimizeLegibility !default;
 
 // We use these to control header font sizes
 $h1-font-size: 56px !important;
+$h1-font-size-mobile: 33px !important;
 $h2-font-size: em-calc(37) !default;
 $h3-font-size: em-calc(27) !default;
 $h4-font-size: em-calc(23) !default;
@@ -198,7 +199,7 @@ $microformat-abbr-font-decoration: none !default;
     }
   }
 
-  h1 { font-size: $h1-font-size; letter-spacing: -.03em; font-weight: 800 !important; }
+  h1 { font-size: $h1-font-size-mobile; letter-spacing: -.03em; font-weight: 800 !important; }
   h2 { font-size: $h2-font-size - em-calc(10); }
   h3 { font-size: $h3-font-size - em-calc(5); letter-spacing:0; }
   h4 { font-size: $h4-font-size - em-calc(5); }
