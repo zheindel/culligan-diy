@@ -50,7 +50,7 @@
 					margin-bottom:10px;
 					font-weight:100;
 				}
-				input{
+				input[type="submit"]{
 					background:#49AE48;
 					color:#FFF;
 					padding:3px 10px;
@@ -61,6 +61,9 @@
 					margin-bottom:8px;
 					font-weight:300;
 					margin-right:6px;
+					&:hover{
+						background-color:#0f550f;
+					}
 				}
 			}
 
