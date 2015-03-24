@@ -1,9 +1,5 @@
-.contact-success-wrapper{
+.contact-wrapper{
 	padding-bottom:130px;
-	a{
-		color:#006699;
-		font-size:18px;
-	}
 	.thank-you-wrapper{
 		margin:0 0 20px;
 		h2{
@@ -18,6 +14,7 @@
 			li{
 				margin:0 0 40px;
 				a{
+					color:#006699;
 					font-size:18px;
 				}
 			}
@@ -30,10 +27,14 @@
 			color:#212121;
 			font-size:35px;
 		}
+		a{
+			color:#006699;
+			font-size:18px;
+		}
 	}
 }
 @media #{$small}{
-	.contact-success-wrapper{
+	.contact-wrapper{
 		.thank-you-wrapper{
 			li{
 				&:nth-child(odd){
