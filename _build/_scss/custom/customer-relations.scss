@@ -1,8 +1,12 @@
 .customer-relations-outer-wrapper{
 	position:relative;
-	background-repeat:no-repeat;
-	background-position:top -50px right;
-	background-size:0;
+	img{
+		position:absolute;
+		top:-130px;
+		right:0;
+		z-index:-1;
+		width:100%;
+	}
 	.customer-relations-inner-wrapper{
 		background:rgba(25, 116, 162, 0.90);
 		.customer-relations{
@@ -41,7 +45,6 @@
 
 @media #{$small}{
 	.customer-relations-outer-wrapper{
-		background-size:100%;
-		padding:100px 50px 50px 0;
+		padding-right:50px;
 	}
 }
