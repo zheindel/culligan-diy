@@ -13,15 +13,89 @@
 }
 
 .blue-dot-callout{
-	margin:0px 0px 120px;
+	margin:0 0 120px;
 	padding:0px 15px;
+
+	h3{
+		font-size:35px;
+		color:#000;
+		font-weight:800;
+		margin-top:11px;
+		letter-spacing: 0px;
+	}
+
+	.callout-description{
+		font-size:18px;
+		margin:11px 0px 20px;
+		line-height:22px;
+	}
+
+	.callout-image{
+		background-size:contain;
+		background-repeat:no-repeat;
+		height:215px;
+		background-position:center;
+	}
+	
+	.colshell{
+		padding-left:0px;
+		.see-all {
+			a{
+				color:#006896;
+				display:block;
+				font-size:19px;
+				line-height: 21px;
+			}
+		}
+	}
+
+	.dot-callout{
+		img{
+			opacity:0.8;
+		}
+		.callout-text{
+			margin:15px 0px 0px 0px;
+			font-size:19px;
+
+			span{
+				display:block;
+				font-size:23px;
+				margin-top: 5px;
+				text-transform:uppercase;
+			}
+		}
+	}
 }
 
 @media #{$small} {
 
 	.blue-dot-callout{
-		margin:0px 0px 200px;
+		margin:130px 0px 200px;
 		padding:0px;
-	}
 
+		h3{
+			font-size:44px;
+			margin-top:0;
+			line-height:49px;
+		}
+
+		.callout-description{
+			margin:33px 0px;
+			line-height:26px;
+		}
+
+		.colshell{
+			.see-all{
+				a{
+					font-size:17px;
+				}
+			}
+		}
+		
+		.dot-callout{
+			.callout-text{
+				font-size:17px;
+			}
+		}
+	}
 }

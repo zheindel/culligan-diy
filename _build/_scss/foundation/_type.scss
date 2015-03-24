@@ -14,7 +14,7 @@ $header-bottom-margin: .2em !default;
 $header-text-rendering: optimizeLegibility !default;
 
 // We use these to control header font sizes
-$h1-font-size: em-calc(60) !default;
+$h1-font-size: 56px !important;
 $h2-font-size: em-calc(37) !default;
 $h3-font-size: em-calc(27) !default;
 $h4-font-size: em-calc(23) !default;
@@ -33,7 +33,7 @@ $small-font-size: 60% !default;
 $small-font-color: lighten($header-font-color, 30%) !default;
 
 // We use these to style paragraphs
-$paragraph-font-family: inherit !default;
+$paragraph-font-family: Open Sans;
 $paragraph-font-weight: normal !default;
 $paragraph-font-size: 1em !default;
 $paragraph-line-height: 1.6 !default;
@@ -198,7 +198,7 @@ $microformat-abbr-font-decoration: none !default;
     }
   }
 
-  h1 { font-size: $h1-font-size - em-calc(10); }
+  h1 { font-size: $h1-font-size; letter-spacing: -.03em; font-weight: 800 !important; }
   h2 { font-size: $h2-font-size - em-calc(10); }
   h3 { font-size: $h3-font-size - em-calc(5); letter-spacing:0; }
   h4 { font-size: $h4-font-size - em-calc(5); }

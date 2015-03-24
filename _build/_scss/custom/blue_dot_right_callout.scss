@@ -1,130 +1,47 @@
 .blue-dot-right{
 	position:relative;
 
-	.callout-image{
-		background-size:contain;
-		background-repeat:no-repeat;
-		height:215px;
-		background-position:center;
-
-		.dot-callout{
-
+	.dot-callout{
+		.callout-text{
+			span{
+				line-height:27px;
+			}
+				
 			img{
-				opacity:0.8;
-			}
-			.callout-text{
-				margin:15px 0px 0px 0px;
-				font-size:19px;
-
-				span{
-					display:block;
-					font-size:23px;
-					margin-top:5px;
-					text-transform:uppercase;
-					line-height:27px;
-				}
-					
-				img{
-					display:block;
-					margin:8px 0px 0px 30px;
-					opacity:1;
-				}
-			}
-		}
-	}
-
-	.colshell{
-		padding-left:0px;
-
-		.callout-title{
-			font-size:34px;
-			max-width:none;
-			margin-top:34px;
-			color:#000;
-			font-weight:800;
-		}
-		.callout-description{
-			font-size:18px;
-			margin:10px 0px 18px;
-			line-height:23px;
-		}
-		.see-all{
-				color:#006896;
-				font-size:19px;
-
-			a{
-				color:#006896;
 				display:block;
-				margin-top:7px;
-				font-size:19px;
+				margin:8px 0px 0px 30px;
+				opacity:1;
 			}
 		}
 	}
 }
 
-
-
-
-
 @media #{$small} {
 
 	.blue-dot-right{
-
 		.callout-image{
 			background-position:15px 0px;
 			height:410px;
 
 			.dot-callout{
-
-				img{
-				}
 				.callout-text{
 					margin:22px 0px 0px 0px;
-					font-size:17px;
-
-					span{
-						font-size:22px;
-					}
-						
-					img{
-					}
 				}
 			}
 		}
 
 		.colshell{
 			padding-left:90px;
-
-			.callout-title{
-				font-size:44px;
-				max-width:300px;
-				margin-top:20px;
-				font-weight:500;
-			}
-			.callout-description{
-				font-size:18px;
-				margin:40px 0px;
-				line-height:26px;
-			}
-			.see-all{
-					font-size:20px;
-				a{
-					font-size:20px;
-				}
-			}
 		}
 	}
 
 }
 
-
 @media #{$medium} {
 
 	.blue-dot-right{
-
 		.callout-image{
 			background-position:105px 0px;
 		}
 	}
-
 }

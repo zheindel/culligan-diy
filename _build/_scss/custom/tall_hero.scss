@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
 	position:relative;
 	padding-top:162px;
+	margin-bottom:22px;
 	
 	.half-background-image{
 		background:rgba(2, 35, 51, 0.5);
@@ -13,13 +14,14 @@
 		.colshell{
 			width:auto;
 			max-width: 496px;
-			
+
 			.hero-headline{
 				font-size:60px;
 				font-weight:800;
 				line-height:52px;
 				padding-top: 10px;
 				padding-bottom: 25px;
+				letter-spacing: -.03em;
 			}
 
 			.hero-content{
@@ -51,9 +53,11 @@
 	
 	.hero-image-container{
 		padding-top: 0;
+		margin-bottom: 0;
 		.half-background-image{
-			padding:6% 46px 0 46px;
 			margin-left:50%;
+			padding: 83px 0 0 35px;
+			min-height: 531px;
 
 			.colshell{
 				margin-bottom:0px;
@@ -61,20 +65,25 @@
 				.hero-headline{
 					font-size:70px;
 					line-height:72px;
+					padding-bottom: 32px;
+					padding-top: 0;
 				}
 
 				.hero-content{
-					margin:32px 0px;
 					font-size:20px;
 					line-height:30px;
+					margin:0;
 				}
 				.button.blue{
-					margin-top:95px;
+					margin-top:48px;
 					max-width:none;
 					font-size:20px;
-					padding:22px 75px;
+					padding:23px 64px;
 					width:auto;
 					box-shadow:0px 0px 124px #201F1F;
+					max-width: 280px;
+					letter-spacing: 1px;
+					font-weight: 100;
 				}
 			}
 		}
