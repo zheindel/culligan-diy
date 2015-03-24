@@ -15,7 +15,7 @@ path: ../
 	      	<p>Select the problems associated with your water to find a solution.<br>Check all that apply within one of the categories below.</p>
 	      	<div class="row">
 				<div class="medium-3 columns">
-			      	<form class="custom form-drinking-water">
+			      	<form class="custom form-drinking-water default">
 			      		<h2>Drinking Water</h2>
 				     	<label for="checkbox1">
 				      		<input name="checkbox1" type="checkbox" id="checkbox1" class="hidden-field">
@@ -51,7 +51,7 @@ path: ../
 					</form>
 				</div>
 				<div class="medium-3 medium-offset-1 columns">
-			      	<form class="custom form-house">
+			      	<form class="custom form-house default">
 			      		<h2>Whole House</h2>
 				     	<label for="checkbox1">
 				      		<input name="checkbox1" type="checkbox" id="checkbox7" class="hidden-field">
@@ -77,7 +77,7 @@ path: ../
 					</form>
 				</div>
 				<div class="medium-3 medium-offset-1 columns">
-			      	<form class="custom form-shower">
+			      	<form class="custom form-shower default">
 			      		<h2>Shower</h2>
 				     	<label for="checkbox1">
 				      		<input name="checkbox1" type="checkbox" id="checkbox11" class="hidden-field">
@@ -117,7 +117,7 @@ path: ../
            		$(this).addClass('active');
            	}
             var current_active_form = $(this).parents('form.custom');
-            
+            $('form.custom').removeClass('default');
             if(!current_active_form.hasClass('active')){
             	current_active_form.addClass('active');
             	current_active_form.parents('div').siblings('div').children('form.custom').removeClass('active').children('label').removeClass('active').children('.custom.checkbox').removeClass('checked');
