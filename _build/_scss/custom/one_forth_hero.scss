@@ -19,9 +19,8 @@
 		padding: 30px 15px;
 		background:none;
 
-		h3{ color:#fff; }
+		h3{ color:#000; }
 	}
-
 
 	img.droplet{
 		position:absolute;
@@ -44,7 +43,6 @@
 	.featured-description{
 		font-size:14px;
 	}
-
 
 	form{
 		margin-top:17px;
@@ -69,9 +67,6 @@
 			margin-right:6px;
 		}
 	}
-
-
-
 	.view-details{
 		margin:25px 0px 22px;
 		font-size:18px;
@@ -86,11 +81,7 @@
 			background:#004D81;
 		}
 	}
-
 }
-
-
-
 
 @media #{$small} {
 
@@ -116,7 +107,6 @@
 			background-repeat:no-repeat;
 			background-size:cover;
 		}
-
 
 		img{
 			max-width:480px;
@@ -159,7 +149,5 @@
 				max-width:380px;
 			}
 		}
-
 	}
-
 }

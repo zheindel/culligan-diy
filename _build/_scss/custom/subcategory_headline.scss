@@ -2,5 +2,9 @@
 	font-size:35px;
 	font-weight:800;
 	padding:0px 10px;
-	margin:2px 0px 38px;
+	margin:2px 0px 30px;
+
+	&.top-spacing{
+		margin-top: 80px;
+	}
 }

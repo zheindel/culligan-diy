@@ -4,7 +4,7 @@
 	color:#000;
 
 	.content-title{
-		margin-bottom:25px;
+		margin-bottom:26px;
 	}
 	.content-description{
 		line-height:22px;
@@ -14,12 +14,9 @@
 @media #{$small} {
 
 	.page-content-include{
-		margin:28px 0px 90px;
+		margin:28px 0px 60px;
 		padding:0px 10px;
 
-		.content-title{
-			margin-bottom:44px;
-		}
 		.content-description{
 			font-size:16px;
 			line-height:23px;
