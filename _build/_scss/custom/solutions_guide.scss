@@ -1,24 +1,32 @@
-
 .solutions-guide {
+    padding:0px 10px;
+
+    .guide-title{
+        margin:18px 0px;
+    }
+
     p.narrow{
         font-size:17px;
         color:#000;
     }
-    form.custom{
-        label{
-            padding:18px 0;
-            border-bottom:1px solid #ccc;
-            max-width:380px;
-            position:relative;
 
-            span.value{
-                font-weight:100;
-                margin-left:30px;
-            }
+    .form-title{
+        font-size:28px;
+        font-weight:500;
+        margin:5px 0px;
+    }
+    form.custom{
+
+        padding-right:0px;
+        label{
+            padding:23px 0;
+            border-top:1px solid #ccc;
+            position:relative;
 
             span.custom.checkbox{
                 border-width:3px;
                 margin-right:10px;
+                margin-left:5px;
                 -webkit-border-radius: 10px 9px 9px 10px/9px 9px 10px 10px;
                 -moz-border-radius: 10px 9px 9px 10px/9px 9px 10px 10px;
                 border-radius: 10px 9px 9px 10px/9px 9px 10px 10px;
@@ -33,6 +41,48 @@
                         background: #fff;
                         display: block;
                         position: absolute;
+                    }
+                }
+            }
+        }
+
+        label:first-child{
+            border-top:none;
+        }
+
+        .button{
+            margin-top:16px;
+            border-radius:5px;
+            width:100%;
+            border:none;
+            outline:none;
+            font-weight:500;
+            font-size:17px;
+            letter-spacing:2px;
+        }
+    }
+}
+
+
+@media #{$small} {
+    
+}
+
+
+@media #{$medium} {
+
+
+}
+
+
+@media #{$large} {
+    .solutions-guide {
+            padding-right:100px;
+            label{
+                span.custom.checkbox{
+                    &.checked{
+                        &:before{
+                        }
                     }
                 }
             }
