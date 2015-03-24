@@ -63,29 +63,14 @@
     }
 }
 
-
-@media #{$small} {
-    
+@media #{$small} {   
 }
-
 
 @media #{$medium} {
-
-
 }
-
 
 @media #{$large} {
     .solutions-guide {
-            padding-right:100px;
-            label{
-                span.custom.checkbox{
-                    &.checked{
-                        &:before{
-                        }
-                    }
-                }
-            }
-        }
+        padding-right:100px;
     }
 }
