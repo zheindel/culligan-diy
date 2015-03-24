@@ -14,7 +14,7 @@ path: ../
 				<div class="columns medium-6">
 					<div class="support-form">
 						<h2>Get Product Support</h2>
-						<form>						
+						<form class="custom">						
 					        <select>
 								<option value="default">What product do you need support for?<i class="fa fa-angle-down"></i></option>
 								<option value="husker">Mary</option>
@@ -32,7 +32,11 @@ path: ../
 					        <textarea placeholder="Comment/Question/Concern"></textarea>
 					      	
 					      	<div class="policy-container">
-					      		<input id="checkbox1" type="checkbox"><span>Yes, I would like to receive email communications from Culligan.<br/><a href="#">Privacy Policy</a></span>
+					      		<label class="checkbox-label" for="policy checkbox">
+					      			<input id="policy-checkbox" name="policy-checkbox" type="checkbox" class="hidden-field">
+					      			<span class="checkbox custom"></span>
+					      			Yes, I would like to receive email communications from Culligan.<br/><a href="#">Privacy Policy</a>
+					      		</label>
 					      	</div>
 					      	<a href="#" class="button primary">Submit</a>
 						</form>

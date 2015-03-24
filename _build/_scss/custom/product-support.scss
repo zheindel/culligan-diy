@@ -45,7 +45,7 @@
 				color:#000;
 				width:100%;
 				height:225px;
-				margin-bottom:7px;
+				margin-bottom:20px;
 				background:#F0EFF4;
 				padding:25px;
 				border:none;
@@ -55,23 +55,31 @@
 			}
 
 			.policy-container{
-				margin-top:35px;
+				margin:0;
 				padding-left:25px;
-				input[type=checkbox]{
-					position:relative;
-					max-width:25px;
-					float:left;
-					margin-right:10px;
-					margin-left:-25px;
-				}
-				span{
+				label{
 					font-size:16px;
-					display:inline-block;
+					span.checkbox.custom{
+						position:relative;
+						max-width:25px;
+						float:left;
+						margin-right:10px;
+						margin-left:-25px;
+						background-color:#F0EFF4;
+						&.checked:before{
+							color:#000;
+							content:'\f00c';
+							font-family:FontAwesome;
+							margin-top:6px;
+							margin-left:-8px;
+						}
+					}
 					a{
 						display:inline-block;
 						margin-top:10px;
-					}
-				}			
+					}						
+				}
+		
 			}
 			.button{
 				margin:55px 0px;
