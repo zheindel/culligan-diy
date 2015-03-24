@@ -48,6 +48,14 @@
                 }
             }
         }
+        &.default{
+            h2{
+                color:#545454;
+            }
+            label{
+                color:#000;
+            }
+        }
         &.active {
             h2{
                 color:#545454;
