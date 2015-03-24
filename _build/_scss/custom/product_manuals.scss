@@ -1,86 +1,71 @@
-
-.solutions-guide {
-    padding:0px 10px;
-
-    .grey-box{
-        background:#F0EFF4;
-        padding:20px;
-        margin-top:13px;
-
-        .grey-title{
-            font-size:24px;
-            font-weight:800;
-            color:#000;
-            margin-bottom:14px;
-        }
-        .grey-tag{
-            font-size:14px;
-            color:#000;
-            margin-bottom:25px;
-        }
-        .buttons{
-            color:#FFF;
-            padding:18px 5px;
-            width:100%;
-            font-size:14px;
-            letter-spacing:2px;
-            text-align:center;
-            border-radius:5px;
-        }
+.product-manuals-wrapper{
+    padding-bottom:120px;
+    .heading{
+        margin-bottom:30px;
     }
-
-    .support-manuals{
-        margin:40px 0px 80px;
+    h1{
+        font-size:56px;
+        color:#212121;
+        margin:0 0 20px;
     }
-
-
-    .guide-title{
-        margin:18px 0px;
-    }
-
-    p.narrow{
-        font-size:17px;
+    p{
+        font-size:16px;
         color:#000;
     }
-
-    .form-title{
-        font-size:28px;
-        font-weight:500;
-        margin:5px 0px;
-    }
-    ul.custom{
-        list-style:none;
-        padding-left:0;
-
-        padding-right:0px;
-        li{
-            padding:19px 0;
-            border-top:1px solid #ccc;
-            position:relative;
-            font-size:15px;
-            i{
-                font-size:23px;
-                margin-right:14px;
+    .support-manuals{
+        h2{
+            font-size:26px;
+            color:#545454;
+            font-weight:300;
+            
+        }
+        ul{
+            li{
+                border-top:1px solid #ccc;
+                padding:20px 0;
+                &:first-child{
+                    border-top:none;
+                }
+                a{
+                    display:block;
+                    font-size:14px;
+                    color:#000;
+                    padding-left:44px;
+                    &:hover{
+                        color:#000;
+                    }
+                    .fa{
+                        float:left;
+                        margin-left:-44px;
+                        font-size:24px;
+                        color:#544302;
+                    }
+                }
             }
         }
-
-        li:first-child{
-            border-top:none;
-        }
     }
-}
+    .grey-box{
+        background-color:#f0eff3;
+        padding:20px;
+        margin-bottom:30px;
+        h2{
+            color:#212121;
+            font-size:24px;
 
-@media #{$small} {
-    
-}
-
-@media #{$medium} {
-
-
-}
-
-@media #{$large} {
-    ul.custom{
-        padding-right:100px;
+        }
+        p{
+            font-size:14px;
+            color:#000;
+        }
+        .button{
+            background-color:#3a393a;
+            color:#f0eff3;
+            padding:20px;
+            font-size:15px;
+            -webkit-border-radius:3px;
+            -moz-border-radius:3px;
+            border-radius:3px;
+            margin:0;
+        }
     }
 }
