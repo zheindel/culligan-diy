@@ -1,0 +1,86 @@
+
+.solutions-guide {
+    padding:0px 10px;
+
+    .grey-box{
+        background:#F0EFF4;
+        padding:20px;
+        margin-top:13px;
+
+        .grey-title{
+            font-size:24px;
+            font-weight:800;
+            color:#000;
+            margin-bottom:14px;
+        }
+        .grey-tag{
+            font-size:14px;
+            color:#000;
+            margin-bottom:25px;
+        }
+        .buttons{
+            color:#FFF;
+            padding:18px 5px;
+            width:100%;
+            font-size:14px;
+            letter-spacing:2px;
+            text-align:center;
+            border-radius:5px;
+        }
+    }
+
+    .support-manuals{
+        margin:40px 0px 80px;
+    }
+
+
+    .guide-title{
+        margin:18px 0px;
+    }
+
+    p.narrow{
+        font-size:17px;
+        color:#000;
+    }
+
+    .form-title{
+        font-size:28px;
+        font-weight:500;
+        margin:5px 0px;
+    }
+    ul.custom{
+        list-style:none;
+        padding-left:0;
+
+        padding-right:0px;
+        li{
+            padding:19px 0;
+            border-top:1px solid #ccc;
+            position:relative;
+            font-size:15px;
+            i{
+                font-size:23px;
+                margin-right:14px;
+            }
+        }
+
+        li:first-child{
+            border-top:none;
+        }
+    }
+}
+
+@media #{$small} {
+    
+}
+
+@media #{$medium} {
+
+
+}
+
+@media #{$large} {
+    ul.custom{
+        padding-right:100px;
+    }
+}
