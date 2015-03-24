@@ -77,18 +77,18 @@
 		.half-background-image{
 			padding:36px 56px 0 48px;
 			width:49.5%;
-			min-height: 427px;
+			min-height: 500px;
 
 			.colshell{
 				float:right;
 				max-width:550px;
 
 				.hero-title{
-					font-size:34px;
+					font-size:30px;
 					font-weight:500;
 				}
 				.hero-headline{
-					font-size:46px;
+					font-size:40px;
 					margin-top:10px;
 				}
 
@@ -100,5 +100,21 @@
 			}
 		}
 	}
+}
 
+@media #{$medium} {
+	.feature-hero-section{
+		.half-background-image{
+			min-height: 440px;
+
+			.colshell{
+				.hero-title{
+					font-size:34px;
+				}
+				.hero-headline{
+					font-size:46px;
+				}
+			}
+		}
+	}
 }
