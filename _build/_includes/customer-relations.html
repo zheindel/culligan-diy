@@ -1,5 +1,5 @@
 <div class="customer-relations-outer-wrapper">
-    <img class="show-for-medium-up" src="{{page.path}}img/blue-banner/sidebar-splash.png">
+    <img class="show-for-medium-up sidebar-splash" src="{{page.path}}img/blue-banner/sidebar-splash.png">
     <div class="customer-relations-inner-wrapper">
         <div class="customer-relations">
             <h2 class="relations-title">
@@ -20,3 +20,21 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    var fixRightAlign = function () {
+      var col = $('.hero-image-container')
+      var padding = Math.floor(col.offset().left); //+ Math.floor(col.css('width').replace('px',''));
+      var pg = $('.page-content-include');
+      var offsetwidth = (pg.outerWidth() - col.outerWidth() + pg.offset().left);
+
+      $(".sidebar-splash").css('right', offsetwidth);
+    };
+    $(window).on('resize', function () {
+      fixRightAlign();
+    });
+
+    $(window).on('load', function () {
+      fixRightAlign();
+    });
+</script>
