@@ -1,0 +1,34 @@
+<div class="support-form">
+  {% if page.slug =='product-support' %}
+    <h2>Get Product Support</h2>
+  {% elsif page.slug == 'contact-us' %}
+    <h2>Contact Culligan DIY</h2>
+  {% endif %}
+  <form class="custom">  
+    {% if page.slug == 'product-support' %}   
+      <select>
+        <option value="default">What product do you need support for?<i class="fa fa-angle-down"></i></option>
+        <option value="husker">Mary</option>
+        <option value="starbuck">Little</option>
+        <option value="hotdog">Hot Dog</option>
+        <option value="apollo">Lamb</option>
+      </select>
+    {% endif %}
+      <input type="text" placeholder="Your Name" />
+
+      <input type="text" placeholder="Email Address" />
+
+      <input type="text" placeholder="Phone [Optional]" />
+
+        <textarea placeholder="Comment/Question/Concern"></textarea>
+        
+        <div class="policy-container">
+          <label class="checkbox-label" for="policy checkbox">
+            <input id="policy-checkbox" name="policy-checkbox" type="checkbox" class="hidden-field">
+            <span class="checkbox custom"></span>
+            Yes, I would like to receive email communications from Culligan.<br/><a href="#">Privacy Policy</a>
+          </label>
+        </div>
+        <a href="#" class="button primary">Submit</a>
+  </form>
+</div>

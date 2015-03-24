@@ -1,26 +1,9 @@
 .page-content-include{
-	margin:0 0px 55px;
-	padding:0px 35px;
-	color:#000;
-
-	.content-title{
-		margin-bottom:26px;
+	padding:50px 0 80px;
+	h1{
+		font-size:56px;
+		margin: 0 0 30px;
+		font-weight:700;
+		color:#212121;
 	}
-	.content-description{
-		line-height:22px;
-	}
-}
-
-@media #{$small} {
-
-	.page-content-include{
-		margin:28px 0px 60px;
-		padding:0px 10px;
-
-		.content-description{
-			font-size:16px;
-			line-height:23px;
-		}
-	}
-
 }
