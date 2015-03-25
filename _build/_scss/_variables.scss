@@ -1482,6 +1482,42 @@ $green-dark: #0E551D;
       background:#212121;
   }
 
+// Global margin styles
+$global-space-sml: 10px;
+$global-space-med: 20px;
+$global-space-lrg: 30px;
+$global-space-xl:  40px;
+$global-space-xxl: 50px;
 
+.margin-sml  { margin-top: $global-space-sml !important; margin-bottom: $global-space-sml !important; }
+.margin-med  { margin-top: $global-space-med !important; margin-bottom: $global-space-med !important; }
+.margin-lrg  { margin-top: $global-space-lrg !important; margin-bottom: $global-space-lrg !important; }
+.margin-xl   { margin-top: $global-space-xl !important; margin-bottom: $global-space-xl !important; }
+.margin-xxl  { margin-top: $global-space-xxl !important; margin-bottom: $global-space-xxl !important; }
+.padding-sml { padding-top: $global-space-sml !important; padding-bottom: $global-space-sml !important; }
+.padding-med { padding-top: $global-space-med !important; padding-bottom: $global-space-med !important; }
+.padding-lrg { padding-top: $global-space-lrg !important; padding-bottom: $global-space-lrg !important; }
+.padding-xl  { padding-top: $global-space-xl !important; padding-bottom: $global-space-xl !important; }
+.padding-xxl { padding-top: $global-space-xxl !important; padding-bottom: $global-space-xxl !important; }
 
-//
+.margin-top-sml  { margin-top: $global-space-sml !important; }
+.margin-top-med  { margin-top: $global-space-med !important; }
+.margin-top-lrg  { margin-top: $global-space-lrg !important; }
+.margin-top-xl   { margin-top: $global-space-xl !important; }
+.margin-top-xxl  { margin-top: $global-space-xxl !important; }
+.padding-top-sml { padding-top: $global-space-sml !important; }
+.padding-top-med { padding-top: $global-space-med !important; }
+.padding-top-lrg { padding-top: $global-space-lrg !important; }
+.padding-top-xl  { padding-top: $global-space-xl !important; }
+.padding-top-xxl { padding-top: $global-space-xxl !important; }
+
+.margin-bot-sml  { margin-bottom: $global-space-sml !important; }
+.margin-bot-med  { margin-bottom: $global-space-med !important; }
+.margin-bot-lrg  { margin-bottom: $global-space-lrg !important; }
+.margin-bot-xl   { margin-bottom: $global-space-xl !important; }
+.margin-bot-xxl  { margin-bottom: $global-space-xxl !important; }
+.padding-bot-sml { padding-bottom: $global-space-sml !important; }
+.padding-bot-med { padding-bottom: $global-space-med !important; }
+.padding-bot-lrg { padding-bottom: $global-space-lrg !important; }
+.padding-bot-xl  { padding-bottom: $global-space-xl !important; }
+.padding-bot-xxl { padding-bottom: $global-space-xxl !important; }
