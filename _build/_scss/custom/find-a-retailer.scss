@@ -1,15 +1,17 @@
 .culligan-retailers {
+	margin-top:13px;
 	a { 
 		display:block;
 		margin-top:24px;
 		margin-bottom: 60px;
 	}
-	h4 { margin-bottom:27px; }
+	h4 { margin-bottom:33px; }
 }
+.diy-retailers { margin-top:35px; }
 .exclusive-product-line {
 	background-color:#f0eff3;
-	padding:20px 24px;
-	max-width:480px;
+	padding:13px 18px 20px;
+	margin-bottom:30px;
 
 	a { 
 		display: inline-block;
@@ -27,18 +29,39 @@
 			float: left;
 			margin-top: 14px;
 			&:first-child{
-				margin-right:13px;
+				margin-right:10px;
 			}
 		}
 	}
 }
+.retailer-links {
+	margin-top:18px;
+}
 
 @media #{$small} {
 	.exclusive-product-line {
+		max-width:480px;
+		margin-bottom:50px;
 		.image-grid {
 			img {
 				width:48%;
 			}
 		}
+	}
+}
+@media #{$medium} {
+	.exclusive-product-line {
+		margin-bottom:100px;
+		.image-grid {
+			img {
+				width:48%;
+				&:first-child{
+					margin-right:13px;
+				}
+			}
+		}
+	}
+	.retailer-links {
+		margin-top:48px;
 	}
 }
