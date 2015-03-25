@@ -118,3 +118,42 @@
 		}
 	}
 }
+@media only screen and (min-width:768px) and (max-width:849px){
+	.navigation-subcategory{
+		.site-navigation{
+			ul{
+				li{
+					a{
+						font-size:12px;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:850px) and (max-width:949px){
+	.navigation-subcategory{
+		.site-navigation{
+			ul{
+				li{
+					a{
+						font-size:13px;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:950px) and (max-width:1023px){
+	.navigation-subcategory{
+		.site-navigation{
+			ul{
+				li{
+					a{
+						font-size:14px;
+					}
+				}
+			}
+		
+	}}
+}
