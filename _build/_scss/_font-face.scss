@@ -5,7 +5,6 @@
 @mixin declare-font-face($font-family, $font-filename, $font-weight, $font-style) {
   @font-face {
     font-family: "#{$font-family}";
-    src: url("../fonts/#{$font-filename}.otf");
     src: url("../fonts/#{$font-filename}.eot");
     src: url("../fonts/#{$font-filename}.eot?#iefix") format("embedded-opentype"),
          url("../fonts/#{$font-filename}.woff") format("woff"),
