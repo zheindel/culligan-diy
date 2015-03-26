@@ -1,5 +1,5 @@
 .navigation-subcategory{
-
+	margin-top:-22px; //Tall hero margin.
 	.site-navigation{
 		background-color:#67666B;
 		padding-bottom:0;
@@ -40,11 +40,15 @@
 	}
 }
 
+@media #{$small}{
+	.navigation-subcategory{
+		margin-top:0;
+	}
+}
 
 @media only screen and (min-width:1024px) {
 
 	.navigation-subcategory{
-
 		.site-navigation{
 			background-color:#67666B;
 			padding-bottom:0px;
