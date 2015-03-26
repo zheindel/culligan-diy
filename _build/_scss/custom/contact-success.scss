@@ -16,6 +16,9 @@
 				a{
 					color:#006699;
 					font-size:18px;
+					&:hover{
+						color:darken(#006699,10);
+					}
 				}
 			}
 		}
@@ -30,6 +33,9 @@
 		a{
 			color:#006699;
 			font-size:18px;
+			&:hover{
+				color:darken(#006699,10);
+			}
 		}
 	}
 }

@@ -31,14 +31,17 @@
                     font-size:14px;
                     color:#000;
                     padding-left:44px;
-                    &:hover{
-                        color:#000;
-                    }
                     .fa{
                         float:left;
                         margin-left:-44px;
                         font-size:24px;
                         color:#544302;
+                    }
+                    &:hover{
+                        color:lighten(#000000,10);
+                        .fa{
+                            color:lighten(#000000,10);
+                        }
                     }
                 }
             }
@@ -60,13 +63,18 @@
         }
         .button{
             background-color:#3a393a;
+            border:1px solid #3a303a;
             color:#f0eff3;
-            padding:20px;
+            padding:19px;
             font-size:15px;
             -webkit-border-radius:3px;
             -moz-border-radius:3px;
             border-radius:3px;
             margin:0;
+            &:hover{
+                background-color:#f0eff3;
+                color:#3a393a;
+            }
         }
     }
 }

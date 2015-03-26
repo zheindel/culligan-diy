@@ -59,18 +59,6 @@
 	}
 }
 
-.button.transparent{
-	border:1px solid #BDBCC1;
-	max-width:none;
-	color:#000;
-	margin:20px 0px;
-	padding:23px 10px;
-	background-color: transparent;
-	border-radius:3px;
-	font-weight:100;
-}
-
-
 @media #{$small} {
 
 	.blue-banner{
@@ -110,16 +98,12 @@
 			line-height:36px;
 			padding:13px 41px;
 			margin-bottom:55px;
-
-			span{
-			}
 		}
 
 
 		.button.transparent{
 			width:100%;
 			max-width:260px;
-			background:transparent;
 			border:1px solid #000;
 			border-radius:3px;
 			padding:22px 15px;
@@ -128,10 +112,6 @@
 			font-weight:100;
 			margin:18px 14px 17px 0px;
 
-			&:hover{
-				color:rgba(0, 91, 19, 0.7);
-				background:#FFF;
-			}
 		}
 	}
 

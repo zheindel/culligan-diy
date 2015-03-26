@@ -71,7 +71,7 @@
 		margin:25px 0px 22px;
 		font-size:18px;
 
-		a{
+		.button{
 			color:#FFF;
 			padding:20px 15px;
 			width:100%;
@@ -80,6 +80,9 @@
 			text-align:center;
 			background:#004D81;
 			font-weight: 300;
+			&:hover{
+				background-color:darken(#004d81,10);
+			}
 		}
 	}
 }
@@ -143,8 +146,7 @@
 			margin:34px 0px 15px;
 			font-size:17px;
 
-			a{
-				color:#FFF;
+			.button{
 				padding:16px 15px;
 				width:100%;
 				max-width:380px;

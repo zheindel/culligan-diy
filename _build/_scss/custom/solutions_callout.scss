@@ -88,8 +88,14 @@
 			vertical-align:top;
 			margin:0px 2px 0px -11px;
 		}
-		i{
+		.fa{
 			color:#006599;
+		}
+		&:hover{
+			color:darken(#006599,10);
+			.fa{
+				color:darken(#006599,10);
+			}
 		}
 	}
 }
@@ -144,8 +150,9 @@
 		.button.transparent{
 			width:100%;
 			max-width:177px;
-			background:transparent;
 			border:1px solid #000;
+			-webkit-border-radius:3px;
+			-moz-border-radius:3px;
 			border-radius:3px;
 			padding:22px 15px;
 			font-size:20px;

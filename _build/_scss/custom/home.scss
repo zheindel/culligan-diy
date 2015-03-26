@@ -45,6 +45,9 @@
 				display:block;
 				font-size:19px;
 				line-height: 21px;
+				&:hover{
+					color:darken(#006896,10);
+				}
 			}
 		}
 	}

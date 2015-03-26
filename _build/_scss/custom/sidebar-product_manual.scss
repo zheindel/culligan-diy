@@ -18,13 +18,13 @@
 		-moz-border-radius:3px;
 		border-radius:3px;
 		border:none;
-		padding:13px;
 		text-align: left;
 	}
 	.manual-button{
 		color:#534302;
 		background-color:#ffcc01;
 		margin:0 0 15px;
+		padding:13px;
 		.fa{
 			font-size:24px;
 			color:#534302;
@@ -33,17 +33,29 @@
 				vertical-align:middle;
 			}
 		}
+		&:hover{
+			background-color:darken(#ffcc01,10);
+		}
 	}
 	.help-button{
 		color:#fff;
 		background-color:#3a393a;
 		margin:0;
+		border:1px solid #3a393a;
+		padding:12px;
 		.fa{
 			font-size:24px;
 			color:#fff;
 			margin-right:22px;
 			&:before{
 				vertical-align:middle;
+			}
+		}
+		&:hover{
+			background-color:#fff;
+			color:#3a393a;
+			.fa{
+				color:#3a303a;
 			}
 		}
 	}
