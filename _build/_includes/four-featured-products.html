@@ -16,15 +16,23 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-    $('.featured-products').each(function(){
-    	var highestBox = 0;
-    	$('.outer-wrapper', this).each(function(){
-    		if($(this).height() > highestBox) {
-    			console.log(this);
-    			highestBox = $(this).height();
-    		}
-    	});
-    	$('.inner-wrapper',this).height(highestBox);
-    });
+        var equalHeightProds = function () {
+            var highestBox = 0;
+            jQuery('.featured-products .inner-wrapper').each(function(){
+                jQuery(this).css('min-height','0');
+                var thisHeight = jQuery(this).outerHeight();
+                if(thisHeight > highestBox){
+                    highestBox = thisHeight;
+                }
+            });
+            jQuery('.featured-products .inner-wrapper').css("min-height",highestBox);
+        };
+              
+        jQuery(window).on('resize', function () {
+            if (jQuery(window).width() > 767){
+              equalHeightProds();
+            }
+            else { jQuery('.inner-wrapper').height('auto').css('min-height','0'); }
+        });
 });
 </script>
