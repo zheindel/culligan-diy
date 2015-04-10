@@ -3,13 +3,28 @@
 		{% include featured-product.html %}
 	</div>
 	<div class="small-12 medium-6 large-3 columns">
-		{% include featured-product.html %}
+		{% include featured-product2.html %}
 	</div>
 	<div class="small-12 medium-6 large-3 columns hide-for-small">
 		{% include featured-product.html %}
 	</div>
 	<div class="small-12 medium-6 large-3 columns hide-for-small">
-		{% include featured-product.html %}
+		{% include featured-product2.html %}
 	</div>
 </div>
 <a class="button secondary show-for-small view-all-button" href="#">View all shower head filters</a>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.featured-products').each(function(){
+    	var highestBox = 0;
+    	$('.outer-wrapper', this).each(function(){
+    		if($(this).height() > highestBox) {
+    			console.log(this);
+    			highestBox = $(this).height();
+    		}
+    	});
+    	$('.inner-wrapper',this).height(highestBox);
+    });
+});
+</script>
