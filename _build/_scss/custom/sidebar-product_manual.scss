@@ -8,7 +8,7 @@
 	.warranty{
 		font-size:18px;
 		color:#212121;
-		margin: 0 0 20px 30px;
+		margin: 0 0 20px;
 		font-weight:400;
 	}
 	.manual-button,.help-button{
@@ -61,10 +61,7 @@
 	}
 }
 @media #{$small}{
-	.proudct-manual-container{
-		padding:10px 25px 15px;
-		.warranty{
-			margin: 0 0 20px;
-		}	
+	.sidebar-proudct-manual-container{
+		padding:30px 25px 15px;
 	}
 }
